@@ -1,0 +1,12 @@
+:global {
+  /* Large Devices, Wide Screens */
+  @include desktop() {
+  }
+
+  /* Small Devices, Tablets */
+  @include tablet() {}
+
+  /* Extra Small Devices, Phones */
+  @include mobile() {
+  }
+}

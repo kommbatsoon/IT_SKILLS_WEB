@@ -1,0 +1,60 @@
+@mixin normalizeFont() {
+  font-size: $font-size-basic;
+  font-family: $font-regular;
+  font-weight: normal;
+  line-height: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $color-black;
+}
+
+@mixin transparentScrollBar(){
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: inherit;
+    border: none;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin keyframes ($animationName)
+{
+  @-webkit-keyframes :global(#{$animationName}) {
+    @content;
+  }
+  @-moz-keyframes :global(#{$animationName}) {
+    @content;
+  }
+  @-o-keyframes :global(#{$animationName}) {
+    @content;
+  }
+  @keyframes :global(#{$animationName}) {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}

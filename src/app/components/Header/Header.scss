@@ -1,0 +1,21 @@
+:local {
+  .header {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    ul {
+      display: flex;
+
+      li > a {
+        padding: 10px;
+        color: $color-white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+

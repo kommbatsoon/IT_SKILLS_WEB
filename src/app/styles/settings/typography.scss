@@ -1,0 +1,45 @@
+@import '../mixins';
+@import '../variables';
+
+body {
+  @include normalizeFont();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: $font-semi-bold;
+  font-size: 64px;
+  line-height: 1.33;
+}
+h2 {
+  font-family: $font-semi-bold;
+  font-size: 92px;
+  line-height: 0.92;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, input, optgroup, select, textarea {
+  @include normalizeFont();
+
+  &::-webkit-input-placeholder {
+    @include normalizeFont();
+  }
+}
