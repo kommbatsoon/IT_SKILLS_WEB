@@ -1,4 +1,4 @@
 export {MainPage} from './MainPage/MainPage';
 export {ContactsPage} from './ContactsPage/ContactsPage';
-export {CoursesPage} from './CoursesPage/CoursesPage';
+export {CoursesPage, IOSCoursePage, FrontendCoursePage} from './courses';
 export {TrialLessonsPage} from './TrialLessonsPage/TrialLessonsPage';

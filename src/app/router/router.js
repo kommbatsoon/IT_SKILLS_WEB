@@ -1,8 +1,10 @@
 import React from 'react';
-import {Router as BrowserRouter, Route, Switch} from 'react-router';
+import {Router as BrowserRouter, Switch} from 'react-router';
 
-import {MainPage, ContactsPage, CoursesPage, TrialLessonsPage} from '@app/pages';
-import {Header, Footer} from '@app/components';
+import {MainPage, ContactsPage, TrialLessonsPage} from '@app/pages';
+import {AppRoute} from '@app/components';
+
+import {CoursesRoute} from '@app/router/courses.route';
 
 import {ROUTER_CONFIG} from '@util/config/router.config';
 import history from '@app/history';
@@ -15,7 +17,7 @@ export default class AppRouter extends React.Component {
 			<BrowserRouter basename={BASE_URL} history={history}>
 				<Switch>
 					<AppRoute exact path={ROUTER_CONFIG.TRIAL_LESSON.LIST} component={TrialLessonsPage} />
-					<AppRoute exact path={ROUTER_CONFIG.COURSES.LIST} component={CoursesPage} />
+					<CoursesRoute path={ROUTER_CONFIG.COURSES.LIST} />
 					<AppRoute exact path={ROUTER_CONFIG.CONTACTS} component={ContactsPage} />
 					<AppRoute exact path={ROUTER_CONFIG.MAIN} component={MainPage} />
 				</Switch>
@@ -23,17 +25,3 @@ export default class AppRouter extends React.Component {
 		);
 	}
 }
-
-const AppRoute = ({component, ...rest}) => {
-	const renderAppContainer = (Component) => (props) => {
-		return (
-			<div className='app-container'>
-				<Header />
-				<Component {...props} />
-				<Footer />
-			</div>
-		);
-	};
-
-	return <Route {...rest} render={renderAppContainer(component)} />;
-};
