@@ -1,0 +1,14 @@
+:local {
+  .footer {
+    background-color: inherit;
+    color: $color-white;
+    padding: 30px 50px;
+
+    .logo {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+

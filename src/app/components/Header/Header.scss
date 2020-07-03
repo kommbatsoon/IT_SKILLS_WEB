@@ -1,10 +1,18 @@
 :local {
   .header {
-    position: absolute;
-    top: 50px;
-    left: 50px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $color-white;
+    }
 
     ul {
+      margin-left: 50px;
       display: flex;
 
       li > a {

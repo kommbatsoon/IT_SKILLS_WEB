@@ -8,6 +8,8 @@ import style from './Header.scss';
 export const Header = () => {
 	return (
 		<header className={style.header}>
+			<div className={style.logo}>IT-SKILLS.PRO</div>
+
 			<ul>
 				<li>
 					<Link to={ROUTER_CONFIG.MAIN}>Main</Link>

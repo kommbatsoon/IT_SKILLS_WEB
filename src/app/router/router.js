@@ -2,7 +2,7 @@ import React from 'react';
 import {Router as BrowserRouter, Route, Switch} from 'react-router';
 
 import {MainPage, ContactsPage, CoursesPage, TrialLessonsPage} from '@app/pages';
-import {Header} from '@app/components';
+import {Header, Footer} from '@app/components';
 
 import {ROUTER_CONFIG} from '@util/config/router.config';
 import history from '@app/history';
@@ -30,6 +30,7 @@ const AppRoute = ({component, ...rest}) => {
 			<div className='app-container'>
 				<Header />
 				<Component {...props} />
+				<Footer />
 			</div>
 		);
 	};
