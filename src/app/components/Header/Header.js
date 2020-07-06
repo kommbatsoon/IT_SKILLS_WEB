@@ -14,9 +14,6 @@ export const Header = () => {
 
 			<ul>
 				<li>
-					<Link to={ROUTER_CONFIG.MAIN}>Main</Link>
-				</li>
-				<li>
 					<Link to={ROUTER_CONFIG.COURSES.LIST}>Courses</Link>
 				</li>
 				<li>

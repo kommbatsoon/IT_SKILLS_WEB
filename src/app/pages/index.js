@@ -1,4 +1,5 @@
 export {MainPage} from './MainPage/MainPage';
-export {ContactsPage} from './ContactsPage/ContactsPage';
 export {CoursesPage, IOSCoursePage, FrontendCoursePage} from './courses';
-export {TrialLessonsPage} from './TrialLessonsPage/TrialLessonsPage';
+export {TrialLessonsPage, FrontendLessonPage, IOSLessonPage} from './trialLessons';
+export {ContactsPage} from './ContactsPage/ContactsPage';
+export {ErrorPage} from './ErrorPage/ErrorPage';

@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const ContactsPage = () => {
+export const ErrorPage = () => {
 	return (
 		<div className='page-wrapper'>
-			<h1>Contacts Page</h1>
+			<h1>404 error</h1>
 		</div>
 	);
 };

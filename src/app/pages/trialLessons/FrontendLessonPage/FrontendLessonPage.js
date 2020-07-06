@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const ContactsPage = () => {
+export const FrontendLessonPage = () => {
 	return (
 		<div className='page-wrapper'>
-			<h1>Contacts Page</h1>
+			<h1>Frontend Trial Lesson Page</h1>
 		</div>
 	);
 };

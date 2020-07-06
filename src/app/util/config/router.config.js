@@ -7,8 +7,9 @@ export const ROUTER_CONFIG = {
 	},
 	TRIAL_LESSON: {
 		LIST: '/trial-lessons',
-		IOS: '',
-		FRONTEND: '',
+		IOS: '/trial-lessons/ios',
+		FRONTEND: '/trial-lessons/frontend',
 	},
 	CONTACTS: '/contacts',
+	ERROR: '/error',
 };
