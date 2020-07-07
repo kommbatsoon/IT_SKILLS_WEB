@@ -1,14 +1,71 @@
+$margin: 16px;
+
 :local {
   .footer {
-    background-color: inherit;
-    color: $color-white;
-    padding: 30px 50px;
+    width: $container-width;
+    height: $footer-height;
+    margin: 0 auto;
+    padding: 56px 0 40px 0;
+    box-sizing: border-box;
 
-    a.logo {
-      font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .logo {
+      width: 261px;
+      height: 38px;
+    }
+
+    h3 {
+      color: $color-text-primary;
+      font-family: $font-regular;
+      font-size: 14px;
+      line-height: 18px;
       text-transform: uppercase;
-      font-weight: bold;
-      color: $color-white;
+    }
+
+    nav {
+
+      a {
+        cursor: pointer;
+        display: block;
+        margin-top: $margin;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-text-primary;
+        font-family: $font-light;
+      }
+    }
+
+    .phone {
+      @extend .text;
+      margin-top: $margin;
+      display: block;
+      color: $color-text-primary;
+    }
+    .email {
+      @extend .text;
+      margin-top: $margin;
+      display: block;
+      color: $color-gold;
+    }
+
+    .socialIcons {
+      display: flex;
+      margin-top: $margin;
+
+      .icon {
+        cursor: pointer;
+
+        &:not(:first-child) {
+          margin-left: 32px;
+        }
+      }
     }
   }
 }

@@ -4,6 +4,8 @@ export const ROUTER_CONFIG = {
 		LIST: '/courses',
 		IOS: '/courses/ios',
 		FRONTEND: '/courses/frontend',
+		WEB_DESIGN: '/courses',
+		ANDROID: '/courses',
 	},
 	TRIAL_LESSON: {
 		LIST: '/trial-lessons',
@@ -11,6 +13,6 @@ export const ROUTER_CONFIG = {
 		FRONTEND: '/trial-lessons/frontend',
 	},
 	CONTACTS: '/contacts',
-	COACHES: '/coaches',
+	COACHES: '/',
 	ERROR: '/error',
 };
