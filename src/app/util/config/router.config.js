@@ -11,5 +11,6 @@ export const ROUTER_CONFIG = {
 		FRONTEND: '/trial-lessons/frontend',
 	},
 	CONTACTS: '/contacts',
+	COACHES: '/coaches',
 	ERROR: '/error',
 };

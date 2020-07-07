@@ -1,0 +1,26 @@
+:local {
+  .icon {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 10px;
+    min-height: 10px;
+  };
+
+  .vkGold {
+    background-image: url('../../../../assets/images/icons/vk-gold.svg');
+    width: 27px;
+    height: 18px;
+  }
+  .fbWhite {
+    background-image: url('../../../../assets/images/icons/fb-white.svg');
+    width: 11px;
+    height: 24px;
+  }
+  .instWhite {
+    background-image: url('../../../../assets/images/icons/inst-white.svg');
+    width: 19px;
+    height: 24px;
+  }
+}

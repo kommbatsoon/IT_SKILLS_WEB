@@ -1,12 +1,16 @@
 //Colors
 $color-white: #ffffff;
-$color-black: #000000;
+$color-text-primary: #F2F2F2;
+$color-black: #171717;
 $color-gold: #FFD700;
+
+//Gradients
+$gradient-gold: linear-gradient(144.58deg, #FCD17B -51.47%, #C3971C -27.96%, #B88927 -4.62%, #E2C280 21.85%, #D3B16E 31.19%, #BF9955 44.29%, #A57617 67.17%, #AE8020 93.65%, #FFCF69 114.78%);
 
 
 //Font settings
-$font-regular: SF-Regular;
-$font-medium: SF-Medium;
+$font-light: Geometria-ExtraLight;
+$font-regular: Geometria;
 $font-semi-bold: SF-Semibold;
 $font-extra-bold: SF-Black;
 $font-size-basic: 14px;
@@ -15,3 +19,6 @@ $font-size-basic: 14px;
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+
+//Sizes
+$container-width: 1140px;

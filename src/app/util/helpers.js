@@ -1,4 +1,4 @@
-import {Screen} from '@`util/srceen';
+import {Screen} from '@util/srceen';
 
 const CONFIG = {
 	scrollingTime: 1500,
@@ -32,4 +32,8 @@ export function scrollTo(element) {
 			window.requestAnimationFrame(step);
 		}
 	});
+}
+
+export function getClassName(...args) {
+	return Object.values(args)?.filter(Boolean).join(' ');
 }

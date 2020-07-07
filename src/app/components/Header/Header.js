@@ -1,28 +1,32 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import {Icon} from '@app/components';
+
 import {ROUTER_CONFIG} from '@util/config/router.config';
+import {TEXT_CONFIG} from '@util/config/text.config';
 
 import style from './Header.scss';
 
 export const Header = () => {
 	return (
 		<header className={style.header}>
-			<Link to='/' className={style.logo}>
-				IT-SKILLS.PRO
+			<Link to={ROUTER_CONFIG.MAIN}>
+				<img src={require('@assets/images/logo-gold.svg')} alt='Logo' className={style.logo} />
 			</Link>
 
-			<ul>
-				<li>
-					<Link to={ROUTER_CONFIG.COURSES.LIST}>Courses</Link>
-				</li>
-				<li>
-					<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>Trial lessons</Link>
-				</li>
-				<li>
-					<Link to={ROUTER_CONFIG.CONTACTS}>Contacts</Link>
-				</li>
-			</ul>
+			<nav>
+				<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>{TEXT_CONFIG.headerNavigation.trialLessons}</Link>
+				<Link to={ROUTER_CONFIG.COURSES.LIST}>{TEXT_CONFIG.headerNavigation.courses}</Link>
+				<Link to={ROUTER_CONFIG.COACHES}>{TEXT_CONFIG.headerNavigation.contacts}</Link>
+				<Link to={ROUTER_CONFIG.CONTACTS}>{TEXT_CONFIG.headerNavigation.contacts}</Link>
+			</nav>
+
+			<div className={style.socialIcons}>
+				<Icon name='vk-gold' className={style.icon} />
+				<Icon name='fb-white' className={style.icon} />
+				<Icon name='inst-white' className={style.icon} />
+			</div>
 		</header>
 	);
 };

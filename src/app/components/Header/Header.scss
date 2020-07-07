@@ -1,26 +1,42 @@
 :local {
   .header {
-    padding: 50px;
+    width: $container-width;
+    height: 65px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 
-    a.logo {
-      font-size: 20px;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: $color-white;
+    .logo {
+      width: 163px;
+      height: 59px;
     }
 
-    ul {
-      margin-left: 50px;
+    nav {
+      margin-left: 185px;
       display: flex;
 
-      li > a {
-        padding: 10px;
-        color: $color-white;
+      a {
+        margin-right: 70px;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $font-light;
+        color: $color-text-primary;
+        white-space: nowrap;
 
         &:hover {
-          text-decoration: underline;
+          font-family: $font-regular;
+        }
+      }
+    }
+
+    .socialIcons {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        &:not(:first-child) {
+          margin-left: 32px;
         }
       }
     }
