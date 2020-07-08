@@ -11,7 +11,7 @@ import style from './Footer.scss';
 export const Footer = () => {
 	return (
 		<>
-			<Divider />
+			<Divider className={style.margin} />
 			<footer className={style.footer}>
 				<div>
 					<Link to={ROUTER_CONFIG.MAIN}>

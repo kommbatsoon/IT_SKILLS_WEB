@@ -1,0 +1,25 @@
+:local {
+  .wrapper {
+    width: $container-width;
+    margin: 100px auto 0 auto;
+
+    h2 {
+      font-size: 36px;
+      line-height: 45px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .cardList {
+      margin-top: 51px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .card {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+

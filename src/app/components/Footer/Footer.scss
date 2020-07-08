@@ -1,6 +1,10 @@
 $margin: 16px;
 
 :local {
+  .margin {
+    margin-top: 128px;
+  }
+
   .footer {
     width: $container-width;
     height: $footer-height;
