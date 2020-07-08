@@ -19,7 +19,7 @@ export const Header = () => {
 			<nav>
 				<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>{TEXT_CONFIG.navigation.trialLessons}</Link>
 				<Link to={ROUTER_CONFIG.COURSES.LIST}>{TEXT_CONFIG.navigation.courses}</Link>
-				<Link to={ROUTER_CONFIG.COACHES}>{TEXT_CONFIG.navigation.contacts}</Link>
+				<Link to={ROUTER_CONFIG.COACHES}>{TEXT_CONFIG.navigation.coaches}</Link>
 				<Link to={ROUTER_CONFIG.CONTACTS}>{TEXT_CONFIG.navigation.contacts}</Link>
 			</nav>
 

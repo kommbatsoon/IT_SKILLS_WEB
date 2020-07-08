@@ -26,11 +26,9 @@ $margin: 16px;
     }
 
     h3 {
-      color: $color-text-primary;
-      font-family: $font-regular;
+      font-family: $font-medium;
       font-size: 14px;
       line-height: 18px;
-      text-transform: uppercase;
     }
 
     nav {
@@ -42,7 +40,6 @@ $margin: 16px;
         font-size: 14px;
         line-height: 18px;
         color: $color-text-primary;
-        font-family: $font-light;
       }
     }
 
@@ -61,6 +58,7 @@ $margin: 16px;
 
     .socialIcons {
       display: flex;
+      align-items: center;
       margin-top: $margin;
 
       .icon {

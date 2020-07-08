@@ -8,12 +8,12 @@ $color-gold: #A18912;
 //Gradients
 $gradient-gold: linear-gradient(144.58deg, #FCD17B -51.47%, #C3971C -27.96%, #B88927 -4.62%, #E2C280 21.85%, #D3B16E 31.19%, #BF9955 44.29%, #A57617 67.17%, #AE8020 93.65%, #FFCF69 114.78%);
 
-//Font settings
-$font-light: Geometria-ExtraLight;
-$font-regular: Geometria;
-$font-semi-bold: SF-Semibold;
-$font-extra-bold: SF-Black;
-$font-size-basic: 14px;
+//Fonts
+$font-regular: Geometria-Regular;
+$font-bold: Geometria-Bold;
+$font-medium: Geometria-Medium;
+$font-size-basic: 16px;
+$font-size-title: 36px;
 
 //Screen breakpoints
 $mobile-width: 320px;

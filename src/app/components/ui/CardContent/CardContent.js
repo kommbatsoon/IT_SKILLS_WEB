@@ -11,7 +11,7 @@ export const CardContent = ({iconName, title, description, className}) => {
 		<div className={getClassName(style.cardContent, className)}>
 			{iconName && <Icon name={iconName} />}
 			{title && <h3>{title}</h3>}
-			{description && <p className={style.description}>{description}</p>}
+			{description && <p>{description}</p>}
 		</div>
 	);
 };
