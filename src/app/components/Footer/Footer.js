@@ -5,6 +5,7 @@ import {Divider, Icon} from '@app/components';
 
 import {ROUTER_CONFIG} from '@util/config/router.config';
 import {TEXT_CONFIG} from '@util/config/text.config';
+import {APP_ICON} from '@util/constants';
 
 import style from './Footer.scss';
 
@@ -46,9 +47,9 @@ export const Footer = () => {
 						info@it-skills.pro
 					</a>
 					<div className={style.socialIcons}>
-						<Icon name='vk-gold' className={style.icon} />
-						<Icon name='fb-white' className={style.icon} />
-						<Icon name='inst-white' className={style.icon} />
+						<Icon name={APP_ICON.vkGold} className={style.icon} />
+						<Icon name={APP_ICON.fbWhite} className={style.icon} />
+						<Icon name={APP_ICON.instWhite} className={style.icon} />
 					</div>
 				</div>
 			</footer>
