@@ -13,6 +13,13 @@ export const TEXT_CONFIG = {
 		android: 'Android-разработка',
 	},
 
+	sectionTitle: {
+		whatPerspective: 'Какие перспективы?',
+		advantages: 'Преимущества обучения',
+		reviews: 'Отзывы учеников',
+		coaches: 'Преподователи — практики',
+	},
+
 	emailLabel: 'Email',
 	phoneLabel: 'Телефон',
 	ourSupportChat: 'Наш чат поддержки',

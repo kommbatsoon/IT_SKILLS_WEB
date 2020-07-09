@@ -1,7 +1,11 @@
 :local {
   .wrapper {
     width: $container-width;
-    margin: 100px auto 0 auto;
+    margin: 0 auto;
+
+    h2 {
+      margin: 122px 0 51px 0;
+    }
 
     .cardList {
       margin-top: 51px;

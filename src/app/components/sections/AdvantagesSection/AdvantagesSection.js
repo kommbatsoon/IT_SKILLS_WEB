@@ -3,11 +3,12 @@ import React from 'react';
 import {CardContainer, CardContent} from '@app/components';
 import {getClassName} from '@util/helpers';
 import {APP_ICON} from '@util/constants';
+import {TEXT_CONFIG} from '@util/config/text.config';
 
 import style from './AdvantagesSection.scss';
 
 const DEFAULT_CONFIG = {
-	sectionTitle: 'Преимущества обучения',
+	sectionTitle: TEXT_CONFIG.sectionTitle.advantages,
 	cards: [
 		{
 			iconName: APP_ICON.practice,
