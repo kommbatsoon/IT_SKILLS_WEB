@@ -3,3 +3,4 @@ export * from './sections';
 
 export {Header} from './Header/Header';
 export {Footer} from './Footer/Footer';
+export {EnrollmentForm} from './EnrollmentForm/EnrollmentForm';

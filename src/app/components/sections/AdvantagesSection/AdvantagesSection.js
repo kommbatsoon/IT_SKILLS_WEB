@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {HoverCardContainer, CardContent} from '@app/components';
+import {CardContainer, CardContent} from '@app/components';
 import {getClassName} from '@util/helpers';
 import {APP_ICON} from '@util/constants';
 
@@ -44,9 +44,9 @@ export const AdvantagesSection = ({config = DEFAULT_CONFIG, className}) => {
 			<div className={style.cardList}>
 				{config.cards.map((card, index) => {
 					return (
-						<HoverCardContainer key={`advantage-card-${index}`} className={style.card}>
+						<CardContainer key={`advantage-card-${index}`} className={style.card} withShadowOnHover>
 							<CardContent iconName={card.iconName} title={card.title} description={card.description} />
-						</HoverCardContainer>
+						</CardContainer>
 					);
 				})}
 			</div>

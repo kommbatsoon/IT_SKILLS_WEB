@@ -1,0 +1,35 @@
+:local {
+  .card {
+    padding: 48px;
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
+    box-shadow: $shadow-primary;
+  }
+
+  .shadowOnHover {
+    transition: box-shadow .3s ease-in-out;
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: $shadow-primary;
+    }
+  }
+
+  .headLine {
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $gradient-gold;
+      height: 3px;
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+:local {
+  .wrapper {
+    margin-top: 128px;
+    width: 709px;
+    padding: 59px 62px 65px 62px;
+    box-sizing: border-box;
+    
+    h3 {
+      text-align: center;
+    }
+
+    .description {
+      margin: 21px 0 46px 0;
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .formControl {
+        width: 358px;
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+      }
+      .button {
+        margin-top: 50px;
+        width: 358px;
+      }
+    }
+  }
+}

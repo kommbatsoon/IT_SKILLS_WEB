@@ -1,10 +1,16 @@
 :local {
   .button {
     padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
     min-width: 60px;
-    color: $color-black;
-    background: linear-gradient(#ebd197, #a2790d);
+    color: $color-text-primary;
+    border: 1px solid $color-gold;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background: $gradient-gold;
+      color: $color-black;
+    }
   }
 }
