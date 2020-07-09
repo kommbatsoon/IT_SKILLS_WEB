@@ -58,7 +58,7 @@ const useStyles = makeStyles({
 	},
 });
 
-export const Input = ({label, placeholder}) => {
+export const Input = ({label, placeholder, multiline}) => {
 	const classes = useStyles();
-	return <TextField classes={{root: classes.root}} label={label} placeholder={placeholder} />;
+	return <TextField classes={{root: classes.root}} label={label} placeholder={placeholder} multiline={multiline} />;
 };

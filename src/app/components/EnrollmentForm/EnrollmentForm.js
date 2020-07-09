@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {Button, CardContainer, Input} from '@app/components';
+import {getClassName} from '@util/helpers';
 
 import style from './EnrollmentForm.scss';
 
@@ -10,9 +11,9 @@ const DEFAULT_CONFIG = {
 	buttonText: 'Получить консультацию',
 };
 
-export const EnrollmentForm = ({config = DEFAULT_CONFIG}) => {
+export const EnrollmentForm = ({className, config = DEFAULT_CONFIG}) => {
 	return (
-		<CardContainer className={style.wrapper} withHeadLine>
+		<CardContainer className={getClassName(style.wrapper, className)} withHeadLine>
 			<h3>{config.title}</h3>
 			<p className={style.description}>{config.description}</p>
 
@@ -25,6 +26,9 @@ export const EnrollmentForm = ({config = DEFAULT_CONFIG}) => {
 				</div>
 				<div className={style.formControl}>
 					<Input label='Номер телефона' placeholder='+375 (' />
+				</div>
+				<div className={style.formControl}>
+					<Input label='Ваш вопрос' placeholder='Напишите ваш вопрос' multiline />
 				</div>
 				<Button className={style.button}>{config.buttonText}</Button>
 			</div>

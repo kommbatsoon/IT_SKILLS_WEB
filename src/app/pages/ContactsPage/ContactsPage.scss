@@ -1,0 +1,54 @@
+:local {
+	.title {
+		margin: 122px 0 115px 0;
+	}
+
+	.flexContainer {
+		width: $container-width;
+		display: flex;
+		justify-content: space-between;
+
+		.points {
+			margin: 16px 0 57px 0;
+
+			.point {
+				font-size: 16px;
+				line-height: 1.2;
+				letter-spacing: 0.01em;
+				color: $color-text-secondary;
+				display: flex;
+				align-items: center;
+
+				&:before {
+					content: '';
+					display: inline-block;
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					background: linear-gradient(104.73deg, #FCD17B -51.47%, #C3971C -27.96%, #B88927 -4.62%, #E2C280 21.85%, #D3B16E 31.19%, #BF9955 44.29%, #A57617 67.17%, #AE8020 93.65%, #FFCF69 114.78%);
+					margin-right: 15px
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		.contacts {
+			margin-top: 14px;
+
+			p {
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 0.01em;
+				color: $color-text-secondary;
+				margin-bottom: 10px;
+			}
+
+			.gold {
+				color: $color-gold;
+			}
+		}
+	}
+}
