@@ -6,4 +6,10 @@ export const APP_ICON = {
 	work: 'work',
 	support: 'support',
 	blank: 'blank',
+	apple: 'apple',
+	android: 'android',
+	webDesign: 'webDesign',
+	webDev: 'webDev',
+	rightArrowBlack: 'rightArrowBlack',
+	rightArrowWhite: 'rightArrowWhite',
 };

@@ -6,11 +6,11 @@ import {getClassName} from '@util/helpers';
 
 import style from './CardContent.scss';
 
-export const CardContent = ({iconName, title, description, className}) => {
+export const CardContent = ({iconName, title, description, className, tittleClassName}) => {
 	return (
 		<div className={getClassName(style.cardContent, className)}>
 			{iconName && <Icon name={iconName} />}
-			{title && <h3>{title}</h3>}
+			{title && <h3 className={getClassName(style.title, tittleClassName)}>{title}</h3>}
 			{description && <p>{description}</p>}
 		</div>
 	);
@@ -20,5 +20,6 @@ CardContent.propTypes = {
 	iconName: PropTypes.string,
 	className: PropTypes.string,
 	title: PropTypes.string,
+	tittleClassName: PropTypes.string,
 	description: PropTypes.string,
 };

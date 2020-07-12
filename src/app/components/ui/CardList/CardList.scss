@@ -1,0 +1,10 @@
+:local {
+  .cardList {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      flex-basis: 50%;
+    }
+  }
+}

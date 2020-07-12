@@ -1,0 +1,146 @@
+@import '../../../styles/mixins';
+
+$gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gradient-gold;
+
+:local {
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 45px;
+    color: $color-black;
+    cursor: pointer;
+
+    border: solid 1px transparent;
+    border-radius: 5px;
+    background-image: $gradient;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 1px 1000px 1px $color-black inset;
+    transition: width 0.5s linear;
+
+    .blackIcon {
+      display: none;
+      margin-left: 30px;
+    }
+    .whiteIcon {
+      display: block;
+    }
+
+    .text {
+      display: none;
+      font-family: $font-medium;
+      font-size: 18px;
+      line-height: 11px;
+      color: $color-black;
+      letter-spacing: 0.01em;
+    }
+
+    &:hover {
+      box-shadow: none;
+      width: max-content;
+      padding: 0 30px;
+
+      .blackIcon {
+        display: block;
+      }
+      .whiteIcon {
+        display: none;
+      }
+      .text {
+        display: block;
+      }
+    }
+  }
+}
+
+:global {
+  .button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+    transition: width .2s linear;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0.6px;
+      right: 0;
+      bottom: 0;
+      border-radius: 4px;
+      background: $gradient-gold;
+      background-size: 300% 300%;
+      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) calc(100% - 1.5px), 1.5px calc(100% - 1.5px), 1.5px 100%, 100% 100%, 100% 0%, 0% 0%);
+      @include animation('frame-enter .3s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite');
+    }
+
+    .blackIcon {
+      display: none;
+      margin-left: 30px;
+    }
+    .whiteIcon {
+      display: block;
+    }
+    .whiteIcon {
+      display: block;
+    }
+
+    .text {
+      display: none;
+      font-family: $font-medium;
+      font-size: 18px;
+      line-height: 11px;
+      color: $color-black;
+      letter-spacing: 0.01em;
+    }
+
+    &:hover {
+      width: 215px;
+      padding: 0 30px;
+      background: $gradient-gold;
+      .blackIcon { display: block; }
+      .whiteIcon { display: none; }
+      .text { display: block; }
+    }
+  }
+
+  @include keyframes(gradient-animation) {
+    0% {
+      background-position: 15% 0;
+    }
+    50% {
+      background-position: 85% 100%;
+    }
+    100% {
+      background-position: 15% 0;
+    }
+  }
+  @include keyframes(frame-enter) {
+    0% {
+      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) calc(100% - 1.5px), 1.5px calc(100% - 1.5px), 1.5px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    15% {
+      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) calc(100% - 1.5px), calc(100% - 1.5px) calc(100% - 1.5px), calc(100% - 1.5px) 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    50% {
+      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, 100% 0%, 0% 0%);
+    }
+    75% {
+      -webkit-clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 0%, 0% 0%);
+    }
+    100% {
+      -webkit-clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 0% 100%);
+    }
+  }
+}
