@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import {CardContainer, CardContent} from '@app/components';
 import {getClassName} from '@util/helpers';
 
+import {CardContentPropTypes} from '@app/components/ui/CardContent/CardContent';
+import {CardContainerPropTypes} from '@app/components/ui/CardContainer/CardContainer';
+
 import style from './CardList.scss';
 
 export const CardList = ({className, cards, CardContainerProps = {}, CardContentProps = {}}) => {
@@ -15,6 +18,7 @@ export const CardList = ({className, cards, CardContainerProps = {}, CardContent
 						<CardContent
 							iconName={card.iconName}
 							title={card.title}
+							subtitle={card.subtitle}
 							description={card.description}
 							{...CardContentProps}
 						/>
@@ -28,21 +32,6 @@ export const CardList = ({className, cards, CardContainerProps = {}, CardContent
 CardList.propTypes = {
 	children: PropTypes.element,
 	className: PropTypes.string,
-	CardContainerProps: PropTypes.shape({
-		children: PropTypes.element,
-		className: PropTypes.string,
-		withShadowOnHover: PropTypes.bool,
-		withHeadLine: PropTypes.bool,
-		ButtonProps: {
-			text: PropTypes.string,
-			onClick: PropTypes.func,
-		},
-	}),
-	CardContentProps: PropTypes.shape({
-		iconName: PropTypes.string,
-		className: PropTypes.string,
-		title: PropTypes.string,
-		tittleClassName: PropTypes.string,
-		description: PropTypes.string,
-	}),
+	CardContainerProps: PropTypes.shape(CardContainerPropTypes),
+	CardContentProps: PropTypes.shape(CardContentPropTypes),
 };

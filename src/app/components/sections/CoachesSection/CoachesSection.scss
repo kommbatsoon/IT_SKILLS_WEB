@@ -1,0 +1,19 @@
+:local {
+  .wrapper {
+    width: $container-width;
+    margin: 0 auto;
+
+    h2 {
+      margin: 122px 0 42px 0;
+    }
+  }
+
+  .cardContainer {
+    flex-basis: calc(50% - 20px);
+    margin: 0 10px;
+    background-image: url('../../../../assets/images/test-avatar.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 256px 256px;
+  }
+}

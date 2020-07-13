@@ -38,8 +38,8 @@ export const CardContainer = (props) => {
 	);
 };
 
-CardContainer.propTypes = {
-	children: PropTypes.element,
+export const CardContainerPropTypes = {
+	children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
 	className: PropTypes.string,
 	withShadowOnHover: PropTypes.bool,
 	withHeadLine: PropTypes.bool,
@@ -48,11 +48,13 @@ CardContainer.propTypes = {
 		title: PropTypes.string,
 		description: PropTypes.string,
 	}),
-	ButtonProps: {
+	ButtonProps: PropTypes.shape({
 		text: PropTypes.string,
 		onClick: PropTypes.func,
-	},
+	}),
 };
+
+CardContainer.propTypes = CardContainerPropTypes;
 
 const FakeButton = () => {
 	return (
