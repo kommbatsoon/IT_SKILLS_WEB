@@ -7,11 +7,11 @@ import {APP_ICON} from '@util/constants';
 import './ArrowButton.scss';
 
 export const ArrowButton = (props) => {
-	const {onClick} = props;
+	const {text, onClick} = props;
 
 	return (
 		<button className='arrowButton' onClick={onClick}>
-			<span className='text'>Подробнее</span>
+			<span className='text'>{text}</span>
 			<Icon className='whiteIcon' name={APP_ICON.rightArrowWhite} />
 			<Icon className='blackIcon' name={APP_ICON.rightArrowBlack} />
 		</button>

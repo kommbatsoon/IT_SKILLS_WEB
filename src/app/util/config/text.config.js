@@ -26,6 +26,8 @@ export const TEXT_CONFIG = {
 	ourContacts: 'Наши контакты',
 	writeToUs: 'Пишите нам если',
 
+	moreDetails: 'Подробнее',
+
 	contactPoints: [
 		'У вас есть вопросы по обучению',
 		'Нужна помощь по использованию сайта',

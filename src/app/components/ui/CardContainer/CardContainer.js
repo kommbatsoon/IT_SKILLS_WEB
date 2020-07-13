@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {isEmpty} from 'lodash';
 
 import {ArrowButton, Icon} from '@app/components';
 import {getClassName} from '@util/helpers';
@@ -7,7 +8,8 @@ import {APP_ICON} from '@util/constants';
 
 import style from './CardContainer.scss';
 
-export const CardContainer = ({className, children, withShadowOnHover = false, withHeadLine = false}) => {
+export const CardContainer = (props) => {
+	const {className, children, card, withShadowOnHover = false, withHeadLine = false, ButtonProps} = props;
 	const [isHovered, setHovered] = useState(() => false);
 
 	return (
@@ -24,10 +26,14 @@ export const CardContainer = ({className, children, withShadowOnHover = false, w
 		>
 			{children}
 
-			<div className={style.emptyBlock} />
+			{!isEmpty(ButtonProps) && (
+				<>
+					<div className={style.emptyBlock} />
 
-			{!isHovered && <FakeButton />}
-			{isHovered && <ArrowButton />}
+					{!isHovered && <FakeButton />}
+					{isHovered && <ArrowButton text={ButtonProps.text} onClick={() => ButtonProps.onClick(card)} />}
+				</>
+			)}
 		</div>
 	);
 };
@@ -37,6 +43,15 @@ CardContainer.propTypes = {
 	className: PropTypes.string,
 	withShadowOnHover: PropTypes.bool,
 	withHeadLine: PropTypes.bool,
+	card: PropTypes.shape({
+		iconName: PropTypes.string,
+		title: PropTypes.string,
+		description: PropTypes.string,
+	}),
+	ButtonProps: {
+		text: PropTypes.string,
+		onClick: PropTypes.func,
+	},
 };
 
 const FakeButton = () => {

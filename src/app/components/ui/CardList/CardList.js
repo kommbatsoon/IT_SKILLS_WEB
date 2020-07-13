@@ -11,7 +11,7 @@ export const CardList = ({className, cards, CardContainerProps = {}, CardContent
 		<div className={getClassName(style.cardList, className)}>
 			{cards.map((card, index) => {
 				return (
-					<CardContainer key={`card-${index}`} className={style.card} {...CardContainerProps}>
+					<CardContainer key={`card-${index}`} className={style.card} card={card} {...CardContainerProps}>
 						<CardContent
 							iconName={card.iconName}
 							title={card.title}
@@ -33,6 +33,10 @@ CardList.propTypes = {
 		className: PropTypes.string,
 		withShadowOnHover: PropTypes.bool,
 		withHeadLine: PropTypes.bool,
+		ButtonProps: {
+			text: PropTypes.string,
+			onClick: PropTypes.func,
+		},
 	}),
 	CardContentProps: PropTypes.shape({
 		iconName: PropTypes.string,
