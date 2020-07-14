@@ -15,3 +15,7 @@ export const MainPage = () => {
 		</div>
 	);
 };
+
+//TODO: Update Icons in Header/Fooret (initial - white, onHover: gold)
+//TODO: Update form inputs (initial - grey, onHover/active: gold)
+//TODO: Add Active flags and reset on first mouse enter
