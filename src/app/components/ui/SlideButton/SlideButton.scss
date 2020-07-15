@@ -1,0 +1,77 @@
+@import '../../../styles/mixins';
+
+$gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gradient-gold;
+
+:global {
+  .slideButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: transparent;
+    border: none;
+
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+
+    &:active {
+      background: $gradient-gold;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0.6px;
+      right: 0;
+      bottom: 0;
+      background: $gradient-gold;
+      background-size: 300% 300%;
+      clip-path: polygon(0% 100%, 0 100%, 0 0, 100% 0, 100% calc(100% - 1px), 1px calc(100% - 1px), 1px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+
+
+    &:hover {
+      &:after {
+        border-radius: 4px;
+        clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) calc(100% - 1.5px), 1.5px calc(100% - 1.5px), 1.5px 100%, 100% 100%, 100% 0%, 0% 0%);
+        @include animation('frame-enter-slide-button .3s forwards ease-in-out reverse, gradient-animation-slide-button 4s ease-in-out infinite');
+      }
+    }
+
+    .leftSideIcon {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include keyframes(gradient-animation-slide-button) {
+    0% {
+      background-position: 15% 0;
+    }
+    50% {
+      background-position: 85% 100%;
+    }
+    100% {
+      background-position: 15% 0;
+    }
+  }
+  @include keyframes(frame-enter-slide-button) {
+    0% {
+      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) calc(100% - 1.5px), 1.5px calc(100% - 1.5px), 1.5px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    15% {
+      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) calc(100% - 1.5px), calc(100% - 1.5px) calc(100% - 1.5px), calc(100% - 1.5px) 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    50% {
+      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) 1.5px, 100% 0%, 0% 0%);
+    }
+    75% {
+      -webkit-clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 1.5px, 1.5px 0%, 0% 0%);
+    }
+    100% {
+      -webkit-clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 1.5px 100%, 0% 100%);
+    }
+  }
+}

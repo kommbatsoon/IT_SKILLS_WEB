@@ -1,5 +1,6 @@
 export {Button} from './Button/Button';
 export {ArrowButton} from './ArrowButton/ArrowButton';
+export {SlideButton} from './SlideButton/SlideButton';
 export {Input} from './Input/Input';
 export {Icon} from './Icon/Icon';
 export {Divider} from './Divider/Divider';

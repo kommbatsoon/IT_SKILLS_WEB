@@ -47,36 +47,10 @@
     top: 128px;
     right: 94px;
 
-    width: 51px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
     &_left {
+      @extend .button;
       left: 94px;
     }
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      background-image: $gradient-gold;
-    }
-
-    &:hover {
-      border: 1px solid $color-gold;
-      &:after {
-        display:none;
-      }
-    }
-  }
-
-  .leftSide {
-    transform: rotate(180deg);
   }
 }
 

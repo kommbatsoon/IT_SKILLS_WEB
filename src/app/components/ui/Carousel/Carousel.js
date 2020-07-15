@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import {Carousel as ResponsiveCarousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import {Icon, SocialIconsBar} from '@app/components';
-import {getClassName} from '@util/helpers';
-import {APP_ICON} from '@util/constants';
+import {SlideButton, SocialIconsBar} from '@app/components';
+
 
 import style from './Carousel.scss';
 
@@ -14,13 +13,13 @@ export const Carousel = ({slides}) => {
 	const renderArrowPrev = (clickHandler, hasPrev) => {
 		if (!hasPrev) return <></>;
 
-		return <SliderButton onClick={clickHandler} leftSide />;
+		return <SlideButton onClick={clickHandler} wrapperClassName={style.button_left} leftSide />;
 	};
 
 	const renderArrowNext = (clickHandler, hasNext) => {
 		if (!hasNext) return <></>;
 
-		return <SliderButton onClick={clickHandler} />;
+		return <SlideButton onClick={clickHandler} wrapperClassName={style.button} />;
 	};
 
 	return (
@@ -58,12 +57,4 @@ export const Carousel = ({slides}) => {
 
 Carousel.propTypes = {
 	slides: PropTypes.array.isRequired,
-};
-
-const SliderButton = ({onClick, leftSide = false}) => {
-	return (
-		<div className={getClassName(style.button, leftSide && style.button_left)} onClick={onClick}>
-			<Icon className={getClassName(leftSide && style.leftSide)} name={APP_ICON.rightArrowWhite} />
-		</div>
-	);
 };
