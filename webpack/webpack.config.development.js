@@ -33,6 +33,21 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: 'style-loader',
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+							importLoaders: 2,
+						},
+					},
+				],
+			},
+			{
 				test: /\.s[ac]ss$/i,
 				exclude: /(node_modules)/,
 				include: path.resolve(__dirname, '..', 'src'),

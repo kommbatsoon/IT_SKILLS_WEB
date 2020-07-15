@@ -47,7 +47,7 @@ export const Footer = () => {
 						info@it-skills.pro
 					</a>
 					<div className={style.socialIcons}>
-						<Icon name={APP_ICON.vkGold} className={style.icon} />
+						<Icon name={APP_ICON.vkWhite} className={style.icon} />
 						<Icon name={APP_ICON.fbWhite} className={style.icon} />
 						<Icon name={APP_ICON.instWhite} className={style.icon} />
 					</div>

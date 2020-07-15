@@ -1,5 +1,5 @@
 export const APP_ICON = {
-	vkGold: 'vkGold',
+	vkWhite: 'vkWhite',
 	fbWhite: 'fbWhite',
 	instWhite: 'instWhite',
 	practice: 'practice',
