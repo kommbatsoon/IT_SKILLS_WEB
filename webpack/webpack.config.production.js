@@ -107,6 +107,9 @@ module.exports = (env) => {
 				{
 					from: 'src/telegram.php',
 				},
+				{
+					from: 'src/.htaccess',
+				},
 			]),
 		].filter(Boolean),
 	};
