@@ -1,10 +1,16 @@
 :local {
   .header {
-    width: $container-width;
+    width: 100%;
     height: $header-height;
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(23, 23, 23, 0.01);
+    backdrop-filter: blur(50px);
+    z-index: 1000;
 
     .logo {
       width: 163px;
@@ -12,15 +18,19 @@
     }
 
     nav {
-      margin-left: 185px;
+      margin-left: 157px;
       display: flex;
 
       a {
-        margin-right: 70px;
+        margin-right: 62px;
         font-size: 16px;
         line-height: 20px;
         color: $color-text-primary;
         white-space: nowrap;
+
+        &:hover {
+          font-weight: bold;
+        }
       }
     }
 
@@ -31,7 +41,7 @@
 
       .icon {
         &:not(:first-child) {
-          margin-left: 32px;
+          margin-left: 62px;
         }
       }
     }

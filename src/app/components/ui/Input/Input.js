@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 const theme = {
 	color: {
 		textPrimary: '#F2F2F2',
+		border: '#B2B2B2',
 	},
 	gradient: {
 		goldPrimary:
@@ -48,9 +49,14 @@ const useStyles = makeStyles({
 			position: 'absolute',
 			bottom: '0',
 			left: '0',
-			background: theme.gradient.goldPrimary,
 			height: '1px',
 			width: '100%',
+		},
+		'& .MuiInput-underline:before': {
+			background: theme.color.border,
+		},
+		'& .MuiInput-underline:after': {
+			background: theme.gradient.goldPrimary,
 		},
 		'& .MuiInput-underline:hover:not(.Mui-disabled):before': {
 			border: 'none',

@@ -17,12 +17,14 @@ const DEFAULT_CONFIG = {
 			subtitle: 'SENIOR IOS-DEVELOPER',
 			description: 'Автор и преподаватель курса. 7 лет опыта в программировании, 5 лет в iOS-разработке',
 			path: ROUTER_CONFIG.COURSES.IOS,
+			image: <img src={require('@assets/images/avatars/den.png')} alt='Logo' className={style.avatar} />,
 		},
 		{
 			title: 'Павел Унгур',
 			subtitle: 'SENIOR FRONTEND-DEVELOPER',
 			description: 'Преподаватель курсе WEB-разработка. 4 года опыта в разработке',
 			path: ROUTER_CONFIG.COURSES.FRONTEND,
+			image: <img src={require('@assets/images/avatars/pavel.png')} alt='Logo' className={style.avatar} />,
 		},
 	],
 };
@@ -41,6 +43,7 @@ export const CoachesSection = ({config = DEFAULT_CONFIG, className}) => {
 					withShadowOnHover: true,
 					ButtonProps: {text: TEXT_CONFIG.moreDetails, onClick: handleMoreDetailsClick},
 				}}
+				CardContentProps={{tittleClassName: style.cardTitle, descriptionClassName: style.cardDescription}}
 			/>
 		</section>
 	);

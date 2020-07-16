@@ -3,13 +3,12 @@ $text-animation-duration: 1.3s;
 
 :local {
   .tabs {
-    margin-top: 100px;
     width: $container-width;
 
     .tab {
       height: 35px;
       h3 {
-        color: $color-text-secondary;
+        color: $color-text-dark-grey;
         cursor: pointer;
       }
 
@@ -19,7 +18,7 @@ $text-animation-duration: 1.3s;
 
       .line {
         margin: 9px 0 13px 0;
-        width: 98px;
+        width: 48px;
         height: 2px;
         background-image: linear-gradient(175.56deg, #FCD17B -51.47%, #C3971C -27.96%, #B88927 -4.62%, #E2C280 21.85%, #D3B16E 31.19%, #BF9955 44.29%, #A57617 67.17%, #AE8020 93.65%, #FFCF69 114.78%);
         background-size: cover;

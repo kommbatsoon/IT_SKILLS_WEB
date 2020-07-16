@@ -9,7 +9,15 @@ import {APP_ICON} from '@util/constants';
 
 import style from './Footer.scss';
 
-export const Footer = () => {
+const DEFAULT_CONFIG = {
+	contacts: {
+		phone: '+375292640518',
+		phoneToDisplay: '+375 29 264 05 18',
+		email: 'info@it-skills.pro',
+	},
+};
+
+export const Footer = ({config = DEFAULT_CONFIG}) => {
 	return (
 		<>
 			<Divider className={style.margin} />
@@ -18,9 +26,10 @@ export const Footer = () => {
 					<Link to={ROUTER_CONFIG.MAIN}>
 						<img src={require('@assets/images/logo-white.svg')} alt='Logo' className={style.logo} />
 					</Link>
+					<p className={style.copyright}>{TEXT_CONFIG.copyright}</p>
 				</div>
 				<div>
-					<h3>Основное</h3>
+					<h3>{TEXT_CONFIG.footerColumnTitle.main}</h3>
 					<nav>
 						<Link to={ROUTER_CONFIG.MAIN}>{TEXT_CONFIG.navigation.main}</Link>
 						<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>{TEXT_CONFIG.navigation.trialLessons}</Link>
@@ -30,7 +39,7 @@ export const Footer = () => {
 					</nav>
 				</div>
 				<div>
-					<h3>Курсы</h3>
+					<h3>{TEXT_CONFIG.footerColumnTitle.courses}</h3>
 					<nav>
 						<Link to={ROUTER_CONFIG.COURSES.IOS}>{TEXT_CONFIG.courses.ios}</Link>
 						<Link to={ROUTER_CONFIG.COURSES.FRONTEND}>{TEXT_CONFIG.courses.frontend}</Link>
@@ -39,12 +48,12 @@ export const Footer = () => {
 					</nav>
 				</div>
 				<div>
-					<h3>Поддержка</h3>
-					<a className={style.phone} href='tel:+375292640518'>
-						+375 29 264 05 18
+					<h3>{TEXT_CONFIG.footerColumnTitle.support}</h3>
+					<a className={style.phone} href={`tel:${config.contacts.phone}`}>
+						{config.contacts.phoneToDisplay}
 					</a>
-					<a className={style.email} href='mailto:info@it-skills.pro'>
-						info@it-skills.pro
+					<a className={style.email} href={`mailto:${config.contacts.email}`}>
+						{config.contacts.email}
 					</a>
 					<div className={style.socialIcons}>
 						<Icon name={APP_ICON.vkWhite} className={style.icon} />

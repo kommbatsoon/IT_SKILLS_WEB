@@ -20,16 +20,16 @@ const DEFAULT_CONFIG = {
 			path: ROUTER_CONFIG.COURSES.IOS,
 		},
 		{
-			iconName: APP_ICON.webDev,
-			title: 'Web-разработка',
-			description: 'Научим создавать сайты, используя HTML, CSS, JS, React и многое другое',
-			path: ROUTER_CONFIG.COURSES.FRONTEND,
-		},
-		{
 			iconName: APP_ICON.android,
 			title: 'Android-разработка',
 			description: 'Научим разрабатывать приложения для Android',
 			path: ROUTER_CONFIG.COURSES.ANDROID,
+		},
+		{
+			iconName: APP_ICON.webDev,
+			title: 'Web-разработка',
+			description: 'Научим создавать сайты, используя HTML, CSS, JS, React и многое другое',
+			path: ROUTER_CONFIG.COURSES.FRONTEND,
 		},
 		{
 			iconName: APP_ICON.webDesign,

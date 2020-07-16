@@ -1,7 +1,6 @@
 :local {
   .wrapper {
     width: $container-width;
-    margin: 0 auto;
 
     h2 {
       margin: 122px 0 42px 0;
@@ -9,11 +8,30 @@
   }
 
   .cardContainer {
-    flex-basis: calc(50% - 20px);
-    margin: 0 10px;
-    background-image: url('../../../../assets/images/test-avatar.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 256px 256px;
+    flex-basis: 50%;
+    height: 320px;
+  }
+
+  .avatar {
+    width: 220px;
+    height: 306px;
+    position: absolute;
+    top: 14px;
+    right: 0;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+
+  .cardTitle {
+    margin: 0 0 13px 0;
+  }
+
+  .cardDescription {
+    width: 328px
   }
 }

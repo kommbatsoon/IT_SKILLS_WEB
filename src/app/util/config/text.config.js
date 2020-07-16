@@ -20,6 +20,12 @@ export const TEXT_CONFIG = {
 		coaches: 'Преподователи — практики',
 	},
 
+	footerColumnTitle: {
+		main: 'Основное',
+		courses: 'Курсы',
+		support: 'Поддержка',
+	},
+
 	mainTitle: 'Научим разрабатывать с 0 за 6 месяцев',
 	trialLessonButton: 'Пробное занятие',
 
@@ -31,6 +37,7 @@ export const TEXT_CONFIG = {
 
 	moreDetails: 'Подробнее',
 	freeLabel: 'Бесплатно',
+	copyright: '2020 ANKDESIGN',
 
 	contactPoints: [
 		'У вас есть вопросы по обучению',

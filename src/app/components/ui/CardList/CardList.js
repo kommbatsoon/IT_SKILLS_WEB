@@ -22,6 +22,7 @@ export const CardList = ({className, cards, CardContainerProps = {}, CardContent
 							description={card.description}
 							{...CardContentProps}
 						/>
+						{card.image}
 					</CardContainer>
 				);
 			})}

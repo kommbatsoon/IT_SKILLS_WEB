@@ -81,7 +81,7 @@ $gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gra
       border-radius: 4px;
       background: $gradient-gold;
       background-size: 300% 300%;
-      clip-path: polygon(0% 100%, 1.5px 100%, 1.5px 1.5px, calc(100% - 1.5px) 1.5px, calc(100% - 1.5px) calc(100% - 1.5px), 1.5px calc(100% - 1.5px), 1.5px 100%, 100% 100%, 100% 0%, 0% 0%);
+      clip-path: polygon(0% 100%, 1px 100%, 1px 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 1px), 1px calc(100% - 1px), 1px 100%, 100% 100%, 100% 0%, 0% 0%);
       @include animation('frame-enter .3s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite');
     }
 
@@ -109,9 +109,14 @@ $gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gra
       width: 215px;
       padding: 0 30px;
       background: $gradient-gold;
-      .blackIcon { display: block; }
-      .whiteIcon { display: none; }
-      .text { display: block; }
+
+      &:after, .whiteIcon {
+        display: none;
+      }
+
+      .blackIcon, .text {
+        display: block;
+      }
     }
   }
 

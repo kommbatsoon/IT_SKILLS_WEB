@@ -25,6 +25,14 @@ $margin: 16px;
       height: 38px;
     }
 
+    .copyright {
+      margin-top: 40px;
+      font-size: 12px;
+      line-height: 15px;
+      color: $color-text-primary;
+      opacity: 0.5;
+    }
+
     h3 {
       font-family: $font-medium;
       font-size: 14px;
@@ -40,6 +48,10 @@ $margin: 16px;
         font-size: 14px;
         line-height: 18px;
         color: $color-text-primary;
+
+        &:hover {
+          font-weight: bold;
+        }
       }
     }
 
@@ -48,12 +60,20 @@ $margin: 16px;
       margin-top: $margin;
       display: block;
       color: $color-text-primary;
+
+      &:hover {
+        font-weight: bold;
+      }
     }
     .email {
       @extend .text;
       margin-top: $margin;
       display: block;
       color: $color-gold;
+
+      &:hover {
+        font-weight: bold;
+      }
     }
 
     .socialIcons {

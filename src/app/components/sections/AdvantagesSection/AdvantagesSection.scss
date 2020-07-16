@@ -1,14 +1,12 @@
 :local {
   .wrapper {
     width: $container-width;
-    margin: 0 auto;
 
     h2 {
-      margin: 122px 0 51px 0;
+      margin: 168px 0 51px 0;
     }
 
     .cardList {
-      margin-top: 51px;
       display: flex;
       flex-wrap: wrap;
 

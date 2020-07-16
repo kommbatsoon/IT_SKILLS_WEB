@@ -13,7 +13,7 @@ export const SocialIconsBar = (props) => {
 	return (
 		<div className={getClassName(style.socialIcons, className)}>
 			<Icon name={APP_ICON.vkWhite} className={style.icon} />
-			<Icon name={APP_ICON.fbWhite} className={style.icon} />
+			{/*<Icon name={APP_ICON.fbWhite} className={style.icon} />*/}
 			<Icon name={APP_ICON.instWhite} className={style.icon} />
 		</div>
 	);
