@@ -7,6 +7,7 @@ import {
 	CoursesSection,
 	CoachesSection,
 	ReviewsSection,
+	TopSection,
 } from '@app/components';
 
 import style from './MainPage.scss';
@@ -14,6 +15,7 @@ import style from './MainPage.scss';
 export const MainPage = () => {
 	return (
 		<div className='page-wrapper'>
+			<TopSection />
 			<CoursesSection />
 			<PerspectivesSection />
 			<AdvantagesSection />

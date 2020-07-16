@@ -1,16 +1,56 @@
 :local {
   .button {
-    padding: 10px 20px;
+    position: relative;
+    width: max-content;
+    border: none;
+    height: 45px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     min-width: 60px;
-    color: $color-text-primary;
-    border: 1px solid $color-gold;
     border-radius: 5px;
-    background: transparent;
     cursor: pointer;
+    background: $gradient-gold;
+
+    font-family: $font-medium;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+
+    .icon {
+      width: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
 
     &:hover {
-      background: $gradient-gold;
-      color: $color-black;
+      .icon {
+        width: 20px;
+        visibility: visible;
+        opacity: 1;
+      }
     }
+  }
+
+  .label {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    width: max-content;
+    padding: 0 15px;
+    height: 26px;
+    background: $color-black;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $color-text-primary;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
   }
 }

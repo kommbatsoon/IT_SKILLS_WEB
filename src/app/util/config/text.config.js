@@ -20,6 +20,9 @@ export const TEXT_CONFIG = {
 		coaches: 'Преподователи — практики',
 	},
 
+	mainTitle: 'Научим разрабатывать с 0 за 6 месяцев',
+	trialLessonButton: 'Пробное занятие',
+
 	emailLabel: 'Email',
 	phoneLabel: 'Телефон',
 	ourSupportChat: 'Наш чат поддержки',
@@ -27,6 +30,7 @@ export const TEXT_CONFIG = {
 	writeToUs: 'Пишите нам если',
 
 	moreDetails: 'Подробнее',
+	freeLabel: 'Бесплатно',
 
 	contactPoints: [
 		'У вас есть вопросы по обучению',
