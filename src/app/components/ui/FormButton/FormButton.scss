@@ -1,0 +1,49 @@
+@import '../../../styles/mixins';
+
+$gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gradient-gold;
+
+:local {
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 45px;
+    color: $color-black;
+    cursor: pointer;
+
+    border: solid 1px transparent;
+    border-radius: 5px;
+    background-image: $gradient;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 1px 1000px 1px $color-black inset;
+    transition: width 0.5s linear;
+
+    .blackIcon {
+      display: none;
+      margin-left: 30px;
+    }
+
+    .text {
+      font-family: $font-medium;
+      font-size: 18px;
+      line-height: 11px;
+      letter-spacing: 0.01em;
+      color: $color-text-primary;
+    }
+
+    &:hover {
+      box-shadow: none;
+      padding: 0 30px;
+
+      .text {
+        color: $color-black;
+      }
+      .blackIcon {
+        display: block;
+      }
+    }
+  }
+}

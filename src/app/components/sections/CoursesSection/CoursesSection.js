@@ -11,7 +11,6 @@ import history from '@app/history';
 import style from './CoursesSection.scss';
 
 const DEFAULT_CONFIG = {
-	sectionTitle: TEXT_CONFIG.sectionTitle.courses,
 	cards: [
 		{
 			iconName: APP_ICON.apple,

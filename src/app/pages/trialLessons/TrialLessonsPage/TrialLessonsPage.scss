@@ -1,16 +1,8 @@
 :local {
-  .nav {
-    margin-top: 30px;
-    display: flex;
-
-    li > a {
-      padding: 10px;
-      color: $color-white;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  .title {
+    margin: 183px 0 175px 0;
+  }
+  .form {
+    margin-top: 128px;
   }
 }
-

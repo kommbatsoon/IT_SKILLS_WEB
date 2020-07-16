@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {
 	AdvantagesSection,
@@ -10,9 +10,15 @@ import {
 	TopSection,
 } from '@app/components';
 
+import {FORM_FIELD_ENUM} from '@util/constants';
+
 import style from './MainPage.scss';
 
 export const MainPage = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<>
 			<TopSection />
@@ -21,7 +27,7 @@ export const MainPage = () => {
 			<AdvantagesSection />
 			<ReviewsSection />
 			<CoachesSection />
-			<EnrollmentForm className={style.form} />
+			<EnrollmentForm className={style.form} fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.PHONE]} />
 		</>
 	);
 };

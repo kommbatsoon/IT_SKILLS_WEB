@@ -1,21 +1,58 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {useEffect} from 'react';
+
+import {CoursesSection, EnrollmentForm, ReviewsSection} from '@app/components';
+import {FORM_CONFIG, TEXT_CONFIG} from '@util/config/text.config';
+import {APP_ICON, FORM_FIELD_ENUM} from '@util/constants';
 import {ROUTER_CONFIG} from '@util/config/router.config';
 
 import style from './CoursesPage.scss';
 
+const CONFIG = {
+	courses: {
+		cards: [
+			{
+				iconName: APP_ICON.apple,
+				title: 'iOS-разработка',
+				description: '19 марта в 19:00',
+				path: ROUTER_CONFIG.COURSES.IOS,
+			},
+			{
+				iconName: APP_ICON.android,
+				title: 'Android-разработка',
+				description: '19 марта в 19:00',
+				path: ROUTER_CONFIG.COURSES.ANDROID,
+			},
+			{
+				iconName: APP_ICON.webDev,
+				title: 'Web-разработка',
+				description: '19 марта в 19:00',
+				path: ROUTER_CONFIG.COURSES.FRONTEND,
+			},
+			{
+				iconName: APP_ICON.webDesign,
+				title: 'WEB-ДИЗАЙН',
+				description: '19 марта в 19:00',
+				path: ROUTER_CONFIG.COURSES.WEB_DESIGN,
+			},
+		],
+	},
+};
+
 export const CoursesPage = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
-		<div className='page-wrapper'>
-			<h1>Courses Page</h1>
-			<ul className={style.nav}>
-				<li>
-					<Link to={ROUTER_CONFIG.COURSES.FRONTEND}>Frontend</Link>
-				</li>
-				<li className='item'>
-					<Link to={ROUTER_CONFIG.COURSES.IOS}>IOS</Link>
-				</li>
-			</ul>
-		</div>
+		<>
+			<h1 className={style.title}>{TEXT_CONFIG.pageTitle.courses}</h1>
+			<CoursesSection config={CONFIG.courses} />
+			<ReviewsSection />
+			<EnrollmentForm
+				className={style.form}
+				config={FORM_CONFIG.coursesPage}
+				fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE]}
+			/>
+		</>
 	);
 };

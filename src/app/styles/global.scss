@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    min-width: $container-width;
     height: max-content;
   }
 }

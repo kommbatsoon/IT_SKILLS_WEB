@@ -1,6 +1,7 @@
 :local {
   .header {
     width: 100%;
+    min-width: $container-width;
     height: $header-height;
     display: flex;
     align-items: center;

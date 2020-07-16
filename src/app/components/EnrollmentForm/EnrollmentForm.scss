@@ -3,6 +3,9 @@
     width: 709px;
     padding: 59px 62px 65px 62px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     h3 {
       text-align: center;

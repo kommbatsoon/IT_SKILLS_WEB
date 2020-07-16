@@ -2,6 +2,7 @@ import React from 'react';
 
 import {EnrollmentForm} from '@app/components';
 import {FORM_CONFIG, TEXT_CONFIG} from '@util/config/text.config';
+import {FORM_FIELD_ENUM} from '@util/constants';
 
 import style from './ContactsPage.scss';
 
@@ -13,7 +14,7 @@ const CONTACTS = {
 export const ContactsPage = () => {
 	return (
 		<div className='page-wrapper'>
-			<h2 className={style.title}>{TEXT_CONFIG.navigation.contacts}</h2>
+			<h2 className={style.title}>{TEXT_CONFIG.pageTitle.contacts}</h2>
 			<div className={style.flexContainer}>
 				<div>
 					<h3>{TEXT_CONFIG.writeToUs}:</h3>
@@ -45,7 +46,10 @@ export const ContactsPage = () => {
 						</p>
 					</div>
 				</div>
-				<EnrollmentForm config={FORM_CONFIG.contactsPage} />
+				<EnrollmentForm
+					config={FORM_CONFIG.contactsPage}
+					fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.PHONE, FORM_FIELD_ENUM.QUESTION]}
+				/>
 			</div>
 		</div>
 	);

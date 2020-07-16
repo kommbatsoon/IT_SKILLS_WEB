@@ -13,3 +13,10 @@ export const APP_ICON = {
 	rightArrowBlack: 'rightArrowBlack',
 	rightArrowWhite: 'rightArrowWhite',
 };
+
+export const FORM_FIELD_ENUM = {
+	NAME: 'NAME',
+	EMAIL: 'EMAIL',
+	PHONE: 'PHONE',
+	QUESTION: 'QUESTION',
+};
