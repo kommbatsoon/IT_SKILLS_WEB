@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Carousel as ResponsiveCarousel} from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
 import {SlideButton, SocialIconsBar} from '@app/components';
 
-
+import './Carousel.lib.scss';
 import style from './Carousel.scss';
 
 export const Carousel = ({slides}) => {
