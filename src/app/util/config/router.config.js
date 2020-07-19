@@ -14,10 +14,8 @@ export const ROUTER_CONFIG = {
 	},
 	TRIAL_LESSON: {
 		LIST: '/trial-lessons',
-		IOS: '/',
+		IOS: '/trial-lessons/ios',
 		FRONTEND: '/',
-
-		// IOS: '/trial-lessons/ios',
 		// FRONTEND: '/trial-lessons/frontend',
 	},
 	CONTACTS: '/contacts',

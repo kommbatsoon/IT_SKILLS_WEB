@@ -24,6 +24,7 @@ h1 {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #E7E7E7;
+  font-weight: normal;
 }
 h2 {
   font-family: $font-bold;
@@ -33,6 +34,7 @@ h2 {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $color-text-primary;
+  font-weight: normal;
 }
 h3 {
   font-family: $font-bold;
@@ -41,12 +43,13 @@ h3 {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $color-text-primary;
+  font-weight: normal;
 }
 
 h4 {
   font-family: $font-medium;
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -58,6 +61,7 @@ p {
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: $color-text-secondary;
+  font-weight: normal;
 }
 
 a {

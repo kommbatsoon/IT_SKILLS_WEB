@@ -1,0 +1,28 @@
+:local {
+  .wrapper {
+    width: $container-width;
+
+    h2 {
+      margin: 200px 0 76px 0;
+    }
+
+    .items {
+      display: flex;
+      justify-content: space-around;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          margin-top: 19px;
+          text-align: center;
+          font-size: 16px;
+          line-height: 20px;
+          font-family: $font-medium;
+        }
+      }
+    }
+  }
+}

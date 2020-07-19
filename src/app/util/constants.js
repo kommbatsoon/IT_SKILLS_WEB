@@ -7,11 +7,16 @@ export const APP_ICON = {
 	support: 'support',
 	blank: 'blank',
 	apple: 'apple',
+	swift: 'swift',
 	android: 'android',
 	webDesign: 'webDesign',
 	webDev: 'webDev',
 	rightArrowBlack: 'rightArrowBlack',
 	rightArrowWhite: 'rightArrowWhite',
+	consult: 'consult',
+	signUp: 'signUp',
+	calendar: 'calendar',
+	door: 'door',
 };
 
 export const FORM_FIELD_ENUM = {
@@ -19,4 +24,11 @@ export const FORM_FIELD_ENUM = {
 	EMAIL: 'EMAIL',
 	PHONE: 'PHONE',
 	QUESTION: 'QUESTION',
+};
+
+export const COURSE_ENUM = {
+	IOS: 'IOS',
+	FRONTEND: 'FRONTEND',
+	WEB_DESIGN: 'WEB_DESIGN',
+	ANDROID: 'ANDROID',
 };

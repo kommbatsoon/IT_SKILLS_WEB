@@ -1,0 +1,33 @@
+:local {
+  .wrapper {
+    width: $container-width;
+    height: 317px;
+    box-shadow: $shadow-primary;
+    border-radius: 5px;
+    margin: 119px 0 122px 0;
+    display: flex;
+
+    .line {
+      min-width: 5px;
+      height: 100%;
+      border-radius: 5px 0 0 5px;
+      background: $gradient-gold;
+    }
+
+    .content {
+      margin-left: 25px;
+
+      h2 {
+        margin: 42px 0 16px 0;
+        text-align: left;
+      }
+    }
+
+    .image {
+      margin-left: auto;
+      height: 100%;
+      width: 430px;
+    }
+  }
+}
+

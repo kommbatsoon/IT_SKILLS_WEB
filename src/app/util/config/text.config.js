@@ -25,6 +25,9 @@ export const TEXT_CONFIG = {
 		advantages: 'Преимущества обучения',
 		reviews: 'Отзывы учеников',
 		coaches: 'Преподователи — практики',
+		howToGet: 'КАК ПОПАСТЬ НА ПРОБНОЕ ЗАНЯТИЕ',
+		whoInterested: 'Кому будет интересно',
+		lessonProgram: 'ПРОГРАММА ПРОБНОГО ЗАНЯТИЯ',
 	},
 
 	footerColumnTitle: {
@@ -35,16 +38,18 @@ export const TEXT_CONFIG = {
 
 	mainTitle: 'Научим разрабатывать с 0 за 6 месяцев',
 	trialLessonButton: 'Пробное занятие',
+	freeOnlineLesson: 'Бесплатное онлайн-занятие',
+	copyright: '2020 ANKDESIGN',
 
 	emailLabel: 'Email',
 	phoneLabel: 'Телефон',
+	whenLabel: 'Когда',
+	signUpLabel: 'Зарегестрироваться',
 	ourSupportChat: 'Наш чат поддержки',
 	ourContacts: 'Наши контакты',
 	writeToUs: 'Пишите нам если',
-
 	moreDetails: 'Подробнее',
 	freeLabel: 'Бесплатно',
-	copyright: '2020 ANKDESIGN',
 
 	contactPoints: [
 		'У вас есть вопросы по обучению',

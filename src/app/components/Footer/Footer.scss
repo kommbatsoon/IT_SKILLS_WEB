@@ -1,3 +1,4 @@
+@import '../../styles/mixins';
 $margin: 16px;
 
 :local {
@@ -67,9 +68,9 @@ $margin: 16px;
     }
     .email {
       @extend .text;
+      @include goldGradientFont();
       margin-top: $margin;
       display: block;
-      color: $color-gold;
 
       &:hover {
         font-weight: bold;

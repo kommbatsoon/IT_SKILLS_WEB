@@ -4,3 +4,7 @@ export {CoursesSection} from './CoursesSection/CoursesSection';
 export {CoachesSection} from './CoachesSection/CoachesSection';
 export {ReviewsSection} from './ReviewsSection/ReviewsSection';
 export {TopSection} from './TopSection/TopSection';
+export {HowToGetSection} from './HowToGetSection/HowToGetSection';
+export {WhoInterestedSection} from './WhoInterestedSection/WhoInterestedSection';
+export {LessonProgramSection} from './LessonProgramSection/LessonProgramSection';
+export {LessonTopSection} from './LessonTopSection/LessonTopSection';

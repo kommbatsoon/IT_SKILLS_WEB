@@ -1,0 +1,51 @@
+$line-animation-duration: 0.3s;
+$text-animation-duration: 1.3s;
+
+:local {
+  .tabs {
+    width: $container-width;
+    display: flex;
+
+    .tab {
+      height: 87px;
+      h3 {
+        margin-top: 22px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-text-dark-grey;
+        cursor: pointer;
+      }
+
+      .line {
+        margin: 10px 0 14px 0;
+        width: 48px;
+        height: 2px;
+        background-image: $gradient-gold;
+        background-size: cover;
+        transition: width $line-animation-duration linear;
+      }
+
+      .description {
+        flex-basis: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $text-animation-duration;
+      }
+
+      &:hover {
+        h3 {
+          color: $color-text-primary;
+        }
+
+        .line {
+          width: 98px;
+        }
+
+        .description {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
