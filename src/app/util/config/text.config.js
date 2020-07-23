@@ -28,6 +28,10 @@ export const TEXT_CONFIG = {
 		howToGet: 'КАК ПОПАСТЬ НА ПРОБНОЕ ЗАНЯТИЕ',
 		whoInterested: 'Кому будет интересно',
 		lessonProgram: 'ПРОГРАММА ПРОБНОГО ЗАНЯТИЯ',
+		howOnlineTrainingGoes: 'КАК ПРОХОДИТ ОНЛАЙН-ОБУЧЕНИЕ',
+		learnOnCourse: 'научитесь на курсе',
+		coachOfCourse: 'Преподаватель курса',
+		speaker: 'Спикер',
 	},
 
 	footerColumnTitle: {
@@ -44,12 +48,15 @@ export const TEXT_CONFIG = {
 	emailLabel: 'Email',
 	phoneLabel: 'Телефон',
 	whenLabel: 'Когда',
-	signUpLabel: 'Зарегестрироваться',
+	registerLabel: 'Зарегестрироваться',
+	signUpLabel: 'Записаться',
 	ourSupportChat: 'Наш чат поддержки',
 	ourContacts: 'Наши контакты',
 	writeToUs: 'Пишите нам если',
 	moreDetails: 'Подробнее',
 	freeLabel: 'Бесплатно',
+	groupStart: 'Старт группы',
+	freePlaces: 'Свободные места',
 
 	contactPoints: [
 		'У вас есть вопросы по обучению',

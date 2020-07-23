@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {
+	CoachSection,
 	CourseCard,
 	EnrollmentForm,
 	HowToGetSection,
@@ -8,7 +9,7 @@ import {
 	LessonTopSection,
 	WhoInterestedSection,
 } from '@app/components';
-import {FORM_CONFIG} from '@util/config/text.config';
+import {FORM_CONFIG, TEXT_CONFIG} from '@util/config/text.config';
 import {COURSE_ENUM, FORM_FIELD_ENUM} from '@util/constants';
 
 import style from './IOSLessonPage.scss';
@@ -27,6 +28,7 @@ export const IOSLessonPage = () => {
 			<WhoInterestedSection type={type} />
 			<CourseCard type={type} />
 			<LessonProgramSection type={type} />
+			<CoachSection type={type} title={TEXT_CONFIG.sectionTitle.speaker} shortMode />
 			<EnrollmentForm
 				className={style.form}
 				config={FORM_CONFIG.trialLessonsPage}

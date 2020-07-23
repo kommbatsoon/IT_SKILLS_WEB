@@ -1,0 +1,77 @@
+:local {
+  .wrapper {
+    margin-top: 116px;
+    height: 437px;
+    display: flex;
+    justify-content: center;
+    width: $container-width;
+  }
+
+  .leftSide {
+    flex-basis: 314px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    .bgImage {
+      width: 170px;
+      height: 170px;
+    }
+
+    .avatar {
+      width: 314px;
+      height: 437px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .rightSide {
+    margin-left: 87px;
+    flex-basis: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      text-align: left;
+    }
+
+    .info {
+      width: 312px;
+    }
+
+    .title {
+      margin-top: 24px;
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      margin-top: 20px;
+      font-family: $font-medium;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: $color-text-primary;
+    }
+
+    .description {
+        margin: 22px 0 24px 0;
+    }
+
+    .button {
+      margin-top: 40px;
+      width: 170px;
+      transition: width 0.2s ease-in-out;
+
+      &:hover {
+        width: 220px;
+      }
+    }
+  }
+
+
+}

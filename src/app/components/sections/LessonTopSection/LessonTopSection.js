@@ -44,7 +44,7 @@ export const LessonTopSection = ({className, type = COURSE_ENUM.IOS}) => {
 			<div className={style.flexWrapper}>
 				<h1>{config.title}</h1>
 				<Button className={style.button} handleClick={handleMoreDetailsClick}>
-					{TEXT_CONFIG.signUpLabel}
+					{TEXT_CONFIG.registerLabel}
 				</Button>
 			</div>
 			{config.image}

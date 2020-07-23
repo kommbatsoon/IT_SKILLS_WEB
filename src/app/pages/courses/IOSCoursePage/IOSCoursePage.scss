@@ -1,0 +1,23 @@
+:local {
+  .form {
+    margin-top: 128px;
+  }
+
+  .advantagesSection {
+    margin-top: 200px;
+  }
+
+  .howGoesCards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      flex-basis: 50%;
+    }
+  }
+
+  .pointsWrapper {
+    margin: 0 auto;
+    width: max-content;
+  }
+}

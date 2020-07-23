@@ -13,3 +13,5 @@ export {VerticalTabs} from './VerticalTabs/VerticalTabs';
 export {Carousel} from './Carousel/Carousel';
 export {SocialIconsBar} from './SocialIconsBar/SocialIconsBar';
 export {CourseCard} from './CourseCard/CourseCard';
+export {SectionContainer} from './SectionContainer/SectionContainer';
+export {PointList} from './PointList/PointList';

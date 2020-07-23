@@ -2,12 +2,11 @@ export const ROUTER_CONFIG = {
 	MAIN: '/',
 	COURSES: {
 		LIST: '/courses',
-		IOS: '/',
+		IOS: '/courses/ios',
 		FRONTEND: '/',
 		WEB_DESIGN: '/',
 		ANDROID: '/',
 
-		// IOS: '/courses/ios',
 		// FRONTEND: '/courses/frontend',
 		// WEB_DESIGN: '/courses',
 		// ANDROID: '/courses',

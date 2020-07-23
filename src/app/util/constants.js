@@ -17,6 +17,12 @@ export const APP_ICON = {
 	signUp: 'signUp',
 	calendar: 'calendar',
 	door: 'door',
+	dollar: 'dollar',
+	home: 'home',
+	diploma: 'diploma',
+	conference: 'conference',
+	message: 'message',
+	check: 'check',
 };
 
 export const FORM_FIELD_ENUM = {

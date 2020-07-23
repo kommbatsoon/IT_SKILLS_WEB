@@ -5,9 +5,12 @@ $text-animation-duration: 1.3s;
   .tabs {
     width: $container-width;
     display: flex;
+    justify-content: space-between;
 
     .tab {
+      max-width: 230px;
       height: 87px;
+
       h3 {
         margin-top: 22px;
         font-size: 16px;
