@@ -12,3 +12,6 @@ export {HowToGetSection} from './HowToGetSection/HowToGetSection';
 export {WhoInterestedSection} from './WhoInterestedSection/WhoInterestedSection';
 export {LessonProgramSection} from './LessonProgramSection/LessonProgramSection';
 export {LessonTopSection} from './LessonTopSection/LessonTopSection';
+
+export {SectionWithCards} from './SectionWithCards/SectionWithCards';
+export {SectionWithPoints} from './SectionWithPoints/SectionWithPoints';

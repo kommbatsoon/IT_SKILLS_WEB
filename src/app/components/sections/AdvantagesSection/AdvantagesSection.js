@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {CardContainer, CardContent} from '@app/components';
 import {getClassName} from '@util/helpers';
@@ -38,14 +38,22 @@ const DEFAULT_CONFIG = {
 };
 
 export const AdvantagesSection = ({config = DEFAULT_CONFIG, className}) => {
+	const [active, setActive] = useState(0);
+
 	return (
 		<section className={getClassName(style.wrapper, className)}>
 			<h2>{config.sectionTitle}</h2>
 
-			<div className={style.cardList}>
+			<div className={style.cardList} onMouseEnter={() => setActive(-1)}>
 				{config.cards.map((card, index) => {
+					const isActive = active === index;
+
 					return (
-						<CardContainer key={`advantage-card-${index}`} className={style.card} withShadowOnHover>
+						<CardContainer
+							key={`advantage-card-${index}`}
+							className={style.card}
+							withShadowOnHover={!isActive}
+						>
 							<CardContent iconName={card.iconName} title={card.title} description={card.description} />
 						</CardContainer>
 					);

@@ -14,12 +14,13 @@
       left: 382px;
       width: 260px;
       height: 312px;
-      opacity: .1;
+      opacity: .15;
     }
 
     .when {
       font-size: 18px;
       line-height: 23px;
+      color: $color-text-dark-grey;
 
       .date {
         color: $color-text-primary;
@@ -32,12 +33,12 @@
       font-size: 24px;
       line-height: 30px;
       text-align: left;
-      color: $color-text-secondary;
+      color: $color-text-dark-grey;
     }
 
     h1 {
       font-size: 48px;
-      line-height: 60px;
+      line-height: 48px;
       text-align: left;
     }
 

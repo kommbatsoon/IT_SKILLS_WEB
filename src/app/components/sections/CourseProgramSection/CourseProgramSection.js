@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Button, SectionContainer} from '@app/components';
 import {getClassName} from '@util/helpers';
@@ -59,12 +59,20 @@ const PROGRAM_CONFIG = {
 				],
 			},
 		],
+		displayedCount: 6,
 	},
 };
 
 export const CourseProgramSection = ({type = COURSE_ENUM.IOS, className}) => {
 	const config = PROGRAM_CONFIG[type];
-	const handleSignUpClick = () => console.log('Записаться на курс: ', config);
+
+	const [isCollapsed, setCollapsed] = useState(true);
+
+	const displayedTopics = isCollapsed ? config.topics.slice(0, config.displayedCount) : config.topics;
+
+	const handleShowMoreClick = () => {
+		setCollapsed(!isCollapsed);
+	};
 
 	return (
 		<SectionContainer
@@ -73,7 +81,7 @@ export const CourseProgramSection = ({type = COURSE_ENUM.IOS, className}) => {
 			withContainerWidth
 		>
 			<div className={style.topicGrid}>
-				{config.topics.map((topic, topicIndex) => {
+				{displayedTopics.map((topic, topicIndex) => {
 					return (
 						<div key={`topic-${topicIndex}`} className={style.topic}>
 							<div className={style.line} />
@@ -94,8 +102,8 @@ export const CourseProgramSection = ({type = COURSE_ENUM.IOS, className}) => {
 				})}
 			</div>
 
-			<Button className={style.button} onClick={handleSignUpClick} withArrow={false}>
-				{TEXT_CONFIG.seeFullProgram}
+			<Button className={style.button} onClick={handleShowMoreClick} withArrow={false}>
+				{isCollapsed ? TEXT_CONFIG.seeFullProgram : TEXT_CONFIG.seeCollapsedProgram}
 			</Button>
 		</SectionContainer>
 	);

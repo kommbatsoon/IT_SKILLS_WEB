@@ -1,17 +1,16 @@
 import React, {useEffect} from 'react';
 
 import {
-	CardContainer,
-	CardContent,
 	CoachSection,
 	CourseProgramSection,
 	CourseTopSection,
 	EnrollmentForm,
 	PriceCardsSection,
-	PointList,
 	ReviewsSection,
 	SectionContainer,
 	VerticalTabs,
+	SectionWithCards,
+	SectionWithPoints,
 } from '@app/components';
 import {FORM_CONFIG, TEXT_CONFIG} from '@util/config/text.config';
 import {APP_ICON, COURSE_ENUM, FORM_FIELD_ENUM} from '@util/constants';
@@ -34,7 +33,7 @@ const CONFIG = {
 			},
 			{
 				icon: APP_ICON.practice,
-				title: 'Упор \n на практику',
+				title: 'Основной упор на практику',
 				description: 'Наши преподаватели — практикующие специалисты, а не просто теоретики.',
 			},
 			{
@@ -100,21 +99,14 @@ export const IOSCoursePage = () => {
 				<VerticalTabs tabs={config.advantagesTabs} />
 			</SectionContainer>
 
-			<SectionContainer title={TEXT_CONFIG.sectionTitle.howOnlineTrainingGoes} withContainerWidth>
-				<div className={style.howGoesCards}>
-					{config.howGoesCards?.map((card, index) => {
-						return (
-							<CardContainer key={`how-goes-card-${index}`} className={style.card} withShadowOnHover>
-								<CardContent iconName={card.icon} title={card.title} description={card.description} />
-							</CardContainer>
-						);
-					})}
-				</div>
-			</SectionContainer>
+			<SectionWithCards
+				keyStart={'how-goes-card'}
+				title={TEXT_CONFIG.sectionTitle.howOnlineTrainingGoes}
+				items={config.howGoesCards}
+				classes={{root: style.howGoesSection}}
+			/>
 
-			<SectionContainer title={TEXT_CONFIG.sectionTitle.learnOnCourse} withContainerWidth>
-				<PointList className={style.pointsWrapper} points={config.learnOnCoursePoints} />
-			</SectionContainer>
+			<SectionWithPoints title={TEXT_CONFIG.sectionTitle.learnOnCourse} items={config.learnOnCoursePoints} />
 
 			<CoachSection type={type} title={TEXT_CONFIG.sectionTitle.coachOfCourse} />
 
@@ -125,7 +117,7 @@ export const IOSCoursePage = () => {
 			<ReviewsSection />
 			<EnrollmentForm
 				className={style.form}
-				config={FORM_CONFIG.coursesPage}
+				config={FORM_CONFIG.coursePage}
 				fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE]}
 			/>
 		</>

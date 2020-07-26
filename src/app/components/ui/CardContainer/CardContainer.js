@@ -9,16 +9,25 @@ import {APP_ICON} from '@util/constants';
 import style from './CardContainer.scss';
 
 export const CardContainer = (props) => {
-	const {className, children, card, withShadowOnHover = false, withHeadLine = false, ButtonProps} = props;
-	const [isHovered, setHovered] = useState(() => false);
+	const {
+		className,
+		children,
+		card,
+		isActive = false,
+		withShadowOnHover = false,
+		withHeadLine = false,
+		ButtonProps,
+	} = props;
+
+	const [isHovered, setHovered] = useState(() => isActive);
 
 	return (
 		<div
 			className={getClassName(
 				style.card,
-				withShadowOnHover && style.shadowOnHover,
-				!withShadowOnHover && withHeadLine && style.headLine,
-				withShadowOnHover && withHeadLine && style.headLineOnHover,
+				!isActive && withShadowOnHover && style.shadowOnHover,
+				(isActive || (!withShadowOnHover && withHeadLine)) && style.headLine,
+				!isActive && withShadowOnHover && withHeadLine && style.headLineOnHover,
 				className,
 			)}
 			onMouseEnter={() => setHovered(true)}
@@ -41,6 +50,7 @@ export const CardContainer = (props) => {
 export const CardContainerPropTypes = {
 	children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
 	className: PropTypes.string,
+	isActive: PropTypes.bool,
 	withShadowOnHover: PropTypes.bool,
 	withHeadLine: PropTypes.bool,
 	card: PropTypes.shape({

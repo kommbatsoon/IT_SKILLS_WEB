@@ -8,10 +8,10 @@ import {getClassName} from '@util/helpers';
 import style from './Button.scss';
 
 export const Button = (props) => {
-	const {children, className, handleClick, labelText, withArrow = true} = props;
+	const {children, className, onClick, labelText, withArrow = true} = props;
 
 	return (
-		<button className={getClassName(style.button, className)} onClick={handleClick}>
+		<button className={getClassName(style.button, className)} onClick={onClick}>
 			{children}
 			{withArrow && <Icon className={style.icon} name={APP_ICON.rightArrowBlack} />}
 			{labelText && <div className={style.label}>{labelText}</div>}

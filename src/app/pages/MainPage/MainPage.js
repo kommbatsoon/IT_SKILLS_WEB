@@ -41,3 +41,6 @@ export const MainPage = () => {
 //TODO: Use one gold gradient;
 //TODO: Unificate button props (onClick, text, etc.);
 //TODO: Show/collapse program;
+
+//TODO: Course page. How goes cards height (to common);
+//TODO: Create SectionWith... components (verticalTabs, horizontalTabs);

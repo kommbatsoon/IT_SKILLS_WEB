@@ -38,7 +38,7 @@ $text-animation-duration: 1.3s;
         }
       }
 
-      &:hover {
+      &:hover, &.active {
         h3 {
           color: $color-text-primary;
         }

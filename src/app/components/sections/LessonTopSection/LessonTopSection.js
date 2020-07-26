@@ -11,22 +11,18 @@ const CONFIG = {
 	[COURSE_ENUM.IOS]: {
 		date: '25 мая в 19:00',
 		title: 'по iOS-разработке',
-		image: <img src={require('@assets/images/icons/apple.svg')} alt='Image' className={style.bgImg} />,
 	},
 	[COURSE_ENUM.FRONTEND]: {
 		date: '25 мая в 19:00',
 		title: 'по FRONTEND-разработке',
-		image: <img src={require('@assets/images/icons/webDev.svg')} alt='Image' className={style.bgImg} />,
 	},
 	[COURSE_ENUM.WEB_DESIGN]: {
 		date: '25 мая в 19:00',
 		title: 'по WEB-дизайну',
-		image: <img src={require('@assets/images/icons/webDesign.svg')} alt='Image' className={style.bgImg} />,
 	},
 	[COURSE_ENUM.ANDROID]: {
 		date: '25 мая в 19:00',
 		title: 'по ANDROID-разработке',
-		image: <img src={require('@assets/images/icons/android.svg')} alt='Image' className={style.bgImg} />,
 	},
 };
 
@@ -47,7 +43,24 @@ export const LessonTopSection = ({className, type = COURSE_ENUM.IOS}) => {
 					{TEXT_CONFIG.registerLabel}
 				</Button>
 			</div>
-			{config.image}
+			<CourseImage type={type} className={style.bgImg} />
 		</section>
 	);
+};
+
+const CourseImage = ({type, className}) => {
+	switch (type) {
+		case COURSE_ENUM.IOS: {
+			return <img src={require('@assets/images/icons/apple.svg')} alt='Image' className={className} />;
+		}
+		case COURSE_ENUM.FRONTEND: {
+			return <img src={require('@assets/images/icons/webDev.svg')} alt='Image' className={className} />;
+		}
+		case COURSE_ENUM.WEB_DESIGN: {
+			return <img src={require('@assets/images/icons/webDesign.svg')} alt='Image' className={className} />;
+		}
+		case COURSE_ENUM.ANDROID: {
+			return <img src={require('@assets/images/icons/android.svg')} alt='Image' className={className} />;
+		}
+	}
 };

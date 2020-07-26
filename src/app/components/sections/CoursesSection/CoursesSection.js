@@ -46,6 +46,7 @@ export const CoursesSection = ({config = DEFAULT_CONFIG, className}) => {
 		<section className={getClassName(style.wrapper, className)}>
 			<CardList
 				cards={config.cards}
+				withFirstActive
 				CardContainerProps={{
 					withShadowOnHover: true,
 					withHeadLine: true,

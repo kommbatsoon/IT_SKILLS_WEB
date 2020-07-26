@@ -31,8 +31,8 @@ export const IOSLessonPage = () => {
 			<CoachSection type={type} title={TEXT_CONFIG.sectionTitle.speaker} shortMode />
 			<EnrollmentForm
 				className={style.form}
-				config={FORM_CONFIG.trialLessonsPage}
-				fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.PHONE]}
+				config={FORM_CONFIG.trialLessonPage}
+				fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE]}
 			/>
 		</>
 	);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Button, CourseEnrollmentForm} from '@app/components';
+import {CourseEnrollmentForm} from '@app/components';
 import {getClassName} from '@util/helpers';
 import {TEXT_CONFIG} from '@util/config/text.config';
 import {COURSE_ENUM} from '@util/constants';
@@ -19,21 +19,18 @@ const CONFIG = {
 		title: 'по FRONTEND-разработке',
 		description: 'Научим с нуля HTML, CSS и JavaScript',
 		period: 'за 6 месяцев',
-		image: <img src={require('@assets/images/icons/webDev.svg')} alt='Image' className={style.bgImg} />,
 	},
 	[COURSE_ENUM.WEB_DESIGN]: {
 		date: '25 мая в 19:00',
 		title: 'по WEB-дизайну',
 		description: 'Научим с нуля HTML, CSS и JavaScript',
 		period: 'за 6 месяцев',
-		image: <img src={require('@assets/images/icons/webDesign.svg')} alt='Image' className={style.bgImg} />,
 	},
 	[COURSE_ENUM.ANDROID]: {
 		date: '25 мая в 19:00',
 		title: 'по ANDROID-разработке',
 		description: 'Научим с нуля HTML, CSS и JavaScript',
 		period: 'за 6 месяцев',
-		image: <img src={require('@assets/images/icons/android.svg')} alt='Image' className={style.bgImg} />,
 	},
 };
 
@@ -48,7 +45,7 @@ export const CourseTopSection = ({className, type = COURSE_ENUM.IOS}) => {
 				<p className={style.description}>
 					{config.description} <span className={style.period}>{config.period}</span>
 				</p>
-				<Image type={type} />
+				<CourseImage type={type} className={style.bgImg} />
 			</div>
 
 			<CourseEnrollmentForm />
@@ -56,13 +53,19 @@ export const CourseTopSection = ({className, type = COURSE_ENUM.IOS}) => {
 	);
 };
 
-const Image = ({type}) => {
+const CourseImage = ({type, className}) => {
 	switch (type) {
 		case COURSE_ENUM.IOS: {
-			return <img src={require('@assets/images/icons/apple.svg')} alt='Image' className={style.bgImg} />;
+			return <img src={require('@assets/images/icons/apple.svg')} alt='Image' className={className} />;
 		}
-		default: {
-			return <img src={require('@assets/images/icons/apple.svg')} alt='Image' className={style.bgImg} />;
+		case COURSE_ENUM.FRONTEND: {
+			return <img src={require('@assets/images/icons/webDev.svg')} alt='Image' className={className} />;
+		}
+		case COURSE_ENUM.WEB_DESIGN: {
+			return <img src={require('@assets/images/icons/webDesign.svg')} alt='Image' className={className} />;
+		}
+		case COURSE_ENUM.ANDROID: {
+			return <img src={require('@assets/images/icons/android.svg')} alt='Image' className={className} />;
 		}
 	}
 };

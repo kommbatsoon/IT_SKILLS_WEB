@@ -1,4 +1,10 @@
 :local {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .point {
     position: relative;
     font-size: 18px;
@@ -41,7 +47,7 @@
       margin-right: 15px;
     }
 
-    &:hover {
+    &:hover, &.active {
       &:before {
         opacity: 1;
         visibility: visible;
