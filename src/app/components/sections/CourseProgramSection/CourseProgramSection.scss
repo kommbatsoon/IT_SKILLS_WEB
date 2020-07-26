@@ -1,0 +1,56 @@
+@import '../../../styles/mixins';
+$line-animation-duration: 0.3s;
+
+:local {
+  .wrapper {
+    margin-top: 152px;
+
+    .topicGrid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .topic {
+        padding: 24px;
+        width: 359px;
+        box-sizing: border-box;
+
+        .line {
+          width: 48px;
+          height: 2px;
+          background-image: $gradient-gold;
+          background-size: cover;
+          transition: width $line-animation-duration linear;
+        }
+
+        .title {
+          margin: 13px 0 15px 0;
+          font-family: $font-medium;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+        }
+        .paragraph {
+          margin-bottom: 10px;
+
+          .gold {
+            margin-right: 10px;
+            @include goldGradientFont();
+          }
+        }
+
+        &:hover {
+          .line {
+            width: 98px;
+          }
+        }
+      }
+    }
+
+    .button {
+      margin: 40px auto 0 auto;
+      width: 314px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import '../../../styles/mixins';
+
+$gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gradient-gold;
+
+:local {
+  .wrapper {
+
+    .flexContainer {
+      display: flex;
+
+      .card {
+        margin: 0 10px;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .priceContainer {
+          border: solid 1px transparent;
+          padding: 12px 32px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .price {
+            font-family: $font-bold;
+            font-size: 36px;
+            line-height: 45px;
+            text-transform: uppercase;
+            color: $color-text-primary;
+          }
+
+          .sale {
+            font-size: 18px;
+            line-height: 23px;
+            margin-left: 10px;
+
+            @include goldGradientFont();
+          }
+        }
+
+        .buyersChoice {
+          border: solid 1px transparent;
+          border-radius: 5px;
+          background-image: $gradient;
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          box-shadow: 1px 1000px 1px $color-black inset;
+
+          &_label {
+            position: absolute;
+            right: 16px;
+            top: -13px;
+            background-color: $color-black;
+            border-radius: 5px;
+            padding: 5px 15px 3px 15px;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: $color-text-primary;
+          }
+        }
+
+        .paymentType {
+          margin-top: 17px;
+          font-family: $font-medium;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          color: $color-text-primary;
+        }
+
+        .button {
+          margin-top: 40px;
+          width: 288px;
+          transition: width 0.2s ease-in-out;
+
+          &:hover {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -35,3 +35,9 @@ export const MainPage = () => {
 //TODO: Update form inputs (initial - grey, onHover/active!!!: gold);
 //TODO: Add Active flags and reset on first mouse enter;
 //TODO: Integrate Telegram;
+//TODO: Make common config (by course);
+//TODO: Replace type with course;
+//TODO: Move all variables to var file;
+//TODO: Use one gold gradient;
+//TODO: Unificate button props (onClick, text, etc.);
+//TODO: Show/collapse program;

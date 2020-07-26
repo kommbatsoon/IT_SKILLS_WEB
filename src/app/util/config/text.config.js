@@ -32,6 +32,8 @@ export const TEXT_CONFIG = {
 		learnOnCourse: 'научитесь на курсе',
 		coachOfCourse: 'Преподаватель курса',
 		speaker: 'Спикер',
+		courseProgram: 'Программа курса',
+		iosPrice: 'Ждем тебя на курсе IOS-РАЗРАБОТКА',
 	},
 
 	footerColumnTitle: {
@@ -48,6 +50,7 @@ export const TEXT_CONFIG = {
 	emailLabel: 'Email',
 	phoneLabel: 'Телефон',
 	whenLabel: 'Когда',
+	courseLabel: 'Курс',
 	registerLabel: 'Зарегестрироваться',
 	signUpLabel: 'Записаться',
 	ourSupportChat: 'Наш чат поддержки',
@@ -57,6 +60,8 @@ export const TEXT_CONFIG = {
 	freeLabel: 'Бесплатно',
 	groupStart: 'Старт группы',
 	freePlaces: 'Свободные места',
+	seeFullProgram: 'Посмотреть всю программу',
+	buyersChoice: 'Выбор учеников',
 
 	contactPoints: [
 		'У вас есть вопросы по обучению',

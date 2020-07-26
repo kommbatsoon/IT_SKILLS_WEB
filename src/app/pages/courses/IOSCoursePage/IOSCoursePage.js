@@ -4,9 +4,10 @@ import {
 	CardContainer,
 	CardContent,
 	CoachSection,
-	CourseEnrollmentForm,
+	CourseProgramSection,
+	CourseTopSection,
 	EnrollmentForm,
-	LessonTopSection,
+	PriceCardsSection,
 	PointList,
 	ReviewsSection,
 	SectionContainer,
@@ -27,17 +28,17 @@ const CONFIG = {
 					'Оплата в рассрочку или вся стоимость курса сразу, со скидкой 15%. Выбирайте как вам удобнее',
 			},
 			{
-				iconName: APP_ICON.blank,
+				icon: APP_ICON.blank,
 				title: 'Трудоустройство и стажировки',
 				description: 'Лучшие выпускники получают предложения по стажировке от наших компаний-партнёров',
 			},
 			{
-				iconName: APP_ICON.practice,
-				title: 'Упор на практику',
+				icon: APP_ICON.practice,
+				title: 'Упор \n на практику',
 				description: 'Наши преподаватели — практикующие специалисты, а не просто теоретики.',
 			},
 			{
-				iconName: APP_ICON.support,
+				icon: APP_ICON.support,
 				title: 'Постоянная поддержка',
 				description: 'Живое общение с преподавателями на занятиях и в чате.',
 			},
@@ -93,9 +94,7 @@ export const IOSCoursePage = () => {
 
 	return (
 		<>
-			<LessonTopSection type={type} />
-
-			<CourseEnrollmentForm />
+			<CourseTopSection type={type} />
 
 			<SectionContainer className={style.advantagesSection} withContainerWidth>
 				<VerticalTabs tabs={config.advantagesTabs} />
@@ -118,6 +117,10 @@ export const IOSCoursePage = () => {
 			</SectionContainer>
 
 			<CoachSection type={type} title={TEXT_CONFIG.sectionTitle.coachOfCourse} />
+
+			<CourseProgramSection type={type} />
+
+			<PriceCardsSection type={type} />
 
 			<ReviewsSection />
 			<EnrollmentForm

@@ -32,6 +32,7 @@ $gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gra
       line-height: 11px;
       letter-spacing: 0.01em;
       color: $color-text-primary;
+      white-space: nowrap;
     }
 
     &:hover {

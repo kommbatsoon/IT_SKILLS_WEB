@@ -8,12 +8,12 @@ import {getClassName} from '@util/helpers';
 import style from './Button.scss';
 
 export const Button = (props) => {
-	const {children, className, handleClick, labelText} = props;
+	const {children, className, handleClick, labelText, withArrow = true} = props;
 
 	return (
 		<button className={getClassName(style.button, className)} onClick={handleClick}>
 			{children}
-			<Icon className={style.icon} name={APP_ICON.rightArrowBlack} />
+			{withArrow && <Icon className={style.icon} name={APP_ICON.rightArrowBlack} />}
 			{labelText && <div className={style.label}>{labelText}</div>}
 		</button>
 	);
@@ -24,4 +24,5 @@ Button.propTypes = {
 	className: PropTypes.string,
 	labelText: PropTypes.string,
 	handleClick: PropTypes.func,
+	withArrow: PropTypes.bool,
 };
