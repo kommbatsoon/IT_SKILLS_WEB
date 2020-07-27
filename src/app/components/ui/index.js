@@ -12,6 +12,6 @@ export {HorizontalTabs} from './HorizontalTabs/HorizontalTabs';
 export {VerticalTabs} from './VerticalTabs/VerticalTabs';
 export {Carousel} from './Carousel/Carousel';
 export {SocialIconsBar} from './SocialIconsBar/SocialIconsBar';
-export {CourseCard} from './CourseCard/CourseCard';
+export {DeveloperCard} from './DeveloperCard/DeveloperCard';
 export {SectionContainer} from './SectionContainer/SectionContainer';
 export {PointList} from './PointList/PointList';

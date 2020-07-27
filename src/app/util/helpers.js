@@ -37,3 +37,7 @@ export function scrollTo(element) {
 export function getClassName(...args) {
 	return Object.values(args)?.filter(Boolean).join(' ');
 }
+
+export const initialPageActions = () => {
+	window.scrollTo(0, 0);
+};

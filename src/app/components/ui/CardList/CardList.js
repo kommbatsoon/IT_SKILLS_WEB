@@ -14,7 +14,7 @@ export const CardList = ({className, cards, withFirstActive, CardContainerProps 
 
 	return (
 		<div className={getClassName(style.cardList, className)} onMouseEnter={() => setActive(-1)}>
-			{cards.map((card, index) => {
+			{cards?.map((card, index) => {
 				const isActive = active === index;
 
 				return (

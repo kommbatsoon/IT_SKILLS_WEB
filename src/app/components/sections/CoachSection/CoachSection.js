@@ -31,8 +31,10 @@ const COACH_CONFIG = {
 	},
 };
 
-export const CoachSection = ({type = COURSE_ENUM.IOS, title, shortMode = false, className}) => {
-	const config = COACH_CONFIG[type];
+// Add config from parent
+
+export const CoachSection = ({course = COURSE_ENUM.IOS, title, shortMode = false, className}) => {
+	const config = COACH_CONFIG[course];
 	const handleSignUpClick = () => console.log('Записаться на курс: ', config);
 
 	return (
@@ -42,7 +44,7 @@ export const CoachSection = ({type = COURSE_ENUM.IOS, title, shortMode = false, 
 				{config.image}
 			</div>
 			<div className={style.rightSide}>
-				<h2>{title}</h2>
+				<h2>{config.title}</h2>
 				<div className={style.info}>
 					<h3 className={style.title}>{config.title}</h3>
 					<p className={style.subtitle}>{config.subtitle}</p>
@@ -58,6 +60,6 @@ export const CoachSection = ({type = COURSE_ENUM.IOS, title, shortMode = false, 
 };
 
 CoachSection.propTypes = {
-	type: PropTypes.string,
+	course: PropTypes.string,
 	shortMode: PropTypes.bool,
 };

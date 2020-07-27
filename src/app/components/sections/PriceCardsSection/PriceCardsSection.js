@@ -37,8 +37,8 @@ const PRICE_CARDS_CONFIG = {
 	},
 };
 
-export const PriceCardsSection = ({type = COURSE_ENUM.IOS, className}) => {
-	const config = PRICE_CARDS_CONFIG[type];
+export const PriceCardsSection = ({course = COURSE_ENUM.IOS, className}) => {
+	const config = PRICE_CARDS_CONFIG[course];
 	const handleSignUpClick = () => console.log('Записаться на курс: ', config);
 
 	return (

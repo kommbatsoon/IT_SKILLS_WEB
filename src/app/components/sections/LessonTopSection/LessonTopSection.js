@@ -1,34 +1,14 @@
 import React from 'react';
 
 import {Button} from '@app/components';
+
 import {getClassName} from '@util/helpers';
 import {TEXT_CONFIG} from '@util/config/text.config';
 import {COURSE_ENUM} from '@util/constants';
 
 import style from './LessonTopSection.scss';
 
-const CONFIG = {
-	[COURSE_ENUM.IOS]: {
-		date: '25 мая в 19:00',
-		title: 'по iOS-разработке',
-	},
-	[COURSE_ENUM.FRONTEND]: {
-		date: '25 мая в 19:00',
-		title: 'по FRONTEND-разработке',
-	},
-	[COURSE_ENUM.WEB_DESIGN]: {
-		date: '25 мая в 19:00',
-		title: 'по WEB-дизайну',
-	},
-	[COURSE_ENUM.ANDROID]: {
-		date: '25 мая в 19:00',
-		title: 'по ANDROID-разработке',
-	},
-};
-
-export const LessonTopSection = ({className, type = COURSE_ENUM.IOS}) => {
-	const config = CONFIG[type];
-
+export const LessonTopSection = ({className, config = {}, course}) => {
 	const handleMoreDetailsClick = () => console.log('Signed up');
 
 	return (
@@ -43,13 +23,13 @@ export const LessonTopSection = ({className, type = COURSE_ENUM.IOS}) => {
 					{TEXT_CONFIG.registerLabel}
 				</Button>
 			</div>
-			<CourseImage type={type} className={style.bgImg} />
+			<CourseImage course={course} className={style.bgImg} />
 		</section>
 	);
 };
 
-const CourseImage = ({type, className}) => {
-	switch (type) {
+const CourseImage = ({course, className}) => {
+	switch (course) {
 		case COURSE_ENUM.IOS: {
 			return <img src={require('@assets/images/icons/apple.svg')} alt='Image' className={className} />;
 		}

@@ -13,11 +13,13 @@ const DEFAULT_CONFIG = {
 	buttonText: 'Получить консультацию',
 };
 
-export const EnrollmentForm = ({className, config = DEFAULT_CONFIG, fields = Object.values(FORM_FIELD_ENUM)}) => {
+export const EnrollmentForm = ({className, config = DEFAULT_CONFIG}) => {
+	const {title, description, buttonText, fields = Object.values(FORM_FIELD_ENUM)} = config;
+
 	return (
 		<CardContainer className={getClassName(style.wrapper, className)} withHeadLine>
-			<h3>{config.title}</h3>
-			<p className={style.description}>{config.description}</p>
+			<h3>{title}</h3>
+			<p className={style.description}>{description}</p>
 
 			<div className={style.form}>
 				{fields.includes(FORM_FIELD_ENUM.NAME) && (
@@ -41,7 +43,7 @@ export const EnrollmentForm = ({className, config = DEFAULT_CONFIG, fields = Obj
 					</div>
 				)}
 
-				<FormButton className={style.button} text={config.buttonText} />
+				<FormButton className={style.button} text={buttonText} />
 			</div>
 		</CardContainer>
 	);
@@ -49,6 +51,10 @@ export const EnrollmentForm = ({className, config = DEFAULT_CONFIG, fields = Obj
 
 EnrollmentForm.propTypes = {
 	className: PropTypes.string,
-	config: PropTypes.object,
-	fields: PropTypes.array,
+	config: PropTypes.shape({
+		title: PropTypes.string,
+		description: PropTypes.string,
+		buttonText: PropTypes.string,
+		fields: PropTypes.array,
+	}),
 };

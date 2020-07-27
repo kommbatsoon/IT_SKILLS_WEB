@@ -1,52 +1,52 @@
 import React, {useEffect} from 'react';
 
 import {CoursesSection, EnrollmentForm, ReviewsSection} from '@app/components';
+
+import {initialPageActions} from '@util/helpers';
 import {FORM_CONFIG, TEXT_CONFIG} from '@util/config/text.config';
 import {APP_ICON, FORM_FIELD_ENUM} from '@util/constants';
 import {ROUTER_CONFIG} from '@util/config/router.config';
 
 import style from './CoursesPage.scss';
 
-const CONFIG = {
-	courses: {
-		cards: [
-			{
-				iconName: APP_ICON.apple,
-				title: 'iOS-разработка',
-				description: '19 марта в 19:00',
-				path: ROUTER_CONFIG.COURSES.IOS,
-			},
-			{
-				iconName: APP_ICON.android,
-				title: 'Android-разработка',
-				description: '19 марта в 19:00',
-				path: ROUTER_CONFIG.COURSES.ANDROID,
-			},
-			{
-				iconName: APP_ICON.webDev,
-				title: 'Web-разработка',
-				description: '19 марта в 19:00',
-				path: ROUTER_CONFIG.COURSES.FRONTEND,
-			},
-			{
-				iconName: APP_ICON.webDesign,
-				title: 'WEB-ДИЗАЙН',
-				description: '19 марта в 19:00',
-				path: ROUTER_CONFIG.COURSES.WEB_DESIGN,
-			},
-		],
-	},
+const COURSES_PAGE_CONFIG = {
+	items: [
+		{
+			iconName: APP_ICON.apple,
+			title: 'iOS-разработка',
+			description: '19 марта в 19:00',
+			path: ROUTER_CONFIG.COURSES.IOS,
+		},
+		{
+			iconName: APP_ICON.android,
+			title: 'Android-разработка',
+			description: '19 марта в 19:00',
+			path: ROUTER_CONFIG.COURSES.ANDROID,
+		},
+		{
+			iconName: APP_ICON.webDev,
+			title: 'Web-разработка',
+			description: '19 марта в 19:00',
+			path: ROUTER_CONFIG.COURSES.FRONTEND,
+		},
+		{
+			iconName: APP_ICON.webDesign,
+			title: 'WEB-ДИЗАЙН',
+			description: '19 марта в 19:00',
+			path: ROUTER_CONFIG.COURSES.WEB_DESIGN,
+		},
+	],
 };
 
 export const CoursesPage = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	const config = COURSES_PAGE_CONFIG;
+
+	useEffect(initialPageActions, []);
 
 	return (
 		<>
 			<h1 className={style.title}>{TEXT_CONFIG.pageTitle.courses}</h1>
-			<CoursesSection config={CONFIG.courses} />
+			<CoursesSection items={config.items} />
 			<ReviewsSection />
 			<EnrollmentForm
 				className={style.form}

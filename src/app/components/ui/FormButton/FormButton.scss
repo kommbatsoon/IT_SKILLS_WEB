@@ -1,7 +1,5 @@
 @import '../../../styles/mixins';
 
-$gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gradient-gold;
-
 :local {
   .button {
     display: flex;
@@ -15,7 +13,7 @@ $gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gra
 
     border: solid 1px transparent;
     border-radius: 5px;
-    background-image: $gradient;
+    background-image: $gradient-gold-button;
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: 1px 1000px 1px $color-black inset;

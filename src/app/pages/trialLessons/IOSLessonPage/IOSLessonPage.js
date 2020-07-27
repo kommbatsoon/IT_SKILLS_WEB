@@ -2,38 +2,49 @@ import React, {useEffect} from 'react';
 
 import {
 	CoachSection,
-	CourseCard,
+	DeveloperCard,
 	EnrollmentForm,
-	HowToGetSection,
-	LessonProgramSection,
 	LessonTopSection,
-	WhoInterestedSection,
+	SectionWithHorizontalTabs,
+	SectionWithVerticalTabs,
+	SectionWithItems,
 } from '@app/components';
-import {FORM_CONFIG, TEXT_CONFIG} from '@util/config/text.config';
-import {COURSE_ENUM, FORM_FIELD_ENUM} from '@util/constants';
+
+import {initialPageActions} from '@util/helpers';
+import {TEXT_CONFIG} from '@util/config/text.config';
+import {COURSE_ENUM} from '@util/constants';
+import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './IOSLessonPage.scss';
 
-export const IOSLessonPage = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+export const IOSLessonPage = ({course = COURSE_ENUM.IOS}) => {
+	const config = GLOBAL_CONFIG.trialLessonPage[course];
 
-	const type = COURSE_ENUM.IOS;
+	useEffect(initialPageActions, []);
 
 	return (
 		<>
-			<LessonTopSection type={type} />
-			<HowToGetSection />
-			<WhoInterestedSection type={type} />
-			<CourseCard type={type} />
-			<LessonProgramSection type={type} />
-			<CoachSection type={type} title={TEXT_CONFIG.sectionTitle.speaker} shortMode />
-			<EnrollmentForm
-				className={style.form}
-				config={FORM_CONFIG.trialLessonPage}
-				fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE]}
+			<LessonTopSection id='topSection' config={config.topSection} course={config.course} />
+
+			<SectionWithHorizontalTabs
+				id='howToGetSection'
+				title={TEXT_CONFIG.sectionTitle.howToGet}
+				items={config.howToGetSection.items}
 			/>
+
+			<SectionWithItems id='whoInterestedSection' config={config.whoInterestedSection} />
+
+			<DeveloperCard id='developerCardSection' config={config.developerCardSection} course={config.course} />
+
+			<SectionWithVerticalTabs
+				id='lessonProgramSection'
+				title={config.lessonProgramSection.title}
+				items={config.lessonProgramSection.items}
+			/>
+
+			<CoachSection id='coachSection' config={config.coachSection} course={config.course} shortMode />
+
+			<EnrollmentForm id='enrollmentFormSection' className={style.form} config={config.enrollmentFormSection} />
 		</>
 	);
 };

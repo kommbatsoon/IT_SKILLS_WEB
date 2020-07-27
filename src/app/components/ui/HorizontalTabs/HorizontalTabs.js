@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
+import {Icon} from '@app/components';
 import {getClassName} from '@util/helpers';
 
 import style from './HorizontalTabs.scss';
@@ -14,12 +15,11 @@ export const HorizontalTabs = ({className, tabs}) => {
 				const isActive = active === index;
 
 				return (
-					<div key={`horizontal-tab-${index}`} className={getClassName(style.tab, isActive && style.active)}>
+					<div key={`vertical-tab-${index}`} className={getClassName(style.tab, isActive && style.active)}>
+						{tab.icon && <Icon name={tab.icon} />}
 						<h3>{tab.title}</h3>
 						<div className={style.line} />
-						<div className={style.flexContainer}>
-							<p className={style.column}>{tab.description}</p>
-						</div>
+						<p className={style.description}>{tab.description}</p>
 					</div>
 				);
 			})}

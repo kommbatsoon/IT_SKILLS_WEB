@@ -1,7 +1,5 @@
 @import '../../../styles/mixins';
 
-$gradient: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gradient-gold;
-
 :global {
   .slideButton {
     position: relative;

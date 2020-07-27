@@ -1,46 +1,52 @@
 import React, {useEffect} from 'react';
 
 import {
-	AdvantagesSection,
 	EnrollmentForm,
-	PerspectivesSection,
 	CoursesSection,
 	CoachesSection,
 	ReviewsSection,
-	TopSection,
+	MainTopSection,
+	SectionWithVerticalTabs,
+	SectionWithCards,
 } from '@app/components';
 
-import {FORM_FIELD_ENUM} from '@util/constants';
+import {initialPageActions} from '@util/helpers';
+import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './MainPage.scss';
 
-export const MainPage = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+export const MainPage = ({config = GLOBAL_CONFIG.mainPage}) => {
+	useEffect(initialPageActions, []);
 
 	return (
 		<>
-			<TopSection />
-			<CoursesSection />
-			<PerspectivesSection />
-			<AdvantagesSection />
-			<ReviewsSection />
-			<CoachesSection />
-			<EnrollmentForm className={style.form} fields={[FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.PHONE]} />
+			<MainTopSection id='topSection' config={config.topSection} />
+			<CoursesSection id='coursesSection' items={config.coursesSection.items} />
+			<SectionWithVerticalTabs
+				id='perspectivesSection'
+				title={config.perspectivesSection.title}
+				items={config.perspectivesSection.items}
+			/>
+			<SectionWithCards
+				id='advantagesSection'
+				keyStart={'advantage-card'}
+				title={config.advantagesSection.title}
+				items={config.advantagesSection.items}
+			/>
+			<ReviewsSection id='reviewsSection' />
+			<CoachesSection id='coachesSection' />
+			<EnrollmentForm id='enrollmentFormSection' className={style.form} config={config.enrollmentFormSection} />
 		</>
 	);
 };
 
+//TODO: Add variables for animation (transition, duration, etc.);
+//TODO: implement CourseImage (with className and classes (ios: style.ios, ...);
+//TODO: Add button handlers and unify props (onClick, text/children, etc.);
+//TODO: Add height prop to card (Course page. How goes section);
+//TODO: From validation and Integration with Telegram;
 //TODO: Update form inputs (initial - grey, onHover/active!!!: gold);
-//TODO: Add Active flags and reset on first mouse enter;
-//TODO: Integrate Telegram;
-//TODO: Make common config (by course);
-//TODO: Replace type with course;
-//TODO: Move all variables to var file;
-//TODO: Use one gold gradient;
-//TODO: Unificate button props (onClick, text, etc.);
-//TODO: Show/collapse program;
+//TODO: Reviews section. Add social media links and avatars to config;
+//TODO: Add CoursePage and LessonPage (Current IOSLessonPage, IOSCoursePage;
 
-//TODO: Course page. How goes cards height (to common);
-//TODO: Create SectionWith... components (verticalTabs, horizontalTabs);
+//TODO: Update Lessons & Courses pages with global config

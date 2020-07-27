@@ -59,16 +59,17 @@ const PROGRAM_CONFIG = {
 				],
 			},
 		],
-		displayedCount: 6,
 	},
 };
 
-export const CourseProgramSection = ({type = COURSE_ENUM.IOS, className}) => {
-	const config = PROGRAM_CONFIG[type];
+const DISPLAYED_COUNT = 6;
+
+export const CourseProgramSection = ({course = COURSE_ENUM.IOS, className}) => {
+	const config = PROGRAM_CONFIG[course];
 
 	const [isCollapsed, setCollapsed] = useState(true);
 
-	const displayedTopics = isCollapsed ? config.topics.slice(0, config.displayedCount) : config.topics;
+	const displayedTopics = isCollapsed ? config.topics.slice(0, DISPLAYED_COUNT) : config.topics;
 
 	const handleShowMoreClick = () => {
 		setCollapsed(!isCollapsed);

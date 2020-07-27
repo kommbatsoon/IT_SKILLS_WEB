@@ -34,8 +34,8 @@ const CONFIG = {
 	},
 };
 
-export const CourseTopSection = ({className, type = COURSE_ENUM.IOS}) => {
-	const config = CONFIG[type];
+export const CourseTopSection = ({className, course = COURSE_ENUM.IOS}) => {
+	const config = CONFIG[course];
 
 	return (
 		<section className={getClassName(style.wrapper, className)}>
@@ -45,7 +45,7 @@ export const CourseTopSection = ({className, type = COURSE_ENUM.IOS}) => {
 				<p className={style.description}>
 					{config.description} <span className={style.period}>{config.period}</span>
 				</p>
-				<CourseImage type={type} className={style.bgImg} />
+				<CourseImage course={course} className={style.bgImg} />
 			</div>
 
 			<CourseEnrollmentForm />
@@ -53,8 +53,8 @@ export const CourseTopSection = ({className, type = COURSE_ENUM.IOS}) => {
 	);
 };
 
-const CourseImage = ({type, className}) => {
-	switch (type) {
+const CourseImage = ({course, className}) => {
+	switch (course) {
 		case COURSE_ENUM.IOS: {
 			return <img src={require('@assets/images/icons/apple.svg')} alt='Image' className={className} />;
 		}

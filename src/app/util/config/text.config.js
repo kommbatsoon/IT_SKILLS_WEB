@@ -42,7 +42,6 @@ export const TEXT_CONFIG = {
 		support: 'Поддержка',
 	},
 
-	mainTitle: 'Научим разрабатывать с 0 за 6 месяцев',
 	trialLessonButton: 'Пробное занятие',
 	freeOnlineLesson: 'Бесплатное онлайн-занятие',
 	copyright: '2020 ANKDESIGN',

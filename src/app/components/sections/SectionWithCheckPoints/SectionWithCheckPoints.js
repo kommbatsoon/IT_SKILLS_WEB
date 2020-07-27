@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {PointList, SectionContainer} from '@app/components';
 
-export const SectionWithPoints = (props) => {
+export const SectionWithCheckPoints = (props) => {
 	const {title, items, withContainerWidth, classes} = props;
 
 	return (
@@ -13,7 +13,7 @@ export const SectionWithPoints = (props) => {
 	);
 };
 
-SectionWithPoints.defaultProps = {
+SectionWithCheckPoints.defaultProps = {
 	keyStart: 'item',
 	title: '',
 	items: [],
@@ -21,7 +21,7 @@ SectionWithPoints.defaultProps = {
 	classes: {},
 };
 
-SectionWithPoints.propTypes = {
+SectionWithCheckPoints.propTypes = {
 	keyStart: PropTypes.string,
 	title: PropTypes.string,
 	items: PropTypes.array,
