@@ -46,4 +46,3 @@ export const MainPage = ({config = GLOBAL_CONFIG.mainPage}) => {
 //TODO: From validation and Integration with Telegram;
 //TODO: Update form inputs (initial - grey, onHover/active!!!: gold);
 //TODO: Reviews section. Add social media links and avatars to config;
-//TODO: Add CoursePage and LessonPage (Current IOSLessonPage, IOSCoursePage;

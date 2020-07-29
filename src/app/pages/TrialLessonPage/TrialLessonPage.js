@@ -14,9 +14,9 @@ import {initialPageActions} from '@util/helpers';
 import {COURSE_ENUM} from '@util/constants';
 import {GLOBAL_CONFIG} from '@util/config';
 
-import style from './IOSLessonPage.scss';
+import style from './TrialLessonPage.scss';
 
-export const IOSLessonPage = ({course = COURSE_ENUM.IOS}) => {
+export const TrialLessonPage = ({course = COURSE_ENUM.IOS}) => {
 	const config = GLOBAL_CONFIG.trialLessonPage[course];
 
 	useEffect(initialPageActions, []);
