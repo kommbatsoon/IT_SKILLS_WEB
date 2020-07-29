@@ -83,11 +83,9 @@ export const PriceCardsSection = ({course = COURSE_ENUM.IOS, className}) => {
 								</Button>
 							)}
 							{!active && (
-								<FormButton
-									className={style.button}
-									onClick={handleSignUpClick}
-									text={packageData.buttonText}
-								/>
+								<FormButton className={style.button} onClick={handleSignUpClick}>
+									{packageData.buttonText}
+								</FormButton>
 							)}
 						</CardContainer>
 					);

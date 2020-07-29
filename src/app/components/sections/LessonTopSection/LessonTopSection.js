@@ -19,7 +19,7 @@ export const LessonTopSection = ({className, config = {}, course}) => {
 			<h2>{TEXT_CONFIG.freeOnlineLesson}</h2>
 			<div className={style.flexWrapper}>
 				<h1>{config.title}</h1>
-				<Button className={style.button} handleClick={handleMoreDetailsClick}>
+				<Button className={style.button} onClick={handleMoreDetailsClick}>
 					{TEXT_CONFIG.registerLabel}
 				</Button>
 			</div>

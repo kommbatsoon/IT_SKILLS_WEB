@@ -7,11 +7,11 @@ import {APP_ICON} from '@util/constants';
 import './ArrowButton.scss';
 
 export const ArrowButton = (props) => {
-	const {text, onClick} = props;
+	const {children, onClick} = props;
 
 	return (
 		<button className='arrowButton' onClick={onClick}>
-			<span className='text'>{text}</span>
+			<span className='text'>{children}</span>
 			<Icon className='whiteIcon' name={APP_ICON.rightArrowWhite} />
 			<Icon className='blackIcon' name={APP_ICON.rightArrowBlack} />
 		</button>
@@ -19,5 +19,6 @@ export const ArrowButton = (props) => {
 };
 
 ArrowButton.propTypes = {
+	children: PropTypes.string,
 	onClick: PropTypes.func,
 };

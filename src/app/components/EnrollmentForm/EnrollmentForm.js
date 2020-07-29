@@ -16,6 +16,10 @@ const DEFAULT_CONFIG = {
 export const EnrollmentForm = ({className, config = DEFAULT_CONFIG}) => {
 	const {title, description, buttonText, fields = Object.values(FORM_FIELD_ENUM)} = config;
 
+	const handleFormSubmit = () => {
+		console.log('Form submitted');
+	};
+
 	return (
 		<CardContainer className={getClassName(style.wrapper, className)} withHeadLine>
 			<h3>{title}</h3>
@@ -43,7 +47,9 @@ export const EnrollmentForm = ({className, config = DEFAULT_CONFIG}) => {
 					</div>
 				)}
 
-				<FormButton className={style.button} text={buttonText} />
+				<FormButton className={style.button} onClick={handleFormSubmit}>
+					{buttonText}
+				</FormButton>
 			</div>
 		</CardContainer>
 	);

@@ -35,12 +35,16 @@ export const CardContainer = (props) => {
 		>
 			{children}
 
+			{card?.image && React.cloneElement(card.image, {active: isHovered})}
+
 			{!isEmpty(ButtonProps) && (
 				<>
 					<div className={style.emptyBlock} />
 
 					{!isHovered && <FakeButton />}
-					{isHovered && <ArrowButton text={ButtonProps.text} onClick={() => ButtonProps.onClick(card)} />}
+					{isHovered && (
+						<ArrowButton onClick={() => ButtonProps.onClick(card)}>{ButtonProps.text}</ArrowButton>
+					)}
 				</>
 			)}
 		</div>

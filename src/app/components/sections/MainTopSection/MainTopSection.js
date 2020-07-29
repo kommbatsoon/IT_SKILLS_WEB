@@ -15,7 +15,7 @@ export const MainTopSection = ({config = {}, className}) => {
 	return (
 		<section className={getClassName(style.wrapper, className)}>
 			<h1>{config.title}</h1>
-			<Button className={style.button} handleClick={handleMoreDetailsClick} labelText={TEXT_CONFIG.freeLabel}>
+			<Button className={style.button} onClick={handleMoreDetailsClick} labelText={TEXT_CONFIG.freeLabel}>
 				{TEXT_CONFIG.trialLessonButton}
 			</Button>
 		</section>

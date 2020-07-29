@@ -27,7 +27,6 @@ export const Footer = ({config = GLOBAL_CONFIG.footer}) => {
 						<Link to={ROUTER_CONFIG.MAIN}>{GLOBAL_CONFIG.navigation.main}</Link>
 						<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>{GLOBAL_CONFIG.navigation.trialLessons}</Link>
 						<Link to={ROUTER_CONFIG.COURSES.LIST}>{GLOBAL_CONFIG.navigation.courses}</Link>
-						<Link to={ROUTER_CONFIG.COACHES}>{GLOBAL_CONFIG.navigation.coaches}</Link>
 						<Link to={ROUTER_CONFIG.CONTACTS}>{GLOBAL_CONFIG.navigation.contacts}</Link>
 					</nav>
 				</div>

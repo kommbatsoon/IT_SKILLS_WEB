@@ -32,7 +32,6 @@ export const CardList = ({className, cards, withFirstActive, CardContainerProps 
 							description={card.description}
 							{...CardContentProps}
 						/>
-						{card.image}
 					</CardContainer>
 				);
 			})}

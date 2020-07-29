@@ -17,7 +17,6 @@ export const Header = () => {
 			<nav>
 				<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>{GLOBAL_CONFIG.navigation.trialLessons}</Link>
 				<Link to={ROUTER_CONFIG.COURSES.LIST}>{GLOBAL_CONFIG.navigation.courses}</Link>
-				<Link to={ROUTER_CONFIG.COACHES}>{GLOBAL_CONFIG.navigation.coaches}</Link>
 				<Link to={ROUTER_CONFIG.CONTACTS}>{GLOBAL_CONFIG.navigation.contacts}</Link>
 			</nav>
 

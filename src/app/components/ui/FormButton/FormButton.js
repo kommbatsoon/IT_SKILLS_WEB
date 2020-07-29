@@ -8,11 +8,11 @@ import {getClassName} from '@util/helpers';
 import style from './FormButton.scss';
 
 export const FormButton = (props) => {
-	const {text, onClick, className} = props;
+	const {children, onClick, className} = props;
 
 	return (
 		<button className={getClassName(style.button, className)} onClick={onClick}>
-			<span className={style.text}>{text}</span>
+			<span className={style.text}>{children}</span>
 			<Icon className={style.blackIcon} name={APP_ICON.rightArrowBlack} />
 		</button>
 	);
@@ -20,6 +20,6 @@ export const FormButton = (props) => {
 
 FormButton.propTypes = {
 	className: PropTypes.string,
-	text: PropTypes.string,
+	children: PropTypes.string,
 	onClick: PropTypes.func,
 };
