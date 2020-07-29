@@ -41,3 +41,7 @@ export function getClassName(...args) {
 export const initialPageActions = () => {
 	window.scrollTo(0, 0);
 };
+
+export function removeWhiteSpaces(str) {
+	return str.replace(/ /g, '');
+}

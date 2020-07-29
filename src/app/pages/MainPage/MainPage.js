@@ -43,10 +43,7 @@ export const MainPage = ({config = GLOBAL_CONFIG.mainPage}) => {
 //TODO: Add variables for animation (transition, duration, etc.);
 //TODO: implement CourseImage (with className and classes (ios: style.ios, ...);
 //TODO: Add button handlers and unify props (onClick, text/children, etc.);
-//TODO: Add height prop to card (Course page. How goes section);
 //TODO: From validation and Integration with Telegram;
 //TODO: Update form inputs (initial - grey, onHover/active!!!: gold);
 //TODO: Reviews section. Add social media links and avatars to config;
 //TODO: Add CoursePage and LessonPage (Current IOSLessonPage, IOSCoursePage;
-
-//TODO: Update Lessons & Courses pages with global config

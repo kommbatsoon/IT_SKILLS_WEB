@@ -11,7 +11,7 @@ export {CardList} from './CardList/CardList';
 export {HorizontalTabs} from './HorizontalTabs/HorizontalTabs';
 export {VerticalTabs} from './VerticalTabs/VerticalTabs';
 export {Carousel} from './Carousel/Carousel';
-export {SocialIconsBar} from './SocialIconsBar/SocialIconsBar';
+export {SocialIcons} from './SocialIcons/SocialIcons';
 export {DeveloperCard} from './DeveloperCard/DeveloperCard';
 export {SectionContainer} from './SectionContainer/SectionContainer';
 export {PointList} from './PointList/PointList';

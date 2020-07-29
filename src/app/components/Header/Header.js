@@ -1,11 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import {Icon} from '@app/components';
-
+import {SocialIcons} from '@app/components';
 import {ROUTER_CONFIG} from '@util/config/router.config';
-import {TEXT_CONFIG} from '@util/config/text.config';
-import {APP_ICON} from '@util/constants';
+import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './Header.scss';
 
@@ -17,17 +15,13 @@ export const Header = () => {
 			</Link>
 
 			<nav>
-				<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>{TEXT_CONFIG.navigation.trialLessons}</Link>
-				<Link to={ROUTER_CONFIG.COURSES.LIST}>{TEXT_CONFIG.navigation.courses}</Link>
-				<Link to={ROUTER_CONFIG.COACHES}>{TEXT_CONFIG.navigation.coaches}</Link>
-				<Link to={ROUTER_CONFIG.CONTACTS}>{TEXT_CONFIG.navigation.contacts}</Link>
+				<Link to={ROUTER_CONFIG.TRIAL_LESSON.LIST}>{GLOBAL_CONFIG.navigation.trialLessons}</Link>
+				<Link to={ROUTER_CONFIG.COURSES.LIST}>{GLOBAL_CONFIG.navigation.courses}</Link>
+				<Link to={ROUTER_CONFIG.COACHES}>{GLOBAL_CONFIG.navigation.coaches}</Link>
+				<Link to={ROUTER_CONFIG.CONTACTS}>{GLOBAL_CONFIG.navigation.contacts}</Link>
 			</nav>
 
-			<div className={style.socialIcons}>
-				<Icon name={APP_ICON.vkWhite} className={style.icon} />
-				<Icon name={APP_ICON.fbWhite} className={style.icon} />
-				<Icon name={APP_ICON.instWhite} className={style.icon} />
-			</div>
+			<SocialIcons classes={{root: style.socialIcons, icon: style.icon}} />
 		</header>
 	);
 };

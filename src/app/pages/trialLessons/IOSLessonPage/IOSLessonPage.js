@@ -11,7 +11,6 @@ import {
 } from '@app/components';
 
 import {initialPageActions} from '@util/helpers';
-import {TEXT_CONFIG} from '@util/config/text.config';
 import {COURSE_ENUM} from '@util/constants';
 import {GLOBAL_CONFIG} from '@util/config';
 
@@ -28,7 +27,7 @@ export const IOSLessonPage = ({course = COURSE_ENUM.IOS}) => {
 
 			<SectionWithHorizontalTabs
 				id='howToGetSection'
-				title={TEXT_CONFIG.sectionTitle.howToGet}
+				title={config.howToGetSection.title}
 				items={config.howToGetSection.items}
 			/>
 

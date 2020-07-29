@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Carousel as ResponsiveCarousel} from 'react-responsive-carousel';
-import {SlideButton, SocialIconsBar} from '@app/components';
+import {SlideButton, SocialIcons} from '@app/components';
 
 import './Carousel.lib.scss';
 import style from './Carousel.scss';
@@ -43,7 +43,7 @@ export const Carousel = ({slides}) => {
 								<h3 className={style.name}>{slide.name}</h3>
 								<p className={style.jobTitle}>{slide.jobTitle}</p>
 							</div>
-							<SocialIconsBar className={style.socialIconsBar} />
+							<SocialIcons classes={{root: style.socialIcons}} />
 						</div>
 						<p className={style.body}>{slide.comment}</p>
 					</div>
