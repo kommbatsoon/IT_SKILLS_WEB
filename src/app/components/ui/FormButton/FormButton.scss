@@ -17,7 +17,7 @@
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: 1px 1000px 1px $color-black inset;
-    transition: width 0.5s linear;
+    transition: $transition-button-width;
 
     .blackIcon {
       display: none;

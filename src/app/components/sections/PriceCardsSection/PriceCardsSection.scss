@@ -73,7 +73,7 @@
         .button {
           margin-top: 40px;
           width: 288px;
-          transition: width 0.2s ease-in-out;
+          transition: $transition-button-width;
 
           &:hover {
             width: 300px;

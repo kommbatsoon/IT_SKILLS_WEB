@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {getClassName} from '@util/helpers';
+import {getClassName, scrollTo} from '@util/helpers';
 import {TEXT_CONFIG} from '@util/config/text.config';
 
 import style from './CoachSection.scss';
@@ -33,9 +33,11 @@ const COACH_CONFIG = {
 
 // Add config from parent
 
-export const CoachSection = ({course = COURSE_ENUM.IOS, title, shortMode = false, className}) => {
+export const CoachSection = ({course = COURSE_ENUM.IOS, title, shortMode = false, actionAnchor, className}) => {
 	const config = COACH_CONFIG[course];
-	const handleSignUpClick = () => console.log('Записаться на курс: ', config);
+	const handleSignUpClick = () => {
+		scrollTo(actionAnchor);
+	};
 
 	return (
 		<section className={getClassName(style.wrapper, className)}>

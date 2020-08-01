@@ -10,6 +10,7 @@ import style from './CardContainer.scss';
 
 export const CardContainer = (props) => {
 	const {
+		id,
 		className,
 		children,
 		card,
@@ -23,6 +24,7 @@ export const CardContainer = (props) => {
 
 	return (
 		<div
+			id={id}
 			className={getClassName(
 				style.card,
 				!isActive && withShadowOnHover && style.shadowOnHover,

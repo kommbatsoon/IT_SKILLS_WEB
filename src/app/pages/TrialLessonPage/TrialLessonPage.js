@@ -16,6 +16,8 @@ import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './TrialLessonPage.scss';
 
+const actionAnchor = '#pageAnchor';
+
 export const TrialLessonPage = ({course = COURSE_ENUM.IOS}) => {
 	const config = GLOBAL_CONFIG.trialLessonPage[course];
 
@@ -23,7 +25,12 @@ export const TrialLessonPage = ({course = COURSE_ENUM.IOS}) => {
 
 	return (
 		<>
-			<LessonTopSection id='topSection' config={config.topSection} course={config.course} />
+			<LessonTopSection
+				id='topSection'
+				config={config.topSection}
+				course={config.course}
+				actionAnchor={actionAnchor}
+			/>
 
 			<SectionWithHorizontalTabs
 				id='howToGetSection'
@@ -41,7 +48,15 @@ export const TrialLessonPage = ({course = COURSE_ENUM.IOS}) => {
 				items={config.lessonProgramSection.items}
 			/>
 
-			<CoachSection id='coachSection' config={config.coachSection} course={config.course} shortMode />
+			<CoachSection
+				id='coachSection'
+				config={config.coachSection}
+				course={config.course}
+				shortMode
+				actionAnchor={actionAnchor}
+			/>
+
+			<div id='pageAnchor' />
 
 			<EnrollmentForm id='enrollmentFormSection' className={style.form} config={config.enrollmentFormSection} />
 		</>

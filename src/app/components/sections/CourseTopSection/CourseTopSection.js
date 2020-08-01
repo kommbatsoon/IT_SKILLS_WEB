@@ -48,7 +48,7 @@ export const CourseTopSection = ({className, course = COURSE_ENUM.IOS}) => {
 				<CourseImage course={course} className={style.bgImg} />
 			</div>
 
-			<CourseEnrollmentForm />
+			<CourseEnrollmentForm course={course} />
 		</section>
 	);
 };

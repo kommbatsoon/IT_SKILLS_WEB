@@ -18,6 +18,8 @@ import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './CoursePage.scss';
 
+const actionAnchor = '#pageAnchor';
+
 export const CoursePage = ({course = COURSE_ENUM.IOS}) => {
 	const config = GLOBAL_CONFIG.coursePage[course];
 
@@ -43,13 +45,20 @@ export const CoursePage = ({course = COURSE_ENUM.IOS}) => {
 				items={config.learnOnCourseSection.items}
 			/>
 
-			<CoachSection id='coachSection' course={course} title={config.coachSection.title} />
+			<CoachSection
+				id='coachSection'
+				course={course}
+				title={config.coachSection.title}
+				actionAnchor={actionAnchor}
+			/>
 
 			<CourseProgramSection id='courseProgramSection' course={course} />
 
-			<PriceCardsSection id='priceCardsSection' course={course} />
+			<PriceCardsSection id='priceCardsSection' course={course} actionAnchor={actionAnchor} />
 
 			<ReviewsSection id='reviewsSection' />
+
+			<div id='pageAnchor' />
 
 			<EnrollmentForm id='reviewsSection' config={config.enrollmentFormSection} className={style.form} />
 		</>

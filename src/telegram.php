@@ -1,20 +1,28 @@
 <?php
 
-$url = $_POST['url'];
-$date = $_POST['date'];
-$time = $_POST['time'];
-$course = $_POST['courseName'];
-$phone = $_POST['phone'];
-
 $token = "1231571642:AAFBCkx5-0MHwDf-ZPYPd2AhaM3hp70wzVs";
 $chat_id = "-458680749";
 
+$date = $_POST['date'];
+$url = $_POST['url'];
+$description = $_POST['description'];
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$question = $_POST['question'];
+
 $arr = array(
-  'Новая заявка',
-  'Дата: ' => $date,
-  'Время: ' => $time,
-  'Курс: ' => $course,
-  'Номер телефона:' => $phone
+  '*** Новая заявка ***',
+  'Дата и время: ' => $date,
+  'URL: ' => $url,
+  'Описание: ' => $description,
+  '--------------------',
+  'Информация о клиенте',
+  'Имя: ' => $name,
+  'Email: ' => $email,
+  'Телефор: ' => $phone,
+  'Вопрос: ' => $question,
 );
 
 foreach($arr as $key => $value) {

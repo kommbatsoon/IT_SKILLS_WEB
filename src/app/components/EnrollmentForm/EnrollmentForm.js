@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
 
-import {CardContainer, FormButton, Input} from '@app/components';
+import {CardContainer, FormButton, InputControl} from '@app/components';
 import {getClassName} from '@util/helpers';
 import {FORM_FIELD_ENUM} from '@util/constants';
 
 import style from './EnrollmentForm.scss';
+import {GLOBAL_CONFIG} from '@util/config';
 
 const DEFAULT_CONFIG = {
 	title: 'Стань востребованным IT специалистом',
@@ -13,37 +15,103 @@ const DEFAULT_CONFIG = {
 	buttonText: 'Получить консультацию',
 };
 
-export const EnrollmentForm = ({className, config = DEFAULT_CONFIG}) => {
+const {form: globalConfig} = GLOBAL_CONFIG;
+
+const INITIAL_VALUE = {
+	[globalConfig.field.name.key]: '',
+	[globalConfig.field.email.key]: '',
+	[globalConfig.field.phone.key]: '',
+	[globalConfig.field.question.key]: '',
+};
+
+export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 	const {title, description, buttonText, fields = Object.values(FORM_FIELD_ENUM)} = config;
 
+	const [formValue, setFormValue] = useState(() => INITIAL_VALUE);
+	const [error, setError] = useState(() => false);
+
+	const handleFormChange = (key, value) => {
+		error && setError(false);
+		setFormValue({...formValue, [key]: value});
+	};
+
 	const handleFormSubmit = () => {
-		console.log('Form submitted');
+		if (!formValue.phone) {
+			setError(true);
+			return;
+		}
+
+		const formData = new FormData();
+
+		const description = 'Форма на странице КОНТАКТЫ';
+
+		formData.append('date', dayjs().format('YYYY.MM.DD HH:mm'));
+		formData.append('url', window.location.origin);
+		formData.append('description', description);
+		formData.append('name', formValue.name);
+		formData.append('email', formValue.email);
+		formData.append('phone', formValue.phone);
+		formData.append('question', formValue.question);
+
+		const fields = ['date', 'url', 'description', 'name', 'email', 'question'];
+
+		fields.forEach((field) => console.log(formData.get(field)));
+
+		fetch('telegram.php', {method: 'post', body: formData})
+			.then((response) => {
+				console.log(response);
+				setFormValue(INITIAL_VALUE);
+			})
+			.catch((error) => console.error(error));
 	};
 
 	return (
-		<CardContainer className={getClassName(style.wrapper, className)} withHeadLine>
+		<CardContainer id={id} className={getClassName(style.wrapper, className)} withHeadLine>
 			<h3>{title}</h3>
 			<p className={style.description}>{description}</p>
 
 			<div className={style.form}>
 				{fields.includes(FORM_FIELD_ENUM.NAME) && (
 					<div className={style.formControl}>
-						<Input label='Имя и Фамилия' placeholder='Иван Иванов' />
+						<InputControl
+							label={globalConfig.field.name.label}
+							placeholder={globalConfig.field.name.placeholder}
+							value={formValue.name}
+							onChange={(value) => handleFormChange(globalConfig.field.name.key, value)}
+						/>
 					</div>
 				)}
 				{fields.includes(FORM_FIELD_ENUM.EMAIL) && (
 					<div className={style.formControl}>
-						<Input label='Email' placeholder='emaill@gmail.com' />
+						<InputControl
+							label={globalConfig.field.email.label}
+							placeholder={globalConfig.field.email.placeholder}
+							value={formValue.email}
+							onChange={(value) => handleFormChange(globalConfig.field.email.key, value)}
+						/>
 					</div>
 				)}
 				{fields.includes(FORM_FIELD_ENUM.PHONE) && (
 					<div className={style.formControl}>
-						<Input label='Номер телефона' placeholder='+375 (' />
+						<InputControl
+							label={globalConfig.field.phone.label}
+							placeholder={globalConfig.field.phone.placeholder}
+							value={formValue.phone}
+							onChange={(value) => handleFormChange(globalConfig.field.phone.key, value)}
+							error={error}
+							errorText={globalConfig.validation.required}
+						/>
 					</div>
 				)}
 				{fields.includes(FORM_FIELD_ENUM.QUESTION) && (
 					<div className={style.formControl}>
-						<Input label='Ваш вопрос' placeholder='Напишите ваш вопрос' multiline />
+						<InputControl
+							label={globalConfig.field.question.label}
+							placeholder={globalConfig.field.question.placeholder}
+							value={formValue.question}
+							onChange={(value) => handleFormChange(globalConfig.field.question.key, value)}
+							multiline
+						/>
 					</div>
 				)}
 

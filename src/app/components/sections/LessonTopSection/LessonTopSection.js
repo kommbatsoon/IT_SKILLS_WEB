@@ -2,14 +2,16 @@ import React from 'react';
 
 import {Button} from '@app/components';
 
-import {getClassName} from '@util/helpers';
+import {getClassName, scrollTo} from '@util/helpers';
 import {TEXT_CONFIG} from '@util/config/text.config';
 import {COURSE_ENUM} from '@util/constants';
 
 import style from './LessonTopSection.scss';
 
-export const LessonTopSection = ({className, config = {}, course}) => {
-	const handleMoreDetailsClick = () => console.log('Signed up');
+export const LessonTopSection = ({className, config = {}, course, actionAnchor = ''}) => {
+	const handleRegisterClick = () => {
+		scrollTo(actionAnchor);
+	};
 
 	return (
 		<section className={getClassName(style.wrapper, className)}>
@@ -19,7 +21,7 @@ export const LessonTopSection = ({className, config = {}, course}) => {
 			<h2>{TEXT_CONFIG.freeOnlineLesson}</h2>
 			<div className={style.flexWrapper}>
 				<h1>{config.title}</h1>
-				<Button className={style.button} onClick={handleMoreDetailsClick}>
+				<Button className={style.button} onClick={handleRegisterClick}>
 					{TEXT_CONFIG.registerLabel}
 				</Button>
 			</div>

@@ -38,3 +38,10 @@ export const COURSE_ENUM = {
 	WEB_DESIGN: 'WEB_DESIGN',
 	ANDROID: 'ANDROID',
 };
+
+export const COURSE_NAME = {
+	[COURSE_ENUM.IOS]: 'IOS-разработка',
+	[COURSE_ENUM.FRONTEND]: 'Frontend-разработка',
+	[COURSE_ENUM.WEB_DESIGN]: 'WEB-дизайн',
+	[COURSE_ENUM.ANDROID]: 'Android-разработка',
+};

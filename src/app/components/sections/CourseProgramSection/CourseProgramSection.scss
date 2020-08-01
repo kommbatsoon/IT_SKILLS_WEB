@@ -20,7 +20,7 @@ $line-animation-duration: 0.3s;
           height: 2px;
           background-image: $gradient-gold;
           background-size: cover;
-          transition: width $line-animation-duration linear;
+          transition: $transition-line-width;
         }
 
         .title {

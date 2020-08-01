@@ -2,7 +2,7 @@ export {Button} from './Button/Button';
 export {ArrowButton} from './ArrowButton/ArrowButton';
 export {SlideButton} from './SlideButton/SlideButton';
 export {FormButton} from './FormButton/FormButton';
-export {Input} from './Input/Input';
+export {InputControl} from './InputControl/InputControl';
 export {Icon} from './Icon/Icon';
 export {Divider} from './Divider/Divider';
 export {CardContainer} from './CardContainer/CardContainer';

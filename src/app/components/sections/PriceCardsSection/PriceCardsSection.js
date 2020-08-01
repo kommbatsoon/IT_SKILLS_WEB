@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Button, CardContainer, FormButton, SectionContainer} from '@app/components';
-import {getClassName} from '@util/helpers';
+import {getClassName, scrollTo} from '@util/helpers';
 import {TEXT_CONFIG} from '@util/config/text.config';
 import {COURSE_ENUM} from '@util/constants';
 
@@ -37,9 +37,12 @@ const PRICE_CARDS_CONFIG = {
 	},
 };
 
-export const PriceCardsSection = ({course = COURSE_ENUM.IOS, className}) => {
+export const PriceCardsSection = ({course = COURSE_ENUM.IOS, actionAnchor, className}) => {
 	const config = PRICE_CARDS_CONFIG[course];
-	const handleSignUpClick = () => console.log('Записаться на курс: ', config);
+
+	const handleSignUpClick = () => {
+		scrollTo(actionAnchor);
+	};
 
 	return (
 		<SectionContainer

@@ -29,3 +29,9 @@ $desktop-width: 1200px;
 $container-width: 1140px;
 $header-height: 65px;
 $footer-height: 283px;
+
+//Animation
+$transition-button-width: width 0.3s ease-in-out;
+$transition-line-width: width 0.3s linear;
+$transition-text-opacity: opacity .7s ease-in-out;
+$transition-shadow: box-shadow .3s ease-in-out;

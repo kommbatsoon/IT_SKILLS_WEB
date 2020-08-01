@@ -404,7 +404,7 @@ export const GLOBAL_CONFIG = {
 			title: 'Мы всегда на связи',
 			description: 'Напишите ваш вопрос в форме ниже и мы проконсультируем вас в ближайшее время',
 			buttonText: 'Отправить',
-			fields: [FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.PHONE, FORM_FIELD_ENUM.QUESTION],
+			fields: [FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE, FORM_FIELD_ENUM.QUESTION],
 		},
 	},
 	reviewsSection: {
@@ -464,5 +464,32 @@ export const GLOBAL_CONFIG = {
 	contacts: {
 		email: 'info@it-skills.pro',
 		phone: '+375 29 264 05 18',
+	},
+	form: {
+		validation: {
+			required: 'Это обязательное поле',
+		},
+		field: {
+			name: {
+				key: 'name',
+				label: 'Имя и Фамилия',
+				placeholder: 'Иван Иванов',
+			},
+			email: {
+				key: 'email',
+				label: 'Email',
+				placeholder: 'emaill@gmail.com',
+			},
+			phone: {
+				key: 'phone',
+				label: 'Номер телефона',
+				placeholder: '+375 (',
+			},
+			question: {
+				key: 'question',
+				label: 'Ваш вопрос',
+				placeholder: 'Напишите ваш вопрос',
+			},
+		},
 	},
 };

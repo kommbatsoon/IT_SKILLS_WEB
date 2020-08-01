@@ -1,6 +1,3 @@
-$line-animation-duration: 0.3s;
-$text-animation-duration: 1.3s;
-
 :local {
   .tabs {
     width: $container-width;
@@ -22,7 +19,7 @@ $text-animation-duration: 1.3s;
         height: 2px;
         background-image: $gradient-gold;
         background-size: cover;
-        transition: width $line-animation-duration linear;
+        transition: $transition-line-width;
       }
 
       .flexContainer {
@@ -34,7 +31,7 @@ $text-animation-duration: 1.3s;
           flex-basis: 50%;
           opacity: 0;
           visibility: hidden;
-          transition: opacity $text-animation-duration;
+          transition: $transition-text-opacity;
         }
       }
 

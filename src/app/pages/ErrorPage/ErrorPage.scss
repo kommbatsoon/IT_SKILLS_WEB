@@ -30,7 +30,7 @@
 
     .button {
       width: 270px;
-      transition: width .1s linear;
+      transition: $transition-button-width;
 
       &:hover {
         width: 300px;
