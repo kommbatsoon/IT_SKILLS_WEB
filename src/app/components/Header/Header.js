@@ -20,7 +20,10 @@ export const Header = () => {
 				<Link to={ROUTER_CONFIG.CONTACTS}>{GLOBAL_CONFIG.navigation.contacts}</Link>
 			</nav>
 
-			<SocialIcons classes={{root: style.socialIcons, icon: style.icon}} />
+			<SocialIcons
+				classes={{root: style.socialIcons, icon: style.icon}}
+				icons={GLOBAL_CONFIG.contacts.socialMedia}
+			/>
 		</header>
 	);
 };

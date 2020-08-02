@@ -43,7 +43,7 @@ export const Carousel = ({slides}) => {
 								<h3 className={style.name}>{slide.name}</h3>
 								<p className={style.jobTitle}>{slide.jobTitle}</p>
 							</div>
-							<SocialIcons classes={{root: style.socialIcons}} />
+							<SocialIcons classes={{root: style.socialIcons}} icons={slide.socialMedia} />
 						</div>
 						<p className={style.body}>{slide.comment}</p>
 					</div>

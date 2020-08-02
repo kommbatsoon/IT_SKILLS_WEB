@@ -47,7 +47,10 @@ export const Footer = ({config = GLOBAL_CONFIG.footer}) => {
 					<a className={style.email} href={`mailto:${GLOBAL_CONFIG.contacts.email}`}>
 						{GLOBAL_CONFIG.contacts.email}
 					</a>
-					<SocialIcons classes={{root: style.socialIcons, icon: style.icon}} />
+					<SocialIcons
+						classes={{root: style.socialIcons, icon: style.icon}}
+						icons={GLOBAL_CONFIG.contacts.socialMedia}
+					/>
 				</div>
 			</footer>
 		</>
