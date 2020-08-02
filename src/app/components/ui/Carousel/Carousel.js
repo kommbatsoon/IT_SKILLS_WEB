@@ -35,7 +35,7 @@ export const Carousel = ({slides}) => {
 					<div key={`slide-${index}`} className={style.slide}>
 						<div className={style.header}>
 							<img
-								src={require('@assets/images/review-avatar.png')}
+								src={require(`./../../../../assets/images/${slide.avatar}`)}
 								alt='Avatar'
 								className={style.avatar}
 							/>

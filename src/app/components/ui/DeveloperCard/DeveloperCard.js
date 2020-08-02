@@ -13,12 +13,12 @@ export const DeveloperCard = ({config = {}, course}) => {
 				<p className={style.description}>{config.description1}</p>
 				<p className={style.description}>{config.description2}</p>
 			</div>
-			<CourseImage course={course} className={style.image} />
+			<CourseCardImage course={course} className={style.image} />
 		</div>
 	);
 };
 
-const CourseImage = ({course = COURSE_ENUM.IOS, className}) => {
+const CourseCardImage = ({course = COURSE_ENUM.IOS, className}) => {
 	switch (course) {
 		case COURSE_ENUM.IOS: {
 			return <img src={require('@assets/images/ios-card.png')} alt='Image' className={className} />;

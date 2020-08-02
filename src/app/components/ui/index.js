@@ -8,6 +8,7 @@ export {Divider} from './Divider/Divider';
 export {CardContainer} from './CardContainer/CardContainer';
 export {CardContent} from './CardContent/CardContent';
 export {CardList} from './CardList/CardList';
+export {CourseImage} from './CourseImage/CourseImage';
 export {HorizontalTabs} from './HorizontalTabs/HorizontalTabs';
 export {VerticalTabs} from './VerticalTabs/VerticalTabs';
 export {Carousel} from './Carousel/Carousel';

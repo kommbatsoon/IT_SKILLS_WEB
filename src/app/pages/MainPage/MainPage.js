@@ -40,6 +40,4 @@ export const MainPage = ({config = GLOBAL_CONFIG.mainPage}) => {
 	);
 };
 
-//TODO: implement CourseImage (with className and classes (ios: style.ios, ...);
-//TODO: Reviews section. Add social media links and avatars to config;
 //TODO: Who interested points - turn around animation on hover;
