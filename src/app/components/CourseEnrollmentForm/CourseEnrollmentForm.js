@@ -56,7 +56,6 @@ export const CourseEnrollmentForm = (props) => {
 
 		fetch(`${window.location.origin}/telegram.php`, {method: 'post', body: formData})
 			.then((response) => {
-				console.log(response);
 				setFormValue(INITIAL_VALUE);
 			})
 			.catch((error) => console.error(error));

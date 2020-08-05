@@ -53,10 +53,6 @@ export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 		formData.append('phone', formValue.phone);
 		formData.append('question', formValue.question);
 
-		const fields = ['date', 'url', 'description', 'name', 'email', 'question'];
-
-		fields.forEach((field) => console.log(formData.get(field)));
-
 		fetch(`${window.location.origin}/telegram.php`, {method: 'post', body: formData})
 			.then((response) => {
 				console.log(response);
