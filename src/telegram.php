@@ -13,22 +13,28 @@ $phone = $_POST['phone'];
 $question = $_POST['question'];
 
 $arr = array(
-  '*** Новая заявка ***',
-  'Дата и время: ' => $date,
-  'URL: ' => $url,
-  'Описание: ' => $description,
-  '--------------------',
-  'Информация о клиенте',
-  'Имя: ' => $name,
-  'Email: ' => $email,
-  'Телефор: ' => $phone,
-  'Вопрос: ' => $question,
+    'URL' => $url,
+    'Дата' => $date,
+    'Имя' => $name,
+    'Email' => $email,
+    'Телефон' => $phone,
+    'Вопрос' => $question,
 );
 
-foreach($arr as $key => $value) {
-  $txt .= "<b>".$key."</b> ".$value."%0A";
+function test_empty($var)
+  {
+  return(!empty($var));
+  }
+
+$filtered_array = array_filter($arr,"test_empty");
+
+foreach($filtered_array as $key => $value) {
+  $txt .= "<b>".$key.":</b> <i>".$value."</i>%0A";
 };
 
-fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+$prefix = '<b>Новая заявка!</b>%0A';
+$form = $prefix . $txt;
+
+fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$form}","r");
 
 ?>

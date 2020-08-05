@@ -50,11 +50,11 @@ export const CourseEnrollmentForm = (props) => {
 		const description = `Курс - ${COURSE_NAME[course]}`;
 
 		formData.append('date', dayjs().format('YYYY.MM.DD HH:mm'));
-		formData.append('url', window.location.origin);
+		formData.append('url', window.location.href);
 		formData.append('description', description);
 		formData.append('phone', formValue.phone);
 
-		fetch('telegram.php', {method: 'post', body: formData})
+		fetch(`${window.location.origin}/telegram.php`, {method: 'post', body: formData})
 			.then((response) => {
 				console.log(response);
 				setFormValue(INITIAL_VALUE);
