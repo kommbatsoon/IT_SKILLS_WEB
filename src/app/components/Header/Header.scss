@@ -116,6 +116,11 @@
           align-items: center;
         }
 
+        .contact {
+          @include goldGradientFont();
+          font-family: $font-medium;
+        }
+
         .socialIcons {
           height: 50px;
           margin-top: 10px;
