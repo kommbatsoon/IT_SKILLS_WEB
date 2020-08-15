@@ -16,6 +16,10 @@ $margin: 16px;
     display: flex;
     justify-content: space-between;
 
+    .logoWrapper {
+      display: block;
+    }
+
     .text {
       font-size: 14px;
       line-height: 18px;
@@ -49,15 +53,12 @@ $margin: 16px;
         font-size: 14px;
         line-height: 18px;
         color: $color-text-primary;
-
-        &:hover {
-          font-weight: bold;
-        }
       }
     }
 
     .phone {
       @extend .text;
+      @include goldGradientFont();
       margin-top: $margin;
       display: block;
       color: $color-text-primary;
@@ -87,6 +88,38 @@ $margin: 16px;
 
         &:not(:first-child) {
           margin-left: 32px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .margin {
+      margin: 0;
+    }
+
+    .footer {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      height: max-content;
+
+      .text {
+        text-align: center;
+      }
+      .copyright {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      h3 {
+        text-align: center;
+        margin-top: 24px;
+      }
+      nav {
+        a {
+          color: $color-text-secondary;
+          text-align: center;
         }
       }
     }

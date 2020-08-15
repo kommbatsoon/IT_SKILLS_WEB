@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Carousel as ResponsiveCarousel} from 'react-responsive-carousel';
 import {SlideButton, SocialIcons} from '@app/components';
+import {getClassName} from '@util/helpers';
 
 import './Carousel.lib.scss';
 import style from './Carousel.scss';
@@ -11,7 +12,13 @@ export const Carousel = ({slides}) => {
 	const renderArrowPrev = (clickHandler, hasPrev) => {
 		if (!hasPrev) return <></>;
 
-		return <SlideButton onClick={clickHandler} wrapperClassName={style.button_left} leftSide />;
+		return (
+			<SlideButton
+				onClick={clickHandler}
+				wrapperClassName={getClassName(style.button, style.button_left)}
+				leftSide
+			/>
+		);
 	};
 
 	const renderArrowNext = (clickHandler, hasNext) => {

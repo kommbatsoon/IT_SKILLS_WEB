@@ -1,3 +1,5 @@
+@import '../styles/mixins';
+
 :global {
   body {
     background: $color-black;
@@ -11,6 +13,13 @@
     min-height: 100vh;
     min-width: $container-width;
     height: max-content;
+  }
+
+  @include mobile {
+    .app-container {
+      min-width: 0;
+      width: 100%;
+    }
   }
 }
 

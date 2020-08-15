@@ -75,3 +75,27 @@ button, input, optgroup, select, textarea {
     @include normalizeFont();
   }
 }
+
+@include mobile {
+  h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  h3 {}
+  h4 {}
+  p {}
+  a {}
+
+  button, input, optgroup, select, textarea {
+    @include normalizeFont();
+
+    &::-webkit-input-placeholder {
+      @include normalizeFont();
+    }
+  }
+}

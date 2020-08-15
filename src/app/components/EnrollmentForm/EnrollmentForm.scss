@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 :local {
   .wrapper {
     width: 709px;
@@ -6,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     h3 {
       text-align: center;
     }
@@ -23,13 +25,41 @@
 
       .formControl {
         width: 358px;
+
         &:not(:first-child) {
           margin-top: 10px;
         }
       }
+
       .button {
         margin-top: 50px;
         width: 358px;
+      }
+    }
+  }
+
+  @include mobile {
+    .wrapper {
+      width: 100%;
+      box-shadow: none;
+      padding: 54px 16px 96px 16px;
+
+      .form {
+        width: 100%;
+
+        .formControl {
+          width: 100%;
+        }
+
+        .button {
+          width: 100%;
+          background: $gradient-gold;
+          box-shadow: none;
+
+          &_text {
+            color: $color-black;
+          }
+        }
       }
     }
   }

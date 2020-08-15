@@ -16,7 +16,7 @@ export const Footer = ({config = GLOBAL_CONFIG.footer}) => {
 			<Divider className={style.margin} />
 			<footer className={style.footer}>
 				<div>
-					<Link to={ROUTER_CONFIG.MAIN}>
+					<Link to={ROUTER_CONFIG.MAIN} className={style.logoWrapper}>
 						<img src={require('@assets/images/logo-white.svg')} alt='Logo' className={style.logo} />
 					</Link>
 					<p className={style.copyright}>{TEXT_CONFIG.copyright}</p>

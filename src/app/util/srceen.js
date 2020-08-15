@@ -4,12 +4,6 @@ const SCREEN_WIDTH = {
 	DESKTOP: 1200,
 };
 
-window.addEventListener('resize', handleWindowResize);
-
-export function handleWindowResize() {
-	Screen.width = window.innerWidth;
-}
-
 export const Screen = {
 	get width() {
 		return this._width;
@@ -18,12 +12,19 @@ export const Screen = {
 		this._width = width;
 	},
 	get isMobile() {
-		return this.width <= SCREEN_WIDTH.MOBILE;
+		return this.width < SCREEN_WIDTH.TABLET;
 	},
 	get isTablet() {
-		return this.width <= SCREEN_WIDTH.TABLET;
+		return this.width >= SCREEN_WIDTH.TABLET && this.width < SCREEN_WIDTH.DESKTOP;
 	},
 	get isDesktop() {
-		return this.width <= SCREEN_WIDTH.DESKTOP;
+		return this.width >= SCREEN_WIDTH.DESKTOP;
 	},
 };
+
+export function handleWindowResize() {
+	Screen.width = window.innerWidth;
+}
+
+handleWindowResize();
+window.addEventListener('resize', handleWindowResize);

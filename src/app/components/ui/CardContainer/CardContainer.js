@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {isEmpty} from 'lodash';
 
-import {ArrowButton, Icon} from '@app/components';
+import {ArrowButton, Button, Icon} from '@app/components';
 import {getClassName} from '@util/helpers';
 import {APP_ICON} from '@util/constants';
+import {Screen} from '@util/srceen';
 
 import style from './CardContainer.scss';
 
@@ -28,24 +29,32 @@ export const CardContainer = (props) => {
 			className={getClassName(
 				style.card,
 				!isActive && withShadowOnHover && style.shadowOnHover,
-				(isActive || (!withShadowOnHover && withHeadLine)) && style.headLine,
+				((!Screen.isMobile && isActive) || (!withShadowOnHover && withHeadLine)) && style.headLine,
 				!isActive && withShadowOnHover && withHeadLine && style.headLineOnHover,
 				className,
 			)}
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
 		>
+			{!Screen.isDesktop && card?.image && React.cloneElement(card.image, {active: isHovered})}
+
 			{children}
 
-			{card?.image && React.cloneElement(card.image, {active: isHovered})}
+			{Screen.isDesktop && card?.image && React.cloneElement(card.image, {active: isHovered})}
 
 			{!isEmpty(ButtonProps) && (
 				<>
 					<div className={style.emptyBlock} />
 
-					{!isHovered && <FakeButton />}
-					{isHovered && (
+					{Screen.isDesktop && !isHovered && <FakeButton />}
+					{Screen.isDesktop && isHovered && (
 						<ArrowButton onClick={() => ButtonProps.onClick(card)}>{ButtonProps.text}</ArrowButton>
+					)}
+
+					{!Screen.isDesktop && (
+						<Button className={style.button} onClick={() => ButtonProps.onClick(card)}>
+							{ButtonProps.text}
+						</Button>
 					)}
 				</>
 			)}

@@ -23,6 +23,8 @@ export const APP_ICON = {
 	conference: 'conference',
 	message: 'message',
 	check: 'check',
+	burgerWhite: 'burgerWhite',
+	burgerGold: 'burgerGold',
 };
 
 export const FORM_FIELD_ENUM = {

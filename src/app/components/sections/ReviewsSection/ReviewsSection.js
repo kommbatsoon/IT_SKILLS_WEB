@@ -9,7 +9,7 @@ import style from './ReviewsSection.scss';
 
 export const ReviewsSection = ({config = GLOBAL_CONFIG.reviewsSection, className}) => {
 	return (
-		<SectionContainer className={getClassName(style.wrapper, className)} title={config.title}>
+		<SectionContainer withContainerWidth className={getClassName(style.wrapper, className)} title={config.title}>
 			<Carousel slides={config.items} />
 		</SectionContainer>
 	);

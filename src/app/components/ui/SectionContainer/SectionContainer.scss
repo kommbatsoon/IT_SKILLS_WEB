@@ -7,4 +7,11 @@
   .title {
     margin-bottom: 50px;
   }
+
+  @include mobile {
+    .wrapper {
+      width: 100%;
+      margin-top: 90px;
+    }
+  }
 }

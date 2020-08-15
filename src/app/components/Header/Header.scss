@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 :local {
   .header {
     width: 100%;
@@ -13,9 +15,17 @@
     backdrop-filter: blur(50px);
     z-index: 1000;
 
-    .logo {
-      width: 163px;
-      height: 59px;
+    &_mobile {
+      display: none;
+    }
+
+    .logoWrapper {
+      display: block;
+
+      .logo {
+        width: 163px;
+        height: 59px;
+      }
     }
 
     nav {
@@ -43,6 +53,76 @@
       .icon {
         &:not(:first-child) {
           margin-left: 62px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .header {
+      min-width: 0;
+      width: 100%;
+      height: max-content;
+      display: block;
+
+      &_desktop {
+        display: none;
+      }
+
+      &_mobile {
+        display: block;
+      }
+
+      .mobileHeader {
+        width: 100%;
+        padding: 0 16px;
+        height: $mobile-header-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+      }
+
+      .mobileContentWrapper {
+        padding: 0;
+        height: 0;
+        transition: height .3s linear;
+
+        &_open {
+          padding: 0 16px 10px 16px;
+          height: 346px;
+        }
+
+        .mobileContent {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity .5s ease-in-out;
+
+          &_open {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        nav {
+          margin: 0;
+          flex-direction: column;
+        }
+
+        a, .contact {
+          margin: 0;
+          height: 46px;
+          display: flex;
+          align-items: center;
+        }
+
+        .socialIcons {
+          height: 50px;
+          margin-top: 10px;
+
+          .icon {
+            margin-right: 30px;
+          }
         }
       }
     }

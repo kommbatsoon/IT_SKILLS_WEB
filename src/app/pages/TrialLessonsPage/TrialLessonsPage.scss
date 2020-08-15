@@ -1,8 +1,20 @@
+@import '../../styles/mixins';
+
 :local {
   .title {
     margin: 183px 0 175px 0;
   }
   .form {
     margin-top: 128px;
+  }
+
+  @include mobile {
+    .title {
+      margin: 80px 20px 50px 20px;
+    }
+
+    .form {
+      margin-top: 78px;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 :local {
   .slide {
     height: 300px;
@@ -49,8 +51,40 @@
     right: 94px;
 
     &_left {
-      @extend .button;
       left: 94px;
+    }
+  }
+
+  @include mobile {
+    .slide {
+      height: max-content;
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .info {
+          margin: 12px 0 0 0;
+
+          .name {
+            text-align: left;
+          }
+
+          .jobTitle {
+            text-align: left;
+          }
+        }
+
+        .socialIcons {
+          margin: 17px 0 0 0;
+        }
+      }
+    }
+
+    .button {
+      display: none;
     }
   }
 }
@@ -76,5 +110,14 @@
 
   .carousel .control-dots .dot:focus {
     outline: none;
+  }
+
+  @include mobile {
+    .carousel .slider-wrapper {
+      width: 100%;
+    }
+    .carousel .control-dots {
+      position: relative;
+    }
   }
 }

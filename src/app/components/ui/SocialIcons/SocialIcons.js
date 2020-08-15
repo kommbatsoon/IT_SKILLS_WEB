@@ -11,10 +11,10 @@ export const SocialIcons = (props) => {
 
 	return (
 		<div className={getClassName(style.socialIcons, classes.root)}>
-			{icons.map(({icon, link}) => {
+			{icons.map(({icon, link}, key) => {
 				return (
-					<a href={link} target='_blank' rel='noreferrer'>
-						<Icon name={icon} className={getClassName(style.icon, classes.icon)} />
+					<a key={`icon-${key}`} href={link} target='_blank' rel='noreferrer'>
+						<Icon name={icon} className={getClassName(classes.icon)} />
 					</a>
 				);
 			})}

@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 :local {
   .wrapper {
     width: $container-width;
@@ -5,6 +7,16 @@
 
   .cardTitle {
     margin: 16px 0 10px 0;
+  }
+
+  @include mobile {
+    .wrapper {
+      width: 100%;
+    }
+
+    .cardTitle {
+      margin: 16px 0 10px 0;
+    }
   }
 }
 

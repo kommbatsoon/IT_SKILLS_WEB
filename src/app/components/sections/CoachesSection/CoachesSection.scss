@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 :local {
   .wrapper {
     width: $container-width;
@@ -33,5 +35,36 @@
 
   .cardDescription {
     width: 328px
+  }
+
+  @include mobile {
+    .wrapper {
+      width: 100%;
+
+      h2 {
+        margin: 91px 0 10px 0;
+      }
+    }
+
+    .cardContainer {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .cardDescription {
+      width: 100%;
+      z-index: 10;
+    }
+
+    .avatar {
+      position: relative;
+      filter: none;
+      z-index: 1;
+      top: 50px;
+    }
   }
 }

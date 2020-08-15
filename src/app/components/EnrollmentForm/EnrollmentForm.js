@@ -111,7 +111,7 @@ export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 					</div>
 				)}
 
-				<FormButton className={style.button} onClick={handleFormSubmit}>
+				<FormButton classes={{root: style.button, text: style.button_text}} onClick={handleFormSubmit}>
 					{buttonText}
 				</FormButton>
 			</div>

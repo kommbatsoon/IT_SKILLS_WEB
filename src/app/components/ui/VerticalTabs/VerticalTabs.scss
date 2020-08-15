@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 :local {
   .tabs {
     width: $container-width;
@@ -47,6 +49,42 @@
         .column {
           visibility: visible;
           opacity: 1;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .tabs {
+      width: 100%;
+      padding: 0 $padding-mobile;
+      box-sizing: border-box;
+
+      .tab {
+        height: max-content;
+
+        h3 {
+          color: $color-text-primary;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 53px;
+        }
+
+        .line {
+          margin: 9px 0;
+          width: 100%;
+          height: 2px;
+        }
+
+        .flexContainer {
+          height: max-content;
+
+          .column {
+            flex-basis: 100%;
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
     }

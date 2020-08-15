@@ -11,7 +11,7 @@ $gradient-gold: linear-gradient(144.58deg, #FCD17B -51.47%, #C3971C -27.96%, #B8
 $gradient-gold-button: linear-gradient(rgba(155, 155, 155, 0), rgba(155, 155, 155, 0)), $gradient-gold;
 
 //Shadow
-$shadow-primary: 0 0 50px rgba(0, 0, 0, 0.5);
+$shadow-primary: 0 0 20px rgba(0, 0, 0, 0.5);
 
 //Fonts
 $font-regular: Geometria-Regular;
@@ -29,9 +29,13 @@ $desktop-width: 1200px;
 $container-width: 1140px;
 $header-height: 65px;
 $footer-height: 283px;
+$mobile-header-height: 65px;
 
 //Animation
 $transition-button-width: width 0.3s ease-in-out;
 $transition-line-width: width 0.3s linear;
 $transition-text-opacity: opacity .7s ease-in-out;
 $transition-shadow: box-shadow .3s ease-in-out;
+
+//Padding/Margin
+$padding-mobile: 16px;

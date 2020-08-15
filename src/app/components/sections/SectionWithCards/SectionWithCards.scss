@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 :local {
   .cards {
     display: flex;
@@ -6,6 +8,17 @@
     .card {
       flex-basis: 50%;
       min-height: 300px;
+    }
+  }
+
+  @include mobile {
+    .cards {
+      display: block;
+
+      .card {
+        width: 100%;
+        min-height: 150px;
+      }
     }
   }
 }

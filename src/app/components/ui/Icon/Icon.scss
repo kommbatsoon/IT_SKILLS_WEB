@@ -76,7 +76,7 @@
   .support {
     background-image: url('../../../../assets/images/icons/support.svg');
     width: 40px;
-    height: 36px;
+    height: 40px;
   }
   .practice {
     background-image: url('../../../../assets/images/icons/practice.svg');
@@ -85,7 +85,7 @@
   }
   .blank {
     background-image: url('../../../../assets/images/icons/blank.svg');
-    width: 29px;
+    width: 40px;
     height: 40px;
   }
 
@@ -179,5 +179,17 @@
     background-image: url(  '../../../../assets/images/icons/check.svg');
     width: 16px;
     height: 13px;
+  }
+
+  .burgerWhite {
+    background-image: url('../../../../assets/images/icons/burgerWhite.svg');
+    width: 20px;
+    height: 15px;
+  }
+
+  .burgerGold {
+    background-image: url('../../../../assets/images/icons/burgerGlod.svg');
+    width: 20px;
+    height: 15px;
   }
 }

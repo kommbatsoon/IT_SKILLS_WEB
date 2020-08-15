@@ -11,22 +11,14 @@ import history from '@app/history';
 import style from './CoachesSection.scss';
 
 const CoachImage = (props) => {
-	const {course = COURSE_ENUM.IOS, active = false} = props;
+	const {course = COURSE_ENUM.IOS, active = false, className = ''} = props;
+
+	const classString = getClassName(style.avatar, active && style.active, className);
 
 	const image = {
-		[COURSE_ENUM.IOS]: (
-			<img
-				src={require('@assets/images/avatars/den.png')}
-				alt='Logo'
-				className={getClassName(style.avatar, active && style.active)}
-			/>
-		),
+		[COURSE_ENUM.IOS]: <img src={require('@assets/images/avatars/den.png')} alt='Logo' className={classString} />,
 		[COURSE_ENUM.FRONTEND]: (
-			<img
-				src={require('@assets/images/avatars/pavel.png')}
-				alt='Logo'
-				className={getClassName(style.avatar, active && style.active)}
-			/>
+			<img src={require('@assets/images/avatars/pavel.png')} alt='Logo' className={classString} />
 		),
 	};
 

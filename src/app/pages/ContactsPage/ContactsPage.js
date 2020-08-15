@@ -14,7 +14,7 @@ export const ContactsPage = ({config = GLOBAL_CONFIG.contactsPage}) => {
 		<>
 			<h2 className={style.title}>{config.topSection.title}</h2>
 			<div className={style.flexContainer}>
-				<div>
+				<div className={style.info}>
 					<h3>{config.infoSection.title}:</h3>
 
 					<ul className={style.points}>
@@ -44,7 +44,7 @@ export const ContactsPage = ({config = GLOBAL_CONFIG.contactsPage}) => {
 						</p>
 					</div>
 				</div>
-				<EnrollmentForm config={config.enrollmentFormSection} />
+				<EnrollmentForm config={config.enrollmentFormSection} className={style.form} />
 			</div>
 		</>
 	);

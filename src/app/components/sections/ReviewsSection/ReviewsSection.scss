@@ -1,10 +1,18 @@
 :local {
   .wrapper {
-    width: $container-width;
-    margin: 0 auto;
-
     h2 {
       margin: 122px 0 43px 0;
+    }
+  }
+
+  @include mobile {
+    .wrapper {
+      padding: 0 $padding-mobile;
+      box-sizing: border-box;
+
+      h2 {
+        margin: 0 0 43px 0;
+      }
     }
   }
 }
