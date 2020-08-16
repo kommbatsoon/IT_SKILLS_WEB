@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 :local {
   .wrapper {
     position: relative;
@@ -55,6 +57,70 @@
     .flexWrapper {
       display: flex;
       align-items: center;
+    }
+  }
+
+  @include mobile {
+    .wrapper {
+      margin-bottom: 30px;
+      margin-top: $header-height + 24px;
+      width: 100%;
+      position: relative;
+      height: max-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 16px 0 16px;
+      box-sizing: border-box;
+
+      .bgImg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 260px;
+        height: 312px;
+        opacity: .15;
+      }
+
+      .when {
+        font-size: 18px;
+        line-height: 23px;
+        color: $color-text-dark-grey;
+
+        .date {
+          color: $color-text-primary;
+          font-family: $font-medium;
+        }
+      }
+
+      h2 {
+        margin: 20px 0 0 0;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        color: $color-text-dark-grey;
+      }
+
+      h1 {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+      }
+
+      .flexWrapper {
+        display: block;
+      }
+
+      .button {
+        margin: 56px 0 0 0;
+        width: 100%;
+        transition: none;
+
+        &:hover {
+          width: 100%;
+        }
+      }
     }
   }
 }

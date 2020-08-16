@@ -1,5 +1,7 @@
+@import '../../../styles/mixins';
+
 :local {
-  .wrapper {
+  .wrapper_desktop {
     width: $container-width;
     height: 317px;
     box-shadow: $shadow-primary;
@@ -32,6 +34,48 @@
       margin-left: auto;
       height: 100%;
       width: 430px;
+    }
+  }
+
+  .wrapper_mobile {
+    display: none;
+    width: 100%;
+    margin-top: 100px;
+
+    .line {
+      width: 100%;
+      height: 5px;
+      background: $gradient-gold;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .image {
+      margin-left: auto;
+      min-height: 236px;
+      width: 100%;
+    }
+
+    .content {
+      padding: 0 16px;
+
+      h2 {
+        margin-top: -37px;
+        text-align: left;
+      }
+
+      .description {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  @include mobile {
+    .wrapper_desktop {
+      display: none;
+    }
+
+    .wrapper_mobile {
+      display: block;
     }
   }
 }

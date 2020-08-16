@@ -6,15 +6,26 @@ import style from './DeveloperCard.scss';
 
 export const DeveloperCard = ({config = {}, course}) => {
 	return (
-		<div className={style.wrapper}>
-			<div className={style.line} />
-			<div className={style.content}>
-				<h2>{config.title}</h2>
-				<p className={style.description}>{config.description1}</p>
-				<p className={style.description}>{config.description2}</p>
+		<>
+			<div className={style.wrapper_desktop}>
+				<div className={style.line} />
+				<div className={style.content}>
+					<h2>{config.title}</h2>
+					<p className={style.description}>{config.description1}</p>
+					<p className={style.description}>{config.description2}</p>
+				</div>
+				<CourseCardImage course={course} className={style.image} />
 			</div>
-			<CourseCardImage course={course} className={style.image} />
-		</div>
+			<div className={style.wrapper_mobile}>
+				<div className={style.line} />
+				<CourseCardImage course={course} className={style.image} />
+				<div className={style.content}>
+					<h2>{config.title}</h2>
+					<p className={style.description}>{config.description1}</p>
+					<p className={style.description}>{config.description2}</p>
+				</div>
+			</div>
+		</>
 	);
 };
 

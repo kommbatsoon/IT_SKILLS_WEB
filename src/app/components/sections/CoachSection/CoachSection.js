@@ -33,7 +33,7 @@ const COACH_CONFIG = {
 
 // Add config from parent
 
-export const CoachSection = ({course = COURSE_ENUM.IOS, title, shortMode = false, actionAnchor, className}) => {
+export const CoachSection = ({course = COURSE_ENUM.IOS, shortMode = false, actionAnchor, className}) => {
 	const config = COACH_CONFIG[course];
 	const handleSignUpClick = () => {
 		scrollTo(actionAnchor);

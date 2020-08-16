@@ -86,7 +86,7 @@
       .mobileContentWrapper {
         padding: 0;
         height: 0;
-        transition: height .3s linear;
+        transition: height .2s linear;
 
         &_open {
           padding: 0 16px 10px 16px;
@@ -96,7 +96,7 @@
         .mobileContent {
           opacity: 0;
           visibility: hidden;
-          transition: opacity .5s ease-in-out;
+          transition: opacity .7s ease-in-out;
 
           &_open {
             opacity: 1;
