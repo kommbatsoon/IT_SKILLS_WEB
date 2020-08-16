@@ -82,4 +82,31 @@
       }
     }
   }
+
+  @include mobile {
+    .wrapper {
+
+      .flexContainer {
+        display: block;
+
+        .card {
+          margin: 0;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .button {
+            margin-top: 40px;
+            width: 100%;
+            transition: none;
+
+            &:hover {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }

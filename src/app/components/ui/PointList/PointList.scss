@@ -1,58 +1,90 @@
+@import '../../../styles/mixins';
+
 :local {
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .point {
+      position: relative;
+      font-size: 18px;
+      line-height: 23px;
+      color: $color-text-primary;
+      padding: 0 15px;
+
+      display: flex;
+      align-items: center;
+
+      width: 750px;
+      height: 60px;
+      box-sizing: border-box;
+
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $gradient-gold;
+        height: 3px;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      .icon {
+        margin-right: 15px;
+      }
+
+      &:hover, &.active {
+        &:before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
 
-  .point {
-    position: relative;
-    font-size: 18px;
-    line-height: 23px;
-    color: $color-text-primary;
-    padding: 0 15px;
+  @include mobile {
+    .wrapper {
 
-    display: flex;
-    align-items: center;
+      .point {
+        color: $color-text-primary;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 60px;
+        height: max-content;
+        box-sizing: border-box;
+        box-shadow: none;
+        border-radius: 0;
+        font-size: 16px;
 
-    width: 750px;
-    height: 60px;
-    box-sizing: border-box;
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
 
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+        &:before {
+          display: none;
+        }
 
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: $gradient-gold;
-      height: 3px;
-      width: 100%;
-      border-radius: 5px 5px 0 0;
-
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .3s ease;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 32px;
-    }
-
-    .icon {
-      margin-right: 15px;
-    }
-
-    &:hover, &.active {
-      &:before {
-        opacity: 1;
-        visibility: visible;
+        .icon {
+          min-width: 16px;
+        }
       }
     }
   }
 }
-
