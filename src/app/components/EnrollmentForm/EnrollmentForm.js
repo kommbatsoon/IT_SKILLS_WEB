@@ -36,7 +36,7 @@ export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 	};
 
 	const handleFormSubmit = () => {
-		if (!formValue.phone) {
+		if (!formValue.phone || !formValue.name) {
 			setError(true);
 			return;
 		}
@@ -74,6 +74,8 @@ export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 							placeholder={globalConfig.field.name.placeholder}
 							value={formValue.name}
 							onChange={(value) => handleFormChange(globalConfig.field.name.key, value)}
+							error={error}
+							errorText={globalConfig.validation.required}
 						/>
 					</div>
 				)}

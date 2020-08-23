@@ -81,6 +81,10 @@
         opacity: .15;
       }
 
+      .course, .description {
+        color: $color-text-secondary;
+      }
+
       h1 {
         margin: 15px 0;
         font-size: 24px;
