@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
 import {CardContainer, FormButton, InputControl} from '@app/components';
 import {getClassName} from '@util/helpers';
 import {FORM_FIELD_ENUM} from '@util/constants';
+import {TEXT_CONFIG} from '@util/config/text.config';
+import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './EnrollmentForm.scss';
-import {GLOBAL_CONFIG} from '@util/config';
 
 const DEFAULT_CONFIG = {
 	title: 'Стань востребованным IT специалистом',
@@ -29,6 +32,7 @@ export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 
 	const [formValue, setFormValue] = useState(() => INITIAL_VALUE);
 	const [error, setError] = useState(() => false);
+	const [snackBarOpen, setSnackBarOpen] = useState(() => false);
 
 	const handleFormChange = (key, value) => {
 		error && setError(false);
@@ -57,6 +61,7 @@ export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 			.then((response) => {
 				console.log(response);
 				setFormValue(INITIAL_VALUE);
+				setSnackBarOpen(true);
 			})
 			.catch((error) => console.error(error));
 	};
@@ -117,6 +122,12 @@ export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
 					{buttonText}
 				</FormButton>
 			</div>
+
+			<Snackbar open={snackBarOpen} autoHideDuration={3000} onClose={() => setSnackBarOpen(false)}>
+				<MuiAlert elevation={6} variant='filled'>
+					{TEXT_CONFIG.successMessage}
+				</MuiAlert>
+			</Snackbar>
 		</CardContainer>
 	);
 };

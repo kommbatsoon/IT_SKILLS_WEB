@@ -17,7 +17,7 @@ export const Footer = ({config = GLOBAL_CONFIG.footer}) => {
 			<footer className={style.footer}>
 				<div>
 					<Link to={ROUTER_CONFIG.MAIN} className={style.logoWrapper}>
-						<img src={require('@assets/images/logo-white.svg')} alt='Logo' className={style.logo} />
+						<img src={require('@assets/images/logo-white.png')} alt='Logo' className={style.logo} />
 					</Link>
 					<p className={style.copyright}>{TEXT_CONFIG.copyright}</p>
 				</div>

@@ -30,7 +30,7 @@
       line-height: 20px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      color: $color-text-dark-grey;
+      color: $color-text-secondary;
     }
 
     h1 {
@@ -46,7 +46,7 @@
       line-height: 20px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      color: $color-text-dark-grey;
+      color: $color-text-secondary;
 
       .period {
         color: $color-text-primary;
@@ -79,10 +79,6 @@
         width: 260px;
         height: 312px;
         opacity: .15;
-      }
-
-      .course, .description {
-        color: $color-text-secondary;
       }
 
       h1 {

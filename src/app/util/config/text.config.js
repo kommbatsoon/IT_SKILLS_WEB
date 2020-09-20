@@ -33,4 +33,5 @@ export const TEXT_CONFIG = {
 	seeFullProgram: 'Посмотреть всю программу',
 	seeCollapsedProgram: 'Свернуть программу',
 	buyersChoice: 'Выбор учеников',
+	successMessage: 'Заявка успешно отправлена!',
 };

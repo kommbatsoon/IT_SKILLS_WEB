@@ -20,7 +20,7 @@ export const Header = () => {
 		<>
 			<header className={getClassName(style.header, style.header_desktop)}>
 				<Link to={ROUTER_CONFIG.MAIN} className={style.logoWrapper}>
-					<img src={require('@assets/images/logo-gold.svg')} alt='Logo' className={style.logo} />
+					<img src={require('@assets/images/logo-gold.png')} alt='Logo' className={style.logo} />
 				</Link>
 
 				<nav>
@@ -36,7 +36,7 @@ export const Header = () => {
 			</header>
 			<header className={getClassName(style.header, style.header_mobile)}>
 				<div className={style.mobileHeader} onClick={() => setOpen(!isOpen)}>
-					<img src={require('@assets/images/logo-gold.svg')} alt='Logo' className={style.logo} />
+					<img src={require('@assets/images/logo-gold.png')} alt='Logo' className={style.logo} />
 					<Icon name={isOpen ? APP_ICON.burgerWhite : APP_ICON.burgerGold} />
 				</div>
 

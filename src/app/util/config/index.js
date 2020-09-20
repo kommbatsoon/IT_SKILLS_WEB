@@ -407,6 +407,32 @@ export const GLOBAL_CONFIG = {
 			fields: [FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE, FORM_FIELD_ENUM.QUESTION],
 		},
 	},
+	courseTopSection: {
+		[COURSE_ENUM.IOS]: {
+			date: '25 мая в 19:00',
+			title: 'по iOS-разработке',
+			description: 'Научим с нуля HTML, CSS и JavaScript',
+			period: 'за 6 месяцев',
+		},
+		[COURSE_ENUM.FRONTEND]: {
+			date: '25 мая в 19:00',
+			title: 'по FRONTEND-разработке',
+			description: 'Научим с нуля HTML, CSS и JavaScript',
+			period: 'за 6 месяцев',
+		},
+		[COURSE_ENUM.WEB_DESIGN]: {
+			date: '25 мая в 19:00',
+			title: 'по WEB-дизайну',
+			description: 'Научим с нуля HTML, CSS и JavaScript',
+			period: 'за 6 месяцев',
+		},
+		[COURSE_ENUM.ANDROID]: {
+			date: '25 мая в 19:00',
+			title: 'по ANDROID-разработке',
+			description: 'Научим с нуля HTML, CSS и JavaScript',
+			period: 'за 6 месяцев',
+		},
+	},
 	reviewsSection: {
 		title: TEXT_CONFIG.sectionTitle.reviews,
 		items: [

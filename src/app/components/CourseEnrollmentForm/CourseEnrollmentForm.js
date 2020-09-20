@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
 import {Button, CardContainer, InputControl} from '@app/components';
 import {getClassName} from '@util/helpers';
@@ -32,6 +34,7 @@ export const CourseEnrollmentForm = (props) => {
 
 	const [formValue, setFormValue] = useState(() => INITIAL_VALUE);
 	const [error, setError] = useState(() => false);
+	const [snackBarOpen, setSnackBarOpen] = useState(() => false);
 
 	const handleFormChange = (key, value) => {
 		error && setError(false);
@@ -57,6 +60,7 @@ export const CourseEnrollmentForm = (props) => {
 		fetch(`${window.location.origin}/telegram.php`, {method: 'post', body: formData})
 			.then((response) => {
 				setFormValue(INITIAL_VALUE);
+				setSnackBarOpen(true);
 			})
 			.catch((error) => console.error(error));
 	};
@@ -87,6 +91,12 @@ export const CourseEnrollmentForm = (props) => {
 					{config.buttonText}
 				</Button>
 			</div>
+
+			<Snackbar open={snackBarOpen} autoHideDuration={3000} onClose={() => setSnackBarOpen(false)}>
+				<MuiAlert elevation={6} variant='filled'>
+					{TEXT_CONFIG.successMessage}
+				</MuiAlert>
+			</Snackbar>
 		</CardContainer>
 	);
 };
