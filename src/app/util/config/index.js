@@ -553,4 +553,11 @@ export const GLOBAL_CONFIG = {
 			},
 		},
 	},
+	errorPage: {
+		404: {
+			title: '404',
+			description: 'Страница не найдена',
+			buttonText: 'Вернуться на главную',
+		},
+	},
 };

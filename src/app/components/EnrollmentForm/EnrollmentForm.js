@@ -12,12 +12,6 @@ import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './EnrollmentForm.scss';
 
-const DEFAULT_CONFIG = {
-	title: 'Стань востребованным IT специалистом',
-	description: 'Оставьте ваш номер телефона и мы проконсультируем вас по любому вопросу обучения и сотрудничества',
-	buttonText: 'Получить консультацию',
-};
-
 const {form: globalConfig} = GLOBAL_CONFIG;
 
 const INITIAL_VALUE = {
@@ -27,7 +21,7 @@ const INITIAL_VALUE = {
 	[globalConfig.field.question.key]: '',
 };
 
-export const EnrollmentForm = ({id, className, config = DEFAULT_CONFIG}) => {
+export const EnrollmentForm = ({id, className, config = {}}) => {
 	const {title, description, buttonText, fields = Object.values(FORM_FIELD_ENUM)} = config;
 
 	const [formValue, setFormValue] = useState(() => INITIAL_VALUE);
