@@ -294,10 +294,197 @@ export const GLOBAL_CONFIG = {
 				title: TEXT_CONFIG.sectionTitle.speaker,
 			},
 		},
+		[COURSE_ENUM.FRONTEND]: {
+			course: COURSE_ENUM.FRONTEND,
+			topSection: {
+				date: '25 мая в 19:00',
+				title: 'по iOS-разработке',
+			},
+			howToGetSection: {
+				title: TEXT_CONFIG.sectionTitle.howToGet,
+				items: [
+					{
+						icon: APP_ICON.signUp,
+						title: '1. Регистрируйся',
+						description: 'Заполни контактную информацию в форме регистрации',
+					},
+					{
+						icon: APP_ICON.consult,
+						title: '2. Мы позвоним',
+						description: 'Заполни контактную информацию в форме регистрации',
+					},
+					{
+						icon: APP_ICON.calendar,
+						title: '3. Напомним',
+						description: 'Заполни контактную информацию в форме регистрации',
+					},
+					{
+						icon: APP_ICON.door,
+						title: '4. Присоединяйся',
+						description: 'Заполни контактную информацию в форме регистрации',
+					},
+				],
+			},
+			lessonProgramSection: {
+				title: TEXT_CONFIG.sectionTitle.lessonProgram,
+				items: [
+					{
+						title: '1. перспективы ios-разработки',
+						description:
+							'Почему создание мобильных приложений для устройств Apple так востребовано, какие тренды на рынке труда и в области iOS-разработки',
+					},
+					{
+						title: '2. язык swift',
+						description:
+							'Почему создание мобильных приложений для устройств Apple так востребовано, какие тренды на рынке труда и в области iOS-разработки',
+					},
+					{
+						title: '3. как проходит обучение',
+						description:
+							'Почему создание мобильных приложений для устройств Apple так востребовано, какие тренды на рынке труда и в области iOS-разработки',
+					},
+					{
+						title: '4. первая практика',
+						description:
+							'Почему создание мобильных приложений для устройств Apple так востребовано, какие тренды на рынке труда и в области iOS-разработки',
+					},
+					{
+						title: '5. живое общение',
+						description:
+							'Почему создание мобильных приложений для устройств Apple так востребовано, какие тренды на рынке труда и в области iOS-разработки',
+					},
+				],
+			},
+			whoInterestedSection: {
+				title: TEXT_CONFIG.sectionTitle.whoInterested,
+				items: [
+					{
+						icon: APP_ICON.apple,
+						title: 'Начинающим iOS-разработчикам',
+					},
+					{
+						icon: APP_ICON.webDev,
+						title: 'Новичкам в программировании',
+					},
+					{
+						icon: APP_ICON.swift,
+						title: 'Желающим освоить новый язык программирования',
+					},
+				],
+			},
+			developerCardSection: {
+				title: 'КТО ТАКОЙ iOS-РАЗРАБОТЧИК?',
+				description1:
+					'IOS-разработчик занимается созданием приложений, интерфейсов \n' +
+					'и обновлений для устройств, созданных под брендом Apple:\n' +
+					'iPad, iPod, iPhone, наручные часы Watch.',
+				description2:
+					'На курсы вы изучите основной инструмент IOS-разработчика — язык программирования Swift,' +
+					'популярный и активно развивающийся язык разработки мобильных приложений. По данным HeadHunter,' +
+					'средняя зарплата разработчиков iOS-приложений — 130-140 тысяч рублей, а с опытом достигает 300 тысяч рублей в месяц',
+			},
+			enrollmentFormSection: {
+				title: 'регистрируйся',
+				description: 'На бесплатное пробное занятие по курсу iOS-разработка',
+				buttonText: 'Записаться',
+				fields: [FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE],
+			},
+			coachSection: {
+				title: TEXT_CONFIG.sectionTitle.speaker,
+			},
+		},
 	},
 	coursePage: {
 		[COURSE_ENUM.IOS]: {
 			course: COURSE_ENUM.IOS,
+			topSection: {
+				date: '25 мая в 19:00',
+				title: 'по iOS-разработке',
+				description: 'Научим с нуля HTML, CSS и JavaScript',
+				period: 'за 6 месяцев',
+			},
+			advantagesSection: {
+				items: [
+					{
+						icon: APP_ICON.dollar,
+						title: 'Удобный формат оплаты',
+						description:
+							'Оплата в рассрочку или вся стоимость курса сразу, со скидкой 15%. Выбирайте как вам удобнее',
+					},
+					{
+						icon: APP_ICON.blank,
+						title: 'Трудоустройство и стажировки',
+						description: 'Лучшие выпускники получают предложения по стажировке от наших компаний-партнёров',
+					},
+					{
+						icon: APP_ICON.practice,
+						title: 'Основной упор на практику',
+						description: 'Наши преподаватели — практикующие специалисты, а не просто теоретики.',
+					},
+					{
+						icon: APP_ICON.support,
+						title: 'Постоянная поддержка',
+						description: 'Живое общение с преподавателями на занятиях и в чате.',
+					},
+				],
+			},
+			howGoesSection: {
+				title: TEXT_CONFIG.sectionTitle.howOnlineTrainingGoes,
+				items: [
+					{
+						icon: APP_ICON.conference,
+						title: 'Конференция в skype',
+						description:
+							'В установленное время группа подключается к конференции в Skype, созданной преподавателем, для проведения занятия. В зависимости от темы занятия будут длиться от 30 минут до 1,5 часа 3 раза в неделю. В течение занятия вы можете задавать свои вопросы и общаться',
+					},
+					{
+						icon: APP_ICON.home,
+						title: 'Домашние задания',
+						description:
+							'После каждого занятия вы будете получать задание, которое нужно обязательно выполнить. Систематическое невыполнение домашних заданий может привести к тому, что вы вылетите из курса',
+					},
+					{
+						icon: APP_ICON.message,
+						title: 'общение с группой и преподавателем',
+						description:
+							'На протяжении всего курса вы будете состоять в чате с другими учениками, где сможете обсуждать, созваниваться и помогать друг другу. В чате будет и преподаватель, которому также можно задавать вопросы и общаться',
+					},
+					{
+						icon: APP_ICON.diploma,
+						title: 'дипломный проект',
+						description:
+							'В конце курса вы напишите свой собственный проект, который будет первым полноценным приложением в вашем портфолио',
+					},
+				],
+			},
+			learnOnCourseSection: {
+				title: TEXT_CONFIG.sectionTitle.learnOnCourse,
+				items: [
+					'Работать с iTunes Connect',
+					'Разбираться в чужом коде',
+					'Ставить и соблюдать сроки',
+					'Программировать анимации',
+					'Работать с реактивными библиотеками',
+					'Работать с многопоточностью в приложениях',
+					'Работать с API, в том числе социальных сетей',
+					'Создавать мобильные приложения по гайдлайнам iOS',
+					'Получишь опыт проектирования клиент-серверных приложений',
+					'Привыкнешь писать комментируемый и строго форматированный код',
+				],
+			},
+			coachSection: {
+				title: TEXT_CONFIG.sectionTitle.coachOfCourse,
+			},
+			enrollmentFormSection: {
+				title: 'Остались вопросы?',
+				description:
+					'Оставь свой номер телефона в форме и мы перезвоним чтобы проконсультировать по всем интересующим вопросам',
+				buttonText: 'Записаться',
+				fields: [FORM_FIELD_ENUM.NAME, FORM_FIELD_ENUM.EMAIL, FORM_FIELD_ENUM.PHONE],
+			},
+		},
+		[COURSE_ENUM.FRONTEND]: {
+			course: COURSE_ENUM.FRONTEND,
 			topSection: {
 				date: '25 мая в 19:00',
 				title: 'по iOS-разработке',
