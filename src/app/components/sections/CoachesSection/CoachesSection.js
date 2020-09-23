@@ -26,7 +26,7 @@ const CoachImage = (props) => {
 };
 
 const DEFAULT_CONFIG = {
-	title: TEXT_CONFIG.sectionTitle.coaches,
+	title: 'Преподователи — практики',
 	items: [
 		{
 			title: 'Денис Байдан',

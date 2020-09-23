@@ -1,9 +1,5 @@
 export const TEXT_CONFIG = {
 	sectionTitle: {
-		whatPerspective: 'Какие перспективы?',
-		advantages: 'Преимущества обучения',
-		reviews: 'Отзывы учеников',
-		coaches: 'Преподователи — практики',
 		howToGet: 'КАК ПОПАСТЬ НА ПРОБНОЕ ЗАНЯТИЕ',
 		whoInterested: 'Кому будет интересно',
 		lessonProgram: 'ПРОГРАММА ПРОБНОГО ЗАНЯТИЯ',
@@ -12,7 +8,10 @@ export const TEXT_CONFIG = {
 		coachOfCourse: 'Преподаватель курса',
 		speaker: 'Спикер',
 		courseProgram: 'Программа курса',
-		iosPrice: 'Ждем тебя на курсе IOS-РАЗРАБОТКА',
+	},
+	currency: {
+		BYN: 'BYN',
+		RUB: 'RUB',
 	},
 	trialLessonButton: 'Пробное занятие',
 	freeOnlineLesson: 'Бесплатное онлайн-занятие',
@@ -34,4 +33,14 @@ export const TEXT_CONFIG = {
 	seeCollapsedProgram: 'Свернуть программу',
 	buyersChoice: 'Выбор учеников',
 	successMessage: 'Заявка успешно отправлена!',
+	paymentType: {
+		full: {
+			title: 'Оплата сразу',
+			buttonText: 'Оплатить сразу',
+		},
+		partly: {
+			title: 'В рассрочку',
+			buttonText: 'Купить в рассрочку',
+		},
+	},
 };

@@ -2,54 +2,21 @@ import React from 'react';
 
 import {Button, CardContainer, FormButton, SectionContainer} from '@app/components';
 import {getClassName, scrollTo} from '@util/helpers';
-import {TEXT_CONFIG} from '@util/config/text.config';
 import {COURSE_ENUM} from '@util/constants';
+import {TEXT_CONFIG} from '@util/config/text.config';
+import {GLOBAL_CONFIG} from '@util/config';
 
 import style from './PriceCardsSection.scss';
 
-const CURRENCY = {
-	BYN: 'BYN',
-	RUB: 'RUB',
-};
-
-const PRICE_CARDS_CONFIG = {
-	[COURSE_ENUM.IOS]: {
-		packages: [
-			{
-				priceData: {
-					value: 1300,
-					currency: CURRENCY.BYN,
-					sale: 15,
-				},
-				buyersChoice: true,
-				paymentType: 'Оплата сразу',
-				buttonText: 'Оплатить сразу',
-			},
-			{
-				priceData: {
-					value: 1500,
-					currency: CURRENCY.BYN,
-				},
-				paymentType: 'В рассрочку',
-				buttonText: 'Купить в рассрочку',
-			},
-		],
-	},
-};
-
 export const PriceCardsSection = ({course = COURSE_ENUM.IOS, actionAnchor, className}) => {
-	const config = PRICE_CARDS_CONFIG[course];
+	const config = GLOBAL_CONFIG.priceCardsSection[course];
 
 	const handleSignUpClick = () => {
 		scrollTo(actionAnchor);
 	};
 
 	return (
-		<SectionContainer
-			title={TEXT_CONFIG.sectionTitle.iosPrice}
-			className={getClassName(style.wrapper, className)}
-			withContainerWidth
-		>
+		<SectionContainer title={config.title} className={getClassName(style.wrapper, className)} withContainerWidth>
 			<div className={style.flexContainer}>
 				{config.packages.map((packageData, index) => {
 					const active = packageData.buyersChoice;

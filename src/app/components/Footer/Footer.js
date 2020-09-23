@@ -35,8 +35,8 @@ export const Footer = ({config = GLOBAL_CONFIG.footer}) => {
 					<nav>
 						<Link to={ROUTER_CONFIG.COURSES.IOS}>{GLOBAL_CONFIG.course.ios}</Link>
 						<Link to={ROUTER_CONFIG.COURSES.FRONTEND}>{GLOBAL_CONFIG.course.frontend}</Link>
-						<Link to={ROUTER_CONFIG.COURSES.WEB_DESIGN}>{GLOBAL_CONFIG.course.webDesign}</Link>
-						<Link to={ROUTER_CONFIG.COURSES.ANDROID}>{GLOBAL_CONFIG.course.android}</Link>
+						{/*<Link to={ROUTER_CONFIG.COURSES.WEB_DESIGN}>{GLOBAL_CONFIG.course.webDesign}</Link>*/}
+						{/*<Link to={ROUTER_CONFIG.COURSES.ANDROID}>{GLOBAL_CONFIG.course.android}</Link>*/}
 					</nav>
 				</div>
 				<div>
