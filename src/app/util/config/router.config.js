@@ -3,19 +3,14 @@ export const ROUTER_CONFIG = {
 	COURSES: {
 		LIST: '/courses',
 		IOS: '/courses/ios',
-		FRONTEND: '/',
+		FRONTEND: '/courses/frontend',
 		WEB_DESIGN: '/',
 		ANDROID: '/',
-
-		// FRONTEND: '/courses/frontend',
-		// WEB_DESIGN: '/courses',
-		// ANDROID: '/courses',
 	},
 	TRIAL_LESSON: {
 		LIST: '/trial-lessons',
 		IOS: '/trial-lessons/ios',
-		FRONTEND: '/',
-		// FRONTEND: '/trial-lessons/frontend',
+		FRONTEND: '/trial-lessons/frontend',
 	},
 	CONTACTS: '/contacts',
 	COACHES: '/',
