@@ -33,7 +33,7 @@ const COACH_CONFIG = {
 
 // Add config from parent
 
-export const CoachSection = ({course = COURSE_ENUM.IOS, shortMode = false, actionAnchor, className}) => {
+export const CoachSection = ({title, course = COURSE_ENUM.IOS, shortMode = false, actionAnchor, className}) => {
 	const config = COACH_CONFIG[course];
 	const handleSignUpClick = () => {
 		scrollTo(actionAnchor);
@@ -46,7 +46,7 @@ export const CoachSection = ({course = COURSE_ENUM.IOS, shortMode = false, actio
 				{config.image}
 			</div>
 			<div className={style.rightSide}>
-				<h2>{config.title}</h2>
+				<h2>{title}</h2>
 				<div className={style.info}>
 					<h3 className={style.title}>{config.title}</h3>
 					<p className={style.subtitle}>{config.subtitle}</p>

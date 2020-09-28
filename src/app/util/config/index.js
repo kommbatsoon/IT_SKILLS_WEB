@@ -28,24 +28,12 @@ export const GLOBAL_CONFIG = {
 					description: 'Научим разработке мобильных приложение на Swift',
 					path: ROUTER_CONFIG.COURSES.IOS,
 				},
-				// {
-				// 	iconName: APP_ICON.android,
-				// 	title: 'Android-разработка',
-				// 	description: 'Научим разрабатывать приложения для Android',
-				// 	path: ROUTER_CONFIG.COURSES.ANDROID,
-				// },
 				{
 					iconName: APP_ICON.webDev,
 					title: 'Frontend-разработка',
 					description: 'Научим создавать сайты, используя HTML, CSS, JS, React и многое другое',
 					path: ROUTER_CONFIG.COURSES.FRONTEND,
 				},
-				// {
-				// 	iconName: APP_ICON.webDesign,
-				// 	title: 'WEB-ДИЗАЙН',
-				// 	description: 'Научим создавать современный стильный дизайн для любых сайтов',
-				// 	path: ROUTER_CONFIG.COURSES.WEB_DESIGN,
-				// },
 			],
 		},
 		perspectivesSection: {
@@ -127,24 +115,12 @@ export const GLOBAL_CONFIG = {
 					description: '19 марта в 19:00',
 					path: ROUTER_CONFIG.COURSES.IOS,
 				},
-				// {
-				// 	iconName: APP_ICON.android,
-				// 	title: 'Android-разработка',
-				// 	description: '19 марта в 19:00',
-				// 	path: ROUTER_CONFIG.COURSES.ANDROID,
-				// },
 				{
 					iconName: APP_ICON.webDev,
 					title: 'Frontend-разработка',
 					description: '19 марта в 19:00',
 					path: ROUTER_CONFIG.COURSES.FRONTEND,
 				},
-				// {
-				// 	iconName: APP_ICON.webDesign,
-				// 	title: 'WEB-ДИЗАЙН',
-				// 	description: '19 марта в 19:00',
-				// 	path: ROUTER_CONFIG.COURSES.WEB_DESIGN,
-				// },
 			],
 		},
 		enrollmentFormSection: {
@@ -166,24 +142,12 @@ export const GLOBAL_CONFIG = {
 					description: '19 марта в 19:00',
 					path: ROUTER_CONFIG.TRIAL_LESSON.IOS,
 				},
-				// {
-				// 	iconName: APP_ICON.android,
-				// 	title: 'Android-разработка',
-				// 	description: '19 марта в 19:00',
-				// 	path: ROUTER_CONFIG.TRIAL_LESSON.ANDROID,
-				// },
 				{
 					iconName: APP_ICON.webDev,
 					title: 'Frontend-разработка',
 					description: '19 марта в 19:00',
 					path: ROUTER_CONFIG.TRIAL_LESSON.FRONTEND,
 				},
-				// {
-				// 	iconName: APP_ICON.webDesign,
-				// 	title: 'WEB-ДИЗАЙН',
-				// 	description: '19 марта в 19:00',
-				// 	path: ROUTER_CONFIG.TRIAL_LESSON.WEB_DESIGN,
-				// },
 			],
 		},
 		enrollmentFormSection: {

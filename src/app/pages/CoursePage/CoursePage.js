@@ -48,7 +48,7 @@ export const CoursePage = ({course = COURSE_ENUM.IOS}) => {
 			<CoachSection
 				id='coachSection'
 				course={course}
-				title={config.coachSection.title}
+				title={config.coachSection?.title}
 				actionAnchor={actionAnchor}
 			/>
 

@@ -50,7 +50,7 @@ export const TrialLessonPage = ({course = COURSE_ENUM.IOS}) => {
 
 			<CoachSection
 				id='coachSection'
-				config={config.coachSection}
+				title={config.coachSection?.title}
 				course={config.course}
 				shortMode
 				actionAnchor={actionAnchor}
