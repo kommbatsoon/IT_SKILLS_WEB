@@ -14,7 +14,7 @@ const COACH_CONFIG = {
 		subtitle: 'SENIOR FRONTEND-DEVELOPER',
 		description1: 'Автор и преподаватель курса. 5 лет опыта во Fronted-разработке',
 		description2:
-			'Павел научит тебя разрабатывать сайты и web-приложения, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший зароботок в этой сфере',
+			'Павел научит тебя разрабатывать сайты и web-приложения, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
 		course: COURSE_ENUM.FRONTEND,
 		image: <img src={require('@assets/images/avatars/pavel.png')} alt='Logo' className={style.avatar} />,
 		bgImage: <img src={require('@assets/images/icons/webDev.svg')} alt='Icon' className={style.bgImage} />,
@@ -24,7 +24,7 @@ const COACH_CONFIG = {
 		subtitle: 'SENIOR IOS-DEVELOPER',
 		description1: 'Автор и преподаватель курса. 7 лет опыта в программировании, 5 лет в iOS-разработке',
 		description2:
-			'Денис научит тебя красиво и грамотно писать код на Swift, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший зароботок в этой сфере',
+			'Денис научит тебя красиво и грамотно писать код на Swift, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
 		course: COURSE_ENUM.FRONTEND,
 		image: <img src={require('@assets/images/avatars/den.png')} alt='Logo' className={style.avatar} />,
 		bgImage: <img src={require('@assets/images/icons/apple.svg')} alt='Icon' className={style.bgImage} />,
