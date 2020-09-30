@@ -45,9 +45,6 @@ export const TEXT_CONFIG = {
 	},
 };
 
-
-
-
 export const GLOBAL_CONFIG = {
 	navigation: {
 		main: 'Главная',
@@ -862,9 +859,9 @@ export const GLOBAL_CONFIG = {
 	},
 	reviewsSection: {
 		title: 'Отзывы учеников',
-		items: [ 
-{
-				avatar: 'avatar-kirill.png',
+		items: [
+			{
+				avatar: 'avatar-kirill.jpg',
 				name: 'Кирилл Подольский',
 				jobTitle: 'iOS-разработчик фрилансер',
 				socialMedia: [
@@ -875,8 +872,8 @@ export const GLOBAL_CONFIG = {
 				comment:
 					'Хотел бы искренне поблагодарить Дениса за его крутой курс по iOS разработке. Я прошел весь курс у него и ни на минуту не пожалел, что доверился Денису и его методам обучения, потому что он настолько все просто объясняет, что поймет даже тот, кто ничего не понимает в IT вовсе. Денис всегда помогал и отвечал на любые вопросы, подсказывал, если что-то не получалось, советовал как лучше, мотивировал и поддерживал на протяжении всего времени обучения. Курс помог мне освоить все основы программирования под iOS и научиться создавать реальные приложения для Apple Store, что позволило мне успешно построить карьеру в IT сфере как iOS developer и стать опытным специалистом. Всем советую не сомневаться и пройти обучение у Дениса!',
 			},
-{
-				avatar: 'avatar-alexey.png',
+			{
+				avatar: 'avatar-alexey.jpg',
 				name: 'Алексей Гапцар',
 				jobTitle: 'iOS-разработчик в ООО "Бусел Капитал"',
 				socialMedia: [
@@ -888,25 +885,20 @@ export const GLOBAL_CONFIG = {
 					'Хотел бы сказать спасибо преподавателю курса Денису, я ранее имел опыт написания кода на другом языке, однако благодаря грамотно составленному материалу курса, а так-же внимательному и последовательному отношению самого преподавателя к обучению, я смог не только научиться разрабатывать приложения под iOS но и так-же находить решения сложных логических задач. Благодаря курсу, уже спустя месяц после его завершения, я успешно устроился на работу как iOS Developer, где с удовольствием работаю уже почти год.',
 			},
 			{
-				avatar: 'review-avatar.png',
+				avatar: 'avatar-vadim.jpg',
 				name: 'Вадим Котковец',
 				jobTitle: 'Frontend-разработчик в Netcracker',
-				socialMedia: [
-					{icon: APP_ICON.vkWhite, link: 'https://vk.com/'},
-					{icon: APP_ICON.fbWhite, link: 'https://www.facebook.com/'},
-					{icon: APP_ICON.instWhite, link: 'https://instagram.com//'},
-				],
+				socialMedia: [{icon: APP_ICON.instWhite, link: 'https://www.instagram.com/programisterx/'}],
 				comment:
 					'Хотел бы поблагодарить IT-SKILLS и лично Павла за их крутой курс по Веб-разработке.\n Я прошёл его полностью и ни на минуту не пожалел.\n Павел настолько все просто объясняет, что поймет даже тот, кто не знает ничего об IT вовсе.\n Преподаватель всегда помогал и отвечал на любые вопросы, подсказывал, если что-то не получалось, советовал как лучше,\n мотивировал и поддерживал на протяжении всего обучения.\n Курс помог мне освоить веб-программирование и научиться создавать реальные сайты и приложения,\n что позволило мне начать карьеру в IT как Frontend developer.\n Всем советую не сомневаться и пройти обучение!',
 			},
 			{
-				avatar: 'review-avatar.png',
-				name: 'Максим Фролов',
+				avatar: 'avatar-max.jpg',
+				name: 'Максим Пронькин',
 				jobTitle: 'Frontend-разработчик фрилансер',
 				socialMedia: [
-					{icon: APP_ICON.vkWhite, link: 'https://vk.com/'},
-					{icon: APP_ICON.fbWhite, link: 'https://www.facebook.com/'},
-					{icon: APP_ICON.instWhite, link: 'https://www.instagram.com/'},
+					{icon: APP_ICON.vkWhite, link: 'https://vk.com/max.pronkin'},
+					{icon: APP_ICON.instWhite, link: 'https://www.instagram.com/max.pronkin/'},
 				],
 				comment: `Раньше я имел опыт в веб-дизайне, но решил стать разработчиком, т.к посчитао это более интересным и подходящим для себя направлением в IT, и не ошибся.
 						Что можно выделить, так это грамотно составленный материал курса,
@@ -914,26 +906,24 @@ export const GLOBAL_CONFIG = {
             			Учюсь более 5 месяцев и уже в процессе обучения я нашел себе первую работу на фрилансе (сверстать landing page) и даже смог оплатить часть курсов. Всем рекомендую!`,
 			},
 			{
-				avatar: 'review-avatar.png',
-				name: 'Сергей Дашкевич',
+				avatar: 'avatar-artur.jpg',
+				name: 'Артур Бакун',
 				jobTitle: 'JS-разработчик в iTechArt Group',
 				socialMedia: [
-					{icon: APP_ICON.vkWhite, link: 'https://vk.com/'},
-					{icon: APP_ICON.fbWhite, link: 'https://www.facebook.com/'},
-					{icon: APP_ICON.instWhite, link: 'https://www.instagram.com/'},
+					{icon: APP_ICON.vkWhite, link: 'https://vk.com/id151564153'},
+					{icon: APP_ICON.instWhite, link: 'https://www.instagram.com/arc_bak/'},
 				],
 				comment: `Начал курс, уже имея на тот момент опыт в другом языке программирования: пол года я учился программированию самостоятельно с нуля.
 						В интернете есть множество курсов/вебинаров/книг, которые при желании можно достать бесплатно, но они не заменят курсы от IT-SKILLS.
 						После обучения с Павлом я понял, насколько неэффективно было моё предыдущее обучения. Тут тебя везде направят и помогут, где у тебя проблемы, какую задачу хочешь решить.
 						А самое главное - это подача информации, преподаватель очень понятно и просто объясняет и даже самые сложные вещи. Респект!`,
 			},
-{
-				avatar: 'avatar-nikita.png',
+			{
+				avatar: 'avatar-nikita.jpg',
 				name: 'Никита Изосимов',
 				jobTitle: 'iOS-разработчик в "Сибинтек-Софт"',
 				socialMedia: [
 					{icon: APP_ICON.vkWhite, link: 'https://vk.com/kalina0036'},
-					{icon: APP_ICON.fbWhite, link: 'https://www.facebook.com/'},
 					{icon: APP_ICON.instWhite, link: 'https://www.instagram.com/_nikita.mmm/?igshid=4yle757je1p9'},
 				],
 				comment:
@@ -993,18 +983,19 @@ export const GLOBAL_CONFIG = {
 	},
 };
 
-
 const COACH_CONFIG = {
 	[COURSE_ENUM.FRONTEND]: {
 		title: 'Павел Унгур',
 		subtitle: 'SENIOR FRONTEND-DEVELOPER',
 		description1: 'Автор и преподаватель курса. 5 лет опыта во Fronted-разработке',
-		description2: 'Павел научит тебя разрабатывать сайты и web-приложения, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
+		description2:
+			'Павел научит тебя разрабатывать сайты и web-приложения, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
 	},
 	[COURSE_ENUM.IOS]: {
 		title: 'Денис Байдан',
 		subtitle: 'SENIOR IOS-DEVELOPER',
 		description1: 'Автор и преподаватель курса. 7 лет опыта в программировании, 5 лет в iOS-разработке',
-		description2: 'Денис научит тебя красиво и грамотно писать код на Swift, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
+		description2:
+			'Денис научит тебя красиво и грамотно писать код на Swift, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
 	},
 };
