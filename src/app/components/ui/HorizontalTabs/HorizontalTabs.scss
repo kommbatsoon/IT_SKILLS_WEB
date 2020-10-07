@@ -31,10 +31,10 @@
         flex-basis: 50%;
         opacity: 0;
         visibility: hidden;
-        transition: $transition-text-opacity;
+        transition: $transition-text-opacity-active;
       }
 
-      &:hover, &.active {
+      &.active {
         h3 {
           color: $color-text-primary;
         }
@@ -44,7 +44,7 @@
         }
 
         .description {
-          visibility: visible;
+          visibility: visible !important;
           opacity: 1;
         }
       }
@@ -88,7 +88,7 @@
           transition: none;
         }
 
-        &:hover, &.active {
+        &.active {
           .line {
             width: 100%;
           }

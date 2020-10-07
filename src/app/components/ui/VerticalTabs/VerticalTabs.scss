@@ -33,11 +33,11 @@
           flex-basis: 50%;
           opacity: 0;
           visibility: hidden;
-          transition: $transition-text-opacity;
+          transition: $transition-text-opacity-active;
         }
       }
 
-      &:hover, &.active {
+      &.active {
         h3 {
           color: $color-text-primary;
         }
@@ -47,7 +47,7 @@
         }
 
         .column {
-          visibility: visible;
+          visibility: visible !important;
           opacity: 1;
         }
       }
