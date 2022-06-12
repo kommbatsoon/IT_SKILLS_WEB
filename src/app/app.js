@@ -8,7 +8,8 @@ import history from '@app/history';
 
 import '@styles/app.scss';
 
-const BASE_URL = document.getElementsByTagName('base')[0].getAttribute('href');
+// const BASE_URL = document.getElementsByTagName('base')[0].getAttribute('href');
+const BASE_URL = '';
 
 const App = () => {
 	return (

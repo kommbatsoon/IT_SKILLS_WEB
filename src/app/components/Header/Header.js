@@ -6,6 +6,7 @@ import {getClassName, removeWhiteSpaces} from '@util/helpers';
 import {ROUTER_CONFIG} from '@util/config/router.config';
 import {GLOBAL_CONFIG} from '@util/config';
 import {APP_ICON} from '@util/constants';
+import {LogoGold} from '@assets/images';
 
 import style from './Header.scss';
 
@@ -20,7 +21,7 @@ export const Header = () => {
 		<>
 			<header className={getClassName(style.header, style.header_desktop)}>
 				<Link to={ROUTER_CONFIG.MAIN} className={style.logoWrapper}>
-					<img src={require('@assets/images/logo-gold.png')} alt='Logo' className={style.logo} />
+					<img src={LogoGold} alt='Logo' className={style.logo} />
 				</Link>
 
 				<nav>
@@ -36,7 +37,7 @@ export const Header = () => {
 			</header>
 			<header className={getClassName(style.header, style.header_mobile)}>
 				<div className={style.mobileHeader} onClick={() => setOpen(!isOpen)}>
-					<img src={require('@assets/images/logo-gold.png')} alt='Logo' className={style.logo} />
+					<img src={LogoGold} alt='Logo' className={style.logo} />
 					<Icon name={isOpen ? APP_ICON.burgerWhite : APP_ICON.burgerGold} />
 				</div>
 

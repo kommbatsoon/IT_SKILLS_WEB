@@ -7,6 +7,7 @@ import {removeWhiteSpaces} from '@util/helpers';
 import {ROUTER_CONFIG} from '@util/config/router.config';
 import {TEXT_CONFIG} from '@util/config/text.config';
 import {GLOBAL_CONFIG} from '@util/config';
+import {LogoWhite} from '@assets/images';
 
 import style from './Footer.scss';
 
@@ -17,7 +18,7 @@ export const Footer = ({config = GLOBAL_CONFIG.footer}) => {
 			<footer className={style.footer}>
 				<div>
 					<Link to={ROUTER_CONFIG.MAIN} className={style.logoWrapper}>
-						<img src={require('@assets/images/logo-white.png')} alt='Logo' className={style.logo} />
+						<img src={LogoWhite} alt='Logo' className={style.logo} />
 					</Link>
 					<p className={style.copyright}>{TEXT_CONFIG.copyright}</p>
 				</div>

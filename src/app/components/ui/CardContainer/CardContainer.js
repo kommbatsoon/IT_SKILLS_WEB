@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {isEmpty} from 'lodash';
 
 import {ArrowButton, Button, Icon} from '@app/components';
 import {getClassName} from '@util/helpers';
@@ -8,6 +7,11 @@ import {APP_ICON} from '@util/constants';
 import {Screen} from '@util/srceen';
 
 import style from './CardContainer.scss';
+
+const isEmpty = (object) => {
+	if(!object) return true;
+	return Object.keys(object).length === 0 && object.constructor === Object;
+}
 
 export const CardContainer = (props) => {
 	const {

@@ -2,9 +2,9 @@ const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = (env) => {
@@ -20,11 +20,14 @@ module.exports = (env) => {
 		resolve: {
 			extensions: ['.jsx', '.js', '.json', '.scss'],
 			modules: ['node_modules'],
+			fallback: {
+				path: false,
+			},
 		},
 
 		optimization: {
 			minimize: true,
-			minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
+			minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
 		},
 
 		module: {
@@ -43,13 +46,16 @@ module.exports = (env) => {
 						{
 							loader: 'postcss-loader',
 							options: {
-								plugins: () => [require('autoprefixer')],
+								postcssOptions: {
+									plugins: () => [require('autoprefixer')],
+								},
 							},
 						},
 						{
 							loader: 'sass-loader',
 							options: {
-								prependData: '@import "variables"; @import "mixins";',
+								implementation: require('sass'),
+								additionalData: '@import "variables"; @import "mixins";',
 								webpackImporter: false,
 								sassOptions: {
 									includePaths: [path.join(__dirname, '..', 'src/app/styles')],
@@ -96,21 +102,22 @@ module.exports = (env) => {
 				template: 'src/index.html',
 				inject: true,
 			}),
-			new CopyWebpackPlugin([
-				{
-					from: 'src/manifest.json',
-					flatten: true,
-				},
-				{
-					from: 'src/favicon.ico',
-				},
-				{
-					from: 'src/telegram.php',
-				},
-				{
-					from: 'src/.htaccess',
-				},
-			]),
+			new CopyPlugin({
+				patterns: [
+					{
+						from: 'src/manifest.json',
+					},
+					{
+						from: 'src/favicon.ico',
+					},
+					{
+						from: 'src/telegram.php',
+					},
+					{
+						from: 'src/.htaccess',
+					},
+				],
+			}),
 		].filter(Boolean),
 	};
 };
