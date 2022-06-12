@@ -5,7 +5,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = (env) => {
 	return {
@@ -69,7 +68,7 @@ module.exports = (env) => {
 					loader: 'babel-loader',
 				},
 				{
-					test: /\.(jpe?g|png|gif|svg|ico)$/i,
+					test: /\.(jpe?g|png|gif|svg|ico|woff|woff2|eot|ttf|otf)$/i,
 					use: [
 						{
 							loader: 'file-loader',
@@ -78,23 +77,12 @@ module.exports = (env) => {
 							},
 						},
 					],
-				},
-				{
-					test: /\.(woff|woff2|eot|ttf|otf)$/,
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								name: 'assets/[name].[ext]',
-							},
-						},
-					],
+					type: 'javascript/auto',
 				},
 			],
 		},
 
 		plugins: [
-			env.ANALYZER === true && new BundleAnalyzerPlugin(),
 			new MiniCssExtractPlugin({
 				filename: '[name].[chunkhash].css',
 			}),

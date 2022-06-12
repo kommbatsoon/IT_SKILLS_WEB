@@ -6,8 +6,7 @@
   "description": "IT-SKILLS.PRO",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && webpack --env.ANALYZER=false --config webpack/webpack.config.production.js",
-    "build:analyzer": "npm run clean && webpack --env.ANALYZER=true --config webpack/webpack.config.production.js",
+    "build": "npm run clean && webpack --config webpack/webpack.config.production.js",
     "start": "webpack-dev-server --config webpack/webpack.config.development.js",
     "lint": "eslint src"
   },
@@ -52,7 +51,6 @@
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.1",
     "webpack": "^5.72.1",
-    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
   },
