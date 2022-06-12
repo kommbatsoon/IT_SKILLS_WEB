@@ -6,8 +6,8 @@ import {TEXT_CONFIG} from '@util/config/text.config';
 import {ROUTER_CONFIG} from '@util/config/router.config';
 import {COURSE_ENUM} from '@util/constants';
 
+import {DenAvatar, PavelAvatar} from '@assets/images';
 import history from '@app/history';
-
 import style from './CoachesSection.scss';
 
 const CoachImage = (props) => {
@@ -16,10 +16,8 @@ const CoachImage = (props) => {
 	const classString = getClassName(style.avatar, active && style.active, className);
 
 	const image = {
-		[COURSE_ENUM.IOS]: <img src={require('@assets/images/avatars/den.png')} alt='Logo' className={classString} />,
-		[COURSE_ENUM.FRONTEND]: (
-			<img src={require('@assets/images/avatars/pavel.png')} alt='Logo' className={classString} />
-		),
+		[COURSE_ENUM.IOS]: <img src={DenAvatar} alt='Logo' className={classString} />,
+		[COURSE_ENUM.FRONTEND]: <img src={PavelAvatar} alt='Logo' className={classString} />,
 	};
 
 	return image[course];

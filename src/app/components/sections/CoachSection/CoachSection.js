@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import {getClassName, scrollTo} from '@util/helpers';
 import {TEXT_CONFIG} from '@util/config/text.config';
-
-import style from './CoachSection.scss';
 import {COURSE_ENUM} from '@util/constants';
 import {Button} from '@app/components';
+import {PavelAvatar, DenAvatar, WebDevIcon, AppleIcon} from '@assets/images';
+import style from './CoachSection.scss';
 
 const COACH_CONFIG = {
 	[COURSE_ENUM.FRONTEND]: {
@@ -16,8 +16,8 @@ const COACH_CONFIG = {
 		description2:
 			'Павел научит тебя разрабатывать сайты и web-приложения, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
 		course: COURSE_ENUM.FRONTEND,
-		image: <img src={require('@assets/images/avatars/pavel.png')} alt='Logo' className={style.avatar} />,
-		bgImage: <img src={require('@assets/images/icons/webDev.svg')} alt='Icon' className={style.bgImage} />,
+		image: <img src={PavelAvatar} alt='Logo' className={style.avatar} />,
+		bgImage: <img src={WebDevIcon} alt='Icon' className={style.bgImage} />,
 	},
 	[COURSE_ENUM.IOS]: {
 		title: 'Денис Байдан',
@@ -26,8 +26,8 @@ const COACH_CONFIG = {
 		description2:
 			'Денис научит тебя красиво и грамотно писать код на Swift, даст полезные советы, лайфхаки, расскажет как успешно устроится на работу и выйти на хороший заработок в этой сфере',
 		course: COURSE_ENUM.FRONTEND,
-		image: <img src={require('@assets/images/avatars/den.png')} alt='Logo' className={style.avatar} />,
-		bgImage: <img src={require('@assets/images/icons/apple.svg')} alt='Icon' className={style.bgImage} />,
+		image: <img src={DenAvatar} alt='Logo' className={style.avatar} />,
+		bgImage: <img src={AppleIcon} alt='Icon' className={style.bgImage} />,
 	},
 };
 

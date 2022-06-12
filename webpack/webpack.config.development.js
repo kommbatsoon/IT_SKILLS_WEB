@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -62,7 +62,8 @@ module.exports = {
 					{
 						loader: 'sass-loader',
 						options: {
-							prependData: '@import "variables"; @import "mixins";',
+							implementation: require('sass'),
+							additionalData: '@import "variables"; @import "mixins";',
 							webpackImporter: false,
 							sassOptions: {
 								includePaths: [path.join(__dirname, '..', 'src/app/styles')],
@@ -83,14 +84,12 @@ module.exports = {
 			{
 				test: /\.(jpe?g|png|gif|svg|ico)$/i,
 				exclude: /(node_modules)/,
-				include: path.resolve(__dirname, '..', 'src'),
-				loader: 'file-loader',
+				type: 'asset/resource',
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				exclude: /(node_modules)/,
-				include: path.resolve(__dirname, '..', 'src'),
-				use: ['file-loader'],
+				type: 'asset/resource',
 			},
 		],
 	},
@@ -100,38 +99,22 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'src/index.html',
 		}),
-		new CopyWebpackPlugin([
-			{
-				from: 'src/manifest.json',
-				flatten: true,
-			},
-			{
-				from: 'src/favicon.ico',
-			},
-		]),
+		new CopyPlugin({
+			patterns: [
+				{
+					from: 'src/manifest.json',
+				},
+				{
+					from: 'src/favicon.ico',
+				},
+			],
+		}),
 	],
 	devServer: {
-		historyApiFallback: true,
 		open: true,
 		hot: true,
-		overlay: true,
 		compress: true,
 		port: 3000,
-		stats: {
-			colors: true,
-			hash: false,
-			version: false,
-			timings: true,
-			assets: false,
-			chunks: false,
-			modules: false,
-			reasons: false,
-			children: false,
-			source: true,
-			errors: true,
-			errorDetails: true,
-			warnings: true,
-			publicPath: false,
-		},
+		historyApiFallback: true,
 	},
 };
